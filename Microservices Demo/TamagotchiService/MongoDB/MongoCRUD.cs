@@ -12,7 +12,7 @@ namespace Shared.MongoDB
         private string connectionString;
         public MongoCRUD(string database)
         {
-            connectionString = $"mongodb+srv://Mickey:Mic2011Kre@fontysprojects.b76fa.azure.mongodb.net";
+            connectionString = $"mongodb+srv://Mickey123:Mic2011Kre@fontysprojects.b76fa.azure.mongodb.net";
        
             var client = new MongoClient(connectionString);
             db = client.GetDatabase(database);
