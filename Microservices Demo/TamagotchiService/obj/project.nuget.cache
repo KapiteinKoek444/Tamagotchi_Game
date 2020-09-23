@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "nCOPC70KvuHFw0Js0epc7EE4pTBHmlv2OUt0p+Tq2KIHzmM8csVgDGFWrgbz7c1E12Gn+DSa7vlClCadqlbq3w==",
+  "dgSpecHash": "M5099NaaReyZQULaKUS3En6ip1wwkCru5GD45PDw/jB5h8/AGxGB48qrTLc+p8Lw2AK128zUtQKw3nDiHieDug==",
   "success": true,
-  "projectFilePath": "C:\\Users\\micke\\source\\repos\\Microservices Demo\\TamagotchiService\\MongoDBService.csproj",
+  "projectFilePath": "C:\\Users\\micke\\Source\\Repos\\Tamagotchi_Game\\Microservices Demo\\TamagotchiService\\MongoDBService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\micke\\.nuget\\packages\\dnsclient\\1.3.1\\dnsclient.1.3.1.nupkg.sha512",
     "C:\\Users\\micke\\.nuget\\packages\\microsoft.netcore.platforms\\2.1.2\\microsoft.netcore.platforms.2.1.2.nupkg.sha512",

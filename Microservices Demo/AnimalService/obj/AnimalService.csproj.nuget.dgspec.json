@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\micke\\source\\repos\\Microservices Demo\\AnimalService\\AnimalService.csproj": {}
+    "C:\\Users\\micke\\Source\\Repos\\Tamagotchi_Game\\Microservices Demo\\AnimalService\\AnimalService.csproj": {}
   },
   "projects": {
-    "C:\\Users\\micke\\source\\repos\\Microservices Demo\\AnimalService\\AnimalService.csproj": {
+    "C:\\Users\\micke\\Source\\Repos\\Tamagotchi_Game\\Microservices Demo\\AnimalService\\AnimalService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\micke\\source\\repos\\Microservices Demo\\AnimalService\\AnimalService.csproj",
+        "projectUniqueName": "C:\\Users\\micke\\Source\\Repos\\Tamagotchi_Game\\Microservices Demo\\AnimalService\\AnimalService.csproj",
         "projectName": "AnimalService",
-        "projectPath": "C:\\Users\\micke\\source\\repos\\Microservices Demo\\AnimalService\\AnimalService.csproj",
+        "projectPath": "C:\\Users\\micke\\Source\\Repos\\Tamagotchi_Game\\Microservices Demo\\AnimalService\\AnimalService.csproj",
         "packagesPath": "C:\\Users\\micke\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\micke\\source\\repos\\Microservices Demo\\AnimalService\\obj\\",
+        "outputPath": "C:\\Users\\micke\\Source\\Repos\\Tamagotchi_Game\\Microservices Demo\\AnimalService\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\micke\\AppData\\Roaming\\NuGet\\NuGet.Config",

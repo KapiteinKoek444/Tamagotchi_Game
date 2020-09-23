@@ -5726,11 +5726,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\micke\\source\\repos\\Microservices Demo\\UserService\\UserService.csproj",
+      "projectUniqueName": "C:\\Users\\micke\\Source\\Repos\\Tamagotchi_Game\\Microservices Demo\\UserService\\UserService.csproj",
       "projectName": "UserService",
-      "projectPath": "C:\\Users\\micke\\source\\repos\\Microservices Demo\\UserService\\UserService.csproj",
+      "projectPath": "C:\\Users\\micke\\Source\\Repos\\Tamagotchi_Game\\Microservices Demo\\UserService\\UserService.csproj",
       "packagesPath": "C:\\Users\\micke\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\micke\\source\\repos\\Microservices Demo\\UserService\\obj\\",
+      "outputPath": "C:\\Users\\micke\\Source\\Repos\\Tamagotchi_Game\\Microservices Demo\\UserService\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\micke\\AppData\\Roaming\\NuGet\\NuGet.Config",

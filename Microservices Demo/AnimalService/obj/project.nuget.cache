@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "thoStwwHnOFKtGNmOk+ygPwU7npoHQS4qPmrb+iDsz/I09mRbwCAGXRjqeGYpq+J52gHbKMVSNvk6KPmTc5+tw==",
+  "dgSpecHash": "XN9YgBvyPJ58ug/ZBv92jUWbOatD8+hdZCDvCYoBzWzq18N9Iw1amP0/LetBvUwPX+7egn9wr8P8vLCUJmfevA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\micke\\source\\repos\\Microservices Demo\\AnimalService\\AnimalService.csproj",
+  "projectFilePath": "C:\\Users\\micke\\Source\\Repos\\Tamagotchi_Game\\Microservices Demo\\AnimalService\\AnimalService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\micke\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\micke\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",

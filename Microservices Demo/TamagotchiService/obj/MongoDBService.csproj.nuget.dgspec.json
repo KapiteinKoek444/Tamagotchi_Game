@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\micke\\source\\repos\\Microservices Demo\\TamagotchiService\\MongoDBService.csproj": {}
+    "C:\\Users\\micke\\Source\\Repos\\Tamagotchi_Game\\Microservices Demo\\TamagotchiService\\MongoDBService.csproj": {}
   },
   "projects": {
-    "C:\\Users\\micke\\source\\repos\\Microservices Demo\\TamagotchiService\\MongoDBService.csproj": {
+    "C:\\Users\\micke\\Source\\Repos\\Tamagotchi_Game\\Microservices Demo\\TamagotchiService\\MongoDBService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\micke\\source\\repos\\Microservices Demo\\TamagotchiService\\MongoDBService.csproj",
+        "projectUniqueName": "C:\\Users\\micke\\Source\\Repos\\Tamagotchi_Game\\Microservices Demo\\TamagotchiService\\MongoDBService.csproj",
         "projectName": "MongoDBService",
-        "projectPath": "C:\\Users\\micke\\source\\repos\\Microservices Demo\\TamagotchiService\\MongoDBService.csproj",
+        "projectPath": "C:\\Users\\micke\\Source\\Repos\\Tamagotchi_Game\\Microservices Demo\\TamagotchiService\\MongoDBService.csproj",
         "packagesPath": "C:\\Users\\micke\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\micke\\source\\repos\\Microservices Demo\\TamagotchiService\\obj\\",
+        "outputPath": "C:\\Users\\micke\\Source\\Repos\\Tamagotchi_Game\\Microservices Demo\\TamagotchiService\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\micke\\AppData\\Roaming\\NuGet\\NuGet.Config",

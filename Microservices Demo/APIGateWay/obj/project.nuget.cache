@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wdHyJCULhw55v12Id++PdjRRRDCYDtijQamxDTQtvJ8V63+9rmIUD8I6iAS3H4l1fpIwELrW3fSAZTlWhTcHlQ==",
+  "dgSpecHash": "hHdqSbghI8VvsoKGl1nARYYZ3Q2BCAfRX7rp96fFEA+jYy5Ol+73Kea7fpqg0SrMneCKba04AqUM6s/SzVw1dg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\micke\\source\\repos\\Microservices Demo\\APIGateWay\\APIGateWay.csproj",
+  "projectFilePath": "C:\\Users\\micke\\Source\\Repos\\Tamagotchi_Game\\Microservices Demo\\APIGateWay\\APIGateWay.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\micke\\.nuget\\packages\\fluentvalidation\\8.6.2\\fluentvalidation.8.6.2.nupkg.sha512",
     "C:\\Users\\micke\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\3.1.3\\microsoft.aspnetcore.jsonpatch.3.1.3.nupkg.sha512",

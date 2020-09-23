@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "INebzXGxu4UT2plN3CQ1OXELShFpiPPQ79DESrDKZ9sh6m+/YmlpBd6yImD2nurJtbR+NOBddPdLQvonN5kfYA==",
+  "dgSpecHash": "2eoY1babe3nvgd4yt9O2zbRwzhF17XO9xhVDO8CGD1HxnzsPXWGLY7lmXpZ4szRbx/XNfq3EbLStsxNkhN+nGw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\micke\\source\\repos\\Microservices Demo\\CombineService\\CombineService.csproj",
+  "projectFilePath": "C:\\Users\\micke\\Source\\Repos\\Tamagotchi_Game\\Microservices Demo\\CombineService\\CombineService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\micke\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\micke\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",

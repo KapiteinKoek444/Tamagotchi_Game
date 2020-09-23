@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\micke\\source\\repos\\Microservices Demo\\APIGateWay\\APIGateWay.csproj": {}
+    "C:\\Users\\micke\\Source\\Repos\\Tamagotchi_Game\\Microservices Demo\\APIGateWay\\APIGateWay.csproj": {}
   },
   "projects": {
-    "C:\\Users\\micke\\source\\repos\\Microservices Demo\\APIGateWay\\APIGateWay.csproj": {
+    "C:\\Users\\micke\\Source\\Repos\\Tamagotchi_Game\\Microservices Demo\\APIGateWay\\APIGateWay.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\micke\\source\\repos\\Microservices Demo\\APIGateWay\\APIGateWay.csproj",
+        "projectUniqueName": "C:\\Users\\micke\\Source\\Repos\\Tamagotchi_Game\\Microservices Demo\\APIGateWay\\APIGateWay.csproj",
         "projectName": "APIGateWay",
-        "projectPath": "C:\\Users\\micke\\source\\repos\\Microservices Demo\\APIGateWay\\APIGateWay.csproj",
+        "projectPath": "C:\\Users\\micke\\Source\\Repos\\Tamagotchi_Game\\Microservices Demo\\APIGateWay\\APIGateWay.csproj",
         "packagesPath": "C:\\Users\\micke\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\micke\\source\\repos\\Microservices Demo\\APIGateWay\\obj\\",
+        "outputPath": "C:\\Users\\micke\\Source\\Repos\\Tamagotchi_Game\\Microservices Demo\\APIGateWay\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\micke\\AppData\\Roaming\\NuGet\\NuGet.Config",

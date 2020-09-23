@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\micke\\source\\repos\\Microservices Demo\\CombineService\\CombineService.csproj": {}
+    "C:\\Users\\micke\\Source\\Repos\\Tamagotchi_Game\\Microservices Demo\\CombineService\\CombineService.csproj": {}
   },
   "projects": {
-    "C:\\Users\\micke\\source\\repos\\Microservices Demo\\CombineService\\CombineService.csproj": {
+    "C:\\Users\\micke\\Source\\Repos\\Tamagotchi_Game\\Microservices Demo\\CombineService\\CombineService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\micke\\source\\repos\\Microservices Demo\\CombineService\\CombineService.csproj",
+        "projectUniqueName": "C:\\Users\\micke\\Source\\Repos\\Tamagotchi_Game\\Microservices Demo\\CombineService\\CombineService.csproj",
         "projectName": "CombineService",
-        "projectPath": "C:\\Users\\micke\\source\\repos\\Microservices Demo\\CombineService\\CombineService.csproj",
+        "projectPath": "C:\\Users\\micke\\Source\\Repos\\Tamagotchi_Game\\Microservices Demo\\CombineService\\CombineService.csproj",
         "packagesPath": "C:\\Users\\micke\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\micke\\source\\repos\\Microservices Demo\\CombineService\\obj\\",
+        "outputPath": "C:\\Users\\micke\\Source\\Repos\\Tamagotchi_Game\\Microservices Demo\\CombineService\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\micke\\AppData\\Roaming\\NuGet\\NuGet.Config",
