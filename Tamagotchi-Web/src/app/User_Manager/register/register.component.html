@@ -1,0 +1,12 @@
+<h1>Register</h1>
+<p>Email:</p>
+<br>
+<input #textboxE type="email" ngModel="" required>
+<br>
+<br>
+<p>Password:</p>
+<br>
+<input #textboxP type="password" ngModel="" required>
+<br>
+<br>
+<button (click)="Register(textboxE.value, textboxP.value)">Register</button>
