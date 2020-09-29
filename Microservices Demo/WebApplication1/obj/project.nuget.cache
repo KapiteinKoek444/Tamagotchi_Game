@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "0AIhV99etH7nUZrweN9StGJOFNvkE3XeYKZj7iC3loJ+x4CNSkXcjxZP5dOuVLm3wzagrDWcvZMfnsx1JglOyA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\micke\\Source\\Repos\\Tamagotchi_Game\\Microservices Demo\\WebApplication1\\WebApplication1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\micke\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
+  ],
+  "logs": []
+}
