@@ -36,7 +36,7 @@ namespace MongoDB_API.Controllers
             return UsersCollection.Find(filter).First();
         }
         [HttpPost]
-        [Route("Login")]
+    
         public Guid Login([FromBody] User model)
         {           
             try

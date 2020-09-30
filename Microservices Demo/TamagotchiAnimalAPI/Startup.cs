@@ -35,7 +35,7 @@ namespace TamagotchiAnimalAPI
             services.AddCors(o => o.AddPolicy("MyPolicy", builder =>
             {
                 builder.AllowAnyOrigin()
-                       .AllowAnyMethod()
+                       .AllowAnyMethod()                   
                        .AllowAnyHeader();
             }));
 

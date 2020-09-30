@@ -31,7 +31,7 @@ namespace MongoDB_API.Controllers
         [HttpGet("{id}")]
         public Animal Get([FromRoute] Guid id)
         {
-            var filter = Builders<Animal>.Filter.Eq("_id", id);
+            var filter = Builders<Animal>.Filter.Eq("UserId", id);
             return AnimalCollection.Find(filter).First();
         }
 
@@ -50,11 +50,11 @@ namespace MongoDB_API.Controllers
         }
 
         [HttpPost("{id}")]
-        public IActionResult Update([FromBody] Animal model)
+        public IActionResult Update([FromRoute] Guid id,[FromBody] Animal model)
         {
             try
             {
-                var result = AnimalCollection.ReplaceOneAsync(a => a.Id.Equals(model.Id),model, new UpdateOptions { IsUpsert = true });
+                var result = AnimalCollection.ReplaceOneAsync(a => a.UserId.Equals(id),model, new UpdateOptions { IsUpsert = true });
                 return StatusCode(StatusCodes.Status201Created, model);
             }
             catch (Exception ex)
