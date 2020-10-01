@@ -1,0 +1,23 @@
+<h1>Choose your animal</h1>
+
+<div>
+  <p>Animal name:</p>
+  <input #textboxN type="text" ngModel="" required><br><br>
+</div>
+
+<div id='Images'>
+
+  <label for="0"><img src="../../assets/Images/Kikker.png" /></label>
+  <label for="1"><img src="../../assets/Images/UIL.png" /></label>
+  <label for="2"><img src="../../assets/Images/BLOEM.png" /></label>
+  <label for="3"><img src="../../assets/Images/VOGEL.png" /></label>
+  <label for="4"><img src="../../assets/Images/OCTOPUS.png" /></label>
+</div>
+
+<div id='Images'>
+  <button id="0" (click)="setAnimal(textboxN.value, 0)">Pick Me!</button>
+  <button id="1" (click)="setAnimal(textboxN.value, 1)">Pick Me!</button>
+  <button id="2" (click)="setAnimal(textboxN.value, 2)">Pick Me!</button>
+  <button id="3" (click)="setAnimal(textboxN.value, 3)">Pick Me!</button>
+  <button id="4" (click)="setAnimal(textboxN.value, 4)">Pick Me!</button>
+</div>

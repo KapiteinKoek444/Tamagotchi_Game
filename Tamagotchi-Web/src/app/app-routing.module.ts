@@ -7,6 +7,7 @@ import { UserComponent } from './Entities/user/user.component';
 import { AnimalComponent } from './Entities/Animal/animal.component';
 import { DinoRunComponent } from './dino-run/dino-run.component';
 import { InventoryComponent } from './Entities/inventory/inventory.component';
+import { AnimalShelterComponent } from './animal-shelter/animal-shelter.component';
 
 const routes: Routes = [
   { path: 'index', component: AppComponent },
@@ -15,7 +16,9 @@ const routes: Routes = [
   { path: 'user', component: UserComponent },
   { path: 'animal', component: AnimalComponent },
   { path: 'dinoRun', component: DinoRunComponent },
-  { path: 'inventory', component: InventoryComponent }
+  { path: 'inventory', component: InventoryComponent },
+  { path: 'shelter', component: AnimalShelterComponent },
+  { path: '', redirectTo: '/login', pathMatch: 'full' }
 ];
 
 @NgModule({

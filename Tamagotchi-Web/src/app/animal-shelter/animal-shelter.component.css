@@ -1,0 +1,25 @@
+div{
+  margin-top: 4rem;
+  text-align: center;
+}
+
+#Images{
+  margin-top: 4rem;
+  text-align: center;
+}
+
+img{
+  size: 1rem;
+  transform: scale(4);
+  align-self: center;
+  image-rendering: pixelated;
+  display:inline-block;
+  margin-left: 4rem;
+  margin-right: 4rem;
+}
+
+button{
+  width: 100px;
+  height: 50px;
+  margin-left: 3rem;
+}

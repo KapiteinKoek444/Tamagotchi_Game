@@ -19,7 +19,6 @@ export class LoginComponent implements OnInit {
 
   Login(email, pword) {
     this.logger = new LoginModel(email, pword);
-
     this.usercomponent.LoginUser(this.logger);
   }
 }

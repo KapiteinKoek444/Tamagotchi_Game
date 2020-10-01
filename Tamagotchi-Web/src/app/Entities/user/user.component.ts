@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { ApiService } from '../../../Data_Manager/api.service';
 import { HasherComponent } from '../../User_Manager/hasher/hasher.component';
 
@@ -9,26 +10,26 @@ import { HasherComponent } from '../../User_Manager/hasher/hasher.component';
 })
 export class UserComponent {
 
-  constructor(private apiservice: ApiService, private hasher: HasherComponent) { }
+  constructor(private apiservice: ApiService, private hasher: HasherComponent, private router: Router) { }
 
   RegisterUser(user) {
     user.password = this.hasher.MD5(user.password);
     JSON.stringify(user);
-    console.log(user);
     this.apiservice.sendUsers(user);
   }
 
   LoginUser(model) {
     model.password = this.hasher.MD5(model.password);
     this.apiservice.getUserPassword(model);
+
     var id = localStorage.getItem("userId");
 
-    if (id == "00000000-0000-0000-0000-000000000000") {
+    if (id == "00000000-0000-0000-0000-000000000000" || id == null) {
       console.log("Failed to log in, try a different username or password..");
       return;
     }
     else {
-      location.href = "/animal";
+      this.router.navigate(['animal'])
     }
   }
 

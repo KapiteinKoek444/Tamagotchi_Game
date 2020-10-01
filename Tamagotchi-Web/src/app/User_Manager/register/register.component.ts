@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { user, UserComponent } from '../../Entities/user/user.component';
-import { Animal, AnimalComponent } from '../../Entities/Animal/animal.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -10,7 +10,7 @@ import { Animal, AnimalComponent } from '../../Entities/Animal/animal.component'
 export class RegisterComponent implements OnInit {
   _user: user;
 
-  constructor(private usercomp: UserComponent, private animalcomp: AnimalComponent) {
+  constructor(private usercomp: UserComponent, private router: Router) {
   }
 
   ngOnInit(): void {
@@ -24,11 +24,10 @@ export class RegisterComponent implements OnInit {
 
     var usr = new user(email, pword, this.newGuid())
     this.usercomp.RegisterUser(usr);
-    this.animalcomp.generateAnimal(this.newGuid(), usr.id);
 
     localStorage.setItem("userId", usr.id);
 
-
+    this.router.navigate(['shelter']);
   }
 
   newGuid() {

@@ -17,7 +17,7 @@ const routes: Routes = [];
   declarations: [
     AppComponent,
     HasherComponent,
-    routingComponents
+    routingComponents,
   ],
   imports: [
     BrowserModule,

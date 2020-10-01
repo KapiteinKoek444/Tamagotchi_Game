@@ -27,13 +27,12 @@ export class ApiService {
   }
 
   public getUserId(userID) {
-    var user = this.httpClient.get(`https://tamagotchiuserapi.azurewebsites.net/user/` + userID);
+    var user = this.httpClient.get(`https://tamagotchiuserapi.azurewebsites.net/user/` + userID).subscribe();
     return user;
   }
 
   public getUserPassword(loginmodel) {
-
-    this.httpClient.post<any>(`https://tamagotchiuserapi.azurewebsites.net/user/login`, { email: loginmodel.email, password: loginmodel.password }).subscribe(data => {
+    this.httpClient.post<string>(`https://tamagotchiuserapi.azurewebsites.net/user/login`, { email: loginmodel.email, password: loginmodel.password }).subscribe(data => {
       localStorage.setItem("userId", data);
     });
   }
@@ -54,13 +53,11 @@ export class ApiService {
   }
 
   public getAnimalUserId(userID) {
-    var animal = this.httpClient.get('https://tamagotchianimalapi.azurewebsites.net/animal/' + userID).subscribe();
-    console.log(animal);
+    var animal = this.httpClient.get('https://tamagotchianimalapi.azurewebsites.net/animal/' + userID);
     return animal;
   }
 
-  public updateAnimal(newAnimal) {
-    var curAnimal = this.httpClient.put('https://tamagotchianimalapi.azurewebsites.net/animal/', newAnimal).subscribe();
-    return curAnimal;
+  public updateAnimal(newAnimal, id) {
+    this.httpClient.post('https://tamagotchianimalapi.azurewebsites.net/animal/' + id, newAnimal, httpOptions).subscribe();
   }
 }
