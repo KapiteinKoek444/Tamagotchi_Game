@@ -12,12 +12,9 @@ namespace MongoDB_API.Entities
         public Guid Id { get; set; }
         public Guid UserId { get; set; }
         public string Name { get; set; }
-
         public float Food { get; set; }
-
         public float Energy { get; set; }
-
         public float Happiness { get; set; }
-
+        public int AnimalType { get; set; }
     }
 }
