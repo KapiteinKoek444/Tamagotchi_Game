@@ -4,6 +4,8 @@ import {Promise} from "bluebird";
 
 export const START_COUNT = 2;
 
+export const START_COINTS_MULTIPLIER = 20;
+
 export enum COLORS{
     red,
     green,
