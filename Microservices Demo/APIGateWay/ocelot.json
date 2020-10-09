@@ -2,10 +2,10 @@
   "Routes": [
     {
       "DownstreamPathTemplate": "/api/user",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "venus.fhict.nl",
+          "Host": "tamagotchiuserapi.azurewebsites.net",
           "Port": "21"
         }
       ],
@@ -14,10 +14,10 @@
     },
     {
       "DownstreamPathTemplate": "/api/user/{id}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "venus.fhict.nl",
+          "Host": "tamagotchiuserapi.azurewebsites.net",
           "Port": "21"
         }
       ],
@@ -26,10 +26,10 @@
     },
     {
       "DownstreamPathTemplate": "/api/PetAnimal",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "venus.fhict.nl",
+          "Host": "tamagotchianimalapi.azurewebsites.net",
           "Port": "21"
         }
       ],
@@ -38,10 +38,10 @@
     },
     {
       "DownstreamPathTemplate": "/api/PetAnimal/{id}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "venus.fhict.nl",
+          "Host": "tamagotchianimalapi.azurewebsites.net",
           "Port": "21"
         }
       ],

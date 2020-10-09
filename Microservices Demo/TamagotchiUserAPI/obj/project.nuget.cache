@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "1DB45k0xxceLQX747cD3FuAQQQFRMEiDjoRFBElWAPeRcy/pqDnO2/kGo4/x+zsvMkBOXWFULanekziMZCLPVg==",
+  "dgSpecHash": "jbNeuVdwpeFm4asbYUz1JRs5PTJeEl4+0sNCS9kc+PrNkIxwAwNdELoyCm7Pe/VdCC1mx8lMIYBmCC4IXQGj9Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\micke\\Source\\Repos\\Tamagotchi_Game\\Microservices Demo\\TamagotchiUserAPI\\TamagotchiUserAPI.csproj",
   "expectedPackageFiles": [
@@ -84,8 +84,7 @@
     "C:\\Users\\micke\\.nuget\\packages\\system.threading.tasks.extensions\\4.3.0\\system.threading.tasks.extensions.4.3.0.nupkg.sha512",
     "C:\\Users\\micke\\.nuget\\packages\\system.threading.timer\\4.3.0\\system.threading.timer.4.3.0.nupkg.sha512",
     "C:\\Users\\micke\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
-    "C:\\Users\\micke\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\micke\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
+    "C:\\Users\\micke\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512"
   ],
   "logs": []
 }
