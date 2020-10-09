@@ -1,0 +1,27 @@
+:root{
+    --red:    #AD3027;
+    --black:  #071013;
+    --green:  #60AD44;
+    --blue:   #39A2F7;
+    --yellow: #FFBC54;
+    --darkBlue: #204ba8;
+
+}
+
+body{
+    background-color:var(--black);
+    color: white;
+    font-family: sans-serif;
+}
+
+button{
+    width:  5.6rem;
+    height: 5.6rem;
+    border: 0.24rem solid;
+    border-radius: 4rem;
+    background-color: var(--black);
+}
+button:focus {
+    outline:none;
+    box-shadow: none;
+}

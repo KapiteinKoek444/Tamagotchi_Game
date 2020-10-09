@@ -1,0 +1,20 @@
+.container{
+    margin: 0 auto;
+    width: 480px;
+}
+p{
+    font-size: 2rem;
+}
+.flex{
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.center{
+    justify-content: center;
+    align-items: baseline;
+}
+
+.middle{
+    justify-content: space-around;
+}
