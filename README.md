@@ -8,4 +8,4 @@ Trello Link: https://trello.com/b/dCAhtjdz/tamagotchi-project
 
 In-game mini games:
 
-- Memory game : https://tamagotchimemorygame.azurewebsites.net
+- Memory game link : https://tamagotchimemorygame.azurewebsites.net 
