@@ -8,6 +8,7 @@ using Microsoft.Extensions.Logging;
 using MongoDB.Bson;
 using MongoDB.Driver;
 using MongoDB_API.Entities;
+using Shared;
 
 namespace MongoDB_API.Controllers
 {
@@ -15,25 +16,27 @@ namespace MongoDB_API.Controllers
     [Route("[controller]")]
     public class UserController : ControllerBase
     {
-        private IMongoCollection<User> UsersCollection;
+        private IMongoCollection<User> _usersCollection;
+        private readonly IActiveMQLog _activeMQLog;
 
-        public UserController(IMongoClient client)
+        public UserController(IMongoClient client, IActiveMQLog activeMQLog)
         {
             var database = client.GetDatabase("Users");
-            UsersCollection = database.GetCollection<User>("UserData");
+            _usersCollection = database.GetCollection<User>("UserData");
+            _activeMQLog = activeMQLog;
         }
 
         [HttpGet]
         public IEnumerable<User> Get()
         {
-            return UsersCollection.Find(Builders<User>.Filter.Empty).ToList();
+            return _usersCollection.Find(Builders<User>.Filter.Empty).ToList();
         }
 
         [HttpGet("{id}")]
         public User Get([FromRoute] Guid id)
         {
             var filter = Builders<User>.Filter.Eq("_id", id);
-            return UsersCollection.Find(filter).First();
+            return _usersCollection.Find(filter).First();
         }
         [HttpPost]
     
@@ -41,7 +44,7 @@ namespace MongoDB_API.Controllers
         {           
             try
             {
-                var users = UsersCollection.Find(Builders<User>.Filter.Empty).ToList();
+                var users = _usersCollection.Find(Builders<User>.Filter.Empty).ToList();
                 var user  = users.Where(x => x.Password == model.Password && x.Email == model.Email).SingleOrDefault();
                 return user.Id;
             }
@@ -58,7 +61,7 @@ namespace MongoDB_API.Controllers
         {
             try
             {
-                UsersCollection.InsertOne(model);
+                _usersCollection.InsertOne(model);
                 return StatusCode(StatusCodes.Status201Created, model);
             }
             catch (Exception ex)

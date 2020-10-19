@@ -2,6 +2,27 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.1": {
+      "Apache.NMS/1.7.1": {
+        "type": "package",
+        "compile": {
+          "lib/net40/Apache.NMS.dll": {}
+        },
+        "runtime": {
+          "lib/net40/Apache.NMS.dll": {}
+        }
+      },
+      "Apache.NMS.ActiveMQ/1.7.2": {
+        "type": "package",
+        "dependencies": {
+          "Apache.NMS": "1.7.1"
+        },
+        "compile": {
+          "lib/net40/Apache.NMS.ActiveMQ.dll": {}
+        },
+        "runtime": {
+          "lib/net40/Apache.NMS.ActiveMQ.dll": {}
+        }
+      },
       "DnsClient/1.3.1": {
         "type": "package",
         "compile": {
@@ -1309,10 +1330,70 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
+      },
+      "Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Apache.NMS.ActiveMQ": "1.7.2"
+        },
+        "compile": {
+          "bin/placeholder/Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Shared.dll": {}
+        }
       }
     }
   },
   "libraries": {
+    "Apache.NMS/1.7.1": {
+      "sha512": "sQA+1dl1hBB0AkhBys7oJ6y9lBJnjH5xVc2aQ5bbEv/pbyMhlN8Yuo/NceYVGNdSK89ANp9XyQsaVUI975QLjg==",
+      "type": "package",
+      "path": "apache.nms/1.7.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "NOTICE.txt",
+        "apache.nms.1.7.1.nupkg.sha512",
+        "apache.nms.nuspec",
+        "lib/net20-cf/Apache.NMS.dll",
+        "lib/net20-cf/Apache.NMS.pdb",
+        "lib/net20-cf/Apache.NMS.xml",
+        "lib/net20/Apache.NMS.dll",
+        "lib/net20/Apache.NMS.pdb",
+        "lib/net20/Apache.NMS.xml",
+        "lib/net35/Apache.NMS.dll",
+        "lib/net35/Apache.NMS.pdb",
+        "lib/net35/Apache.NMS.xml",
+        "lib/net40/Apache.NMS.dll",
+        "lib/net40/Apache.NMS.pdb",
+        "lib/net40/Apache.NMS.xml"
+      ]
+    },
+    "Apache.NMS.ActiveMQ/1.7.2": {
+      "sha512": "byKSg5/G7JGoDzSGGw4KK43/hpOGrXCtjZyjBcEjTF6ZscnrUiy8r20nyv85P55+nNmfa8q+tSF0GURd1GxYag==",
+      "type": "package",
+      "path": "apache.nms.activemq/1.7.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "NOTICE.txt",
+        "apache.nms.activemq.1.7.2.nupkg.sha512",
+        "apache.nms.activemq.nuspec",
+        "lib/net20/Apache.NMS.ActiveMQ.dll",
+        "lib/net20/Apache.NMS.ActiveMQ.pdb",
+        "lib/net20/Apache.NMS.ActiveMQ.xml",
+        "lib/net35/Apache.NMS.ActiveMQ.dll",
+        "lib/net35/Apache.NMS.ActiveMQ.pdb",
+        "lib/net35/Apache.NMS.ActiveMQ.xml",
+        "lib/net40/Apache.NMS.ActiveMQ.dll",
+        "lib/net40/Apache.NMS.ActiveMQ.pdb",
+        "lib/net40/Apache.NMS.ActiveMQ.xml"
+      ]
+    },
     "DnsClient/1.3.1": {
       "sha512": "b9XczgqSjs3dd+OlV799jn+LXxdfirln1q36GKjs3QwWBhjhgIvgHLEG5s2VrBLcP4ogQjtA0PZ5+AmRJ35Vhg==",
       "type": "package",
@@ -4781,11 +4862,17 @@
         "system.xml.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xdocument.nuspec"
       ]
+    },
+    "Shared/1.0.0": {
+      "type": "project",
+      "path": "../Shared/Shared.csproj",
+      "msbuildProject": "../Shared/Shared.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "MongoDB.Driver >= 2.11.2"
+      "MongoDB.Driver >= 2.11.2",
+      "Shared >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -4813,7 +4900,11 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\micke\\Source\\Repos\\Tamagotchi_Game\\Microservices Demo\\Shared\\Shared.csproj": {
+              "projectPath": "C:\\Users\\micke\\Source\\Repos\\Tamagotchi_Game\\Microservices Demo\\Shared\\Shared.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -4851,5 +4942,27 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Apache.NMS 1.7.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "Apache.NMS",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Apache.NMS.ActiveMQ 1.7.2' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "Apache.NMS.ActiveMQ",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    }
+  ]
 }

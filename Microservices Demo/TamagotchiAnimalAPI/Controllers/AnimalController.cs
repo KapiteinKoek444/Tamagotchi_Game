@@ -17,16 +17,13 @@ namespace MongoDB_API.Controllers
     public class AnimalController : ControllerBase
     {
         private IMongoCollection<Animal> AnimalCollection;
+        private readonly IActiveMQLog _activeMQLog;
 
-        public AnimalController(IMongoClient client)
+        public AnimalController(IMongoClient client, IActiveMQLog activeMQLog)
         {
             var database = client.GetDatabase("PetAnimals");
             AnimalCollection = database.GetCollection<Animal>("Animals");
-
-            ActiveMQLog mq = new ActiveMQLog("tcp://40.114.246.89:61616");
-            mq.ConnectSender("testing.queue");
-            //mq.messageProducer.Send("Matthijs dit bericht is verzonden op 15:18");
-
+            _activeMQLog = activeMQLog;
         }
 
         [HttpGet]

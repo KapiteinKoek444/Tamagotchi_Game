@@ -9,6 +9,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using MongoDB.Driver;
+using Shared;
 
 namespace TamagotchiUserAPI
 {
@@ -30,6 +31,17 @@ namespace TamagotchiUserAPI
             {
                 var uri = s.GetRequiredService<IConfiguration>()["MongoUri"];
                 return new MongoClient(uri);
+            });
+
+            services.AddSingleton<IActiveMQLog, ActiveMQLog>(s =>
+            {
+                var uri =      s.GetRequiredService<IConfiguration>()["MQUri"];
+                var username = s.GetRequiredService<IConfiguration>()["MQUsername"];
+                var password = s.GetRequiredService<IConfiguration>()["MQPassword"];
+
+
+                ActiveMQLog result = new ActiveMQLog(uri, username, password);
+                return result;
             });
 
             services.AddCors(o => o.AddPolicy("MyPolicy", builder =>
