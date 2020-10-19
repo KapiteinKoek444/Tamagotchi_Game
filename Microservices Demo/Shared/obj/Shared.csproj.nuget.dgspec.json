@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\micke\\source\\repos\\Microservices Demo\\Shared\\Shared.csproj": {}
+    "C:\\Users\\micke\\Source\\Repos\\Tamagotchi_Game\\Microservices Demo\\Shared\\Shared.csproj": {}
   },
   "projects": {
-    "C:\\Users\\micke\\source\\repos\\Microservices Demo\\Shared\\Shared.csproj": {
+    "C:\\Users\\micke\\Source\\Repos\\Tamagotchi_Game\\Microservices Demo\\Shared\\Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\micke\\source\\repos\\Microservices Demo\\Shared\\Shared.csproj",
+        "projectUniqueName": "C:\\Users\\micke\\Source\\Repos\\Tamagotchi_Game\\Microservices Demo\\Shared\\Shared.csproj",
         "projectName": "Shared",
-        "projectPath": "C:\\Users\\micke\\source\\repos\\Microservices Demo\\Shared\\Shared.csproj",
+        "projectPath": "C:\\Users\\micke\\Source\\Repos\\Tamagotchi_Game\\Microservices Demo\\Shared\\Shared.csproj",
         "packagesPath": "C:\\Users\\micke\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\micke\\source\\repos\\Microservices Demo\\Shared\\obj\\",
+        "outputPath": "C:\\Users\\micke\\Source\\Repos\\Tamagotchi_Game\\Microservices Demo\\Shared\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\micke\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -38,9 +38,9 @@
       "frameworks": {
         "netstandard2.0": {
           "dependencies": {
-            "MongoDB.Driver": {
+            "Apache.NMS.ActiveMQ": {
               "target": "Package",
-              "version": "[2.11.2, )"
+              "version": "[1.7.2, )"
             },
             "NETStandard.Library": {
               "suppressParent": "All",
@@ -59,7 +59,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

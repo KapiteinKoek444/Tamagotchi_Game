@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="MongoDB.Driver" Version="2.11.2" />
+    <PackageReference Include="Apache.NMS.ActiveMQ" Version="1.7.2" />
   </ItemGroup>
 
 </Project>

@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Apache.NMS;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MongoDB.Bson;
 using MongoDB.Driver;
 using MongoDB_API.Entities;
+using Shared;
 
 namespace MongoDB_API.Controllers
 {
@@ -20,6 +22,11 @@ namespace MongoDB_API.Controllers
         {
             var database = client.GetDatabase("PetAnimals");
             AnimalCollection = database.GetCollection<Animal>("Animals");
+
+            ActiveMQLog mq = new ActiveMQLog("tcp://40.114.246.89:61616");
+            mq.ConnectSender("testing.queue");
+            //mq.messageProducer.Send("Matthijs dit bericht is verzonden op 15:18");
+
         }
 
         [HttpGet]
