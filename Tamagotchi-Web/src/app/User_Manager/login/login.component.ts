@@ -17,18 +17,18 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  Login(email, pword) {
-    this.logger = new LoginModel(email, pword);
+  public Login(email, password) {
+    this.logger = new LoginModel(email, password);
     this.usercomponent.LoginUser(this.logger);
   }
 }
 
-class LoginModel {
+export class LoginModel {
   email: string;
   password: string;
 
-  constructor(em, pas) {
-    this.email = em;
-    this.password = pas;
+  constructor(email, pword) {
+    this.email = email;
+    this.password = pword;
   }
 }

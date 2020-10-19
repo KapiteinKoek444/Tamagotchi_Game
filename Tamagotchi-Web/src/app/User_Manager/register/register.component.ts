@@ -16,13 +16,13 @@ export class RegisterComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  Register(email, pword) {
-    if (email == null || pword == null) {
+  public Register(email, password) {
+    if (email == null || password == null) {
       console.log("all boxes must be filled in");
       return;
     }
 
-    var usr = new user(email, pword, this.newGuid())
+    var usr = new user(email, password, this.newGuid())
     this.usercomp.RegisterUser(usr);
 
     localStorage.setItem("userId", usr.id);
@@ -30,7 +30,7 @@ export class RegisterComponent implements OnInit {
     this.router.navigate(['shelter']);
   }
 
-  newGuid() {
+  private newGuid() {
     return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
       var r = Math.random() * 16 | 0,
         v = c == 'x' ? r : (r & 0x3 | 0x8);

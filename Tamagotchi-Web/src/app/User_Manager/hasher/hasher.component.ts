@@ -12,7 +12,7 @@ export class HasherComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  MD5 = function (string) {
+  public MD5 = function (string) {
 
     function RotateLeft(lValue, iShiftBits) {
       return (lValue << iShiftBits) | (lValue >>> (32 - iShiftBits));

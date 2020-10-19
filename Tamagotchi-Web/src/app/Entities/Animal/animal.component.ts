@@ -24,32 +24,32 @@ export class AnimalComponent implements OnInit {
     });
   }
 
-  generateAnimal(id, Uid, name, type) {
-    var animal = new Animal(id, Uid, name, 100, 100, 100, type);
+  public generateAnimal(id, userId, name, type) {
+    var animal = new Animal(id, userId, name, 100, 100, 100, type);
     this.apiservice.sendAnimals(animal);
   }
 
-  getAllAnimals() {
+  public getAllAnimals() {
     this.apiservice.getAnimals().subscribe((data) => {
       console.log(data);
     })
   }
 
-  Feed() {
+  public Feed() {
     this.animal.food += 5;
     this.animal.happiness++;
     this.animal.energy += 2;
     this.UpdateAnimal(this.animal, this.animal.userId);
   }
 
-  Play() {
+  public Play() {
     this.animal.energy -= 3;
     this.animal.happiness += 5;
     this.animal.food -= 2;
     this.UpdateAnimal(this.animal, this.animal.userId);
   }
 
-  Sleep() {
+  public Sleep() {
     this.animal.energy += 10;
     this.animal.food -= 8;
     this.animal.happiness -= 20;
@@ -57,7 +57,7 @@ export class AnimalComponent implements OnInit {
   }
 
 
-  UpdateAnimal(Animal, id) {
+  private UpdateAnimal(Animal, id) {
     this.apiservice.updateAnimal(Animal, id);
   }
 }
@@ -81,7 +81,7 @@ export class Animal {
     this.animalType = type;
   }
 
-  fromJSON(json) {
+  public fromJSON(json) {
     for (var propName in json)
       this[propName] = json[propName];
     return this;

@@ -12,13 +12,13 @@ export class UserComponent {
 
   constructor(private apiservice: ApiService, private hasher: HasherComponent, private router: Router) { }
 
-  RegisterUser(user) {
+  public RegisterUser(user) {
     user.password = this.hasher.MD5(user.password);
     JSON.stringify(user);
     this.apiservice.sendUsers(user);
   }
 
-  LoginUser(model) {
+  public LoginUser(model) {
     model.password = this.hasher.MD5(model.password);
     this.apiservice.getUserPassword(model);
 
@@ -33,7 +33,7 @@ export class UserComponent {
     }
   }
 
-  GetAllUser() {
+  public GetAllUser() {
     this.apiservice.getUsers().subscribe((data) => {
       console.log(data);
     })
