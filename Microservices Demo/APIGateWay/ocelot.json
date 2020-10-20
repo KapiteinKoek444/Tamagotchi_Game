@@ -46,7 +46,7 @@
         }
       ],
       "UpstreamPathTemplate": "/api/animal/{id}",
-      "UpstreamHttpMethod": [ "GET" ]
+      "UpstreamHttpMethod": [ "GET", "POST" ]
     }
   ],
   "GlobalConfiguration": {
