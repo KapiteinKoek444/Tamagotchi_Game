@@ -9,7 +9,7 @@ using Microsoft.Extensions.Logging;
 
 namespace APIGateWay
 {
-    public class Program
+    public static class Program
     {
         public static void Main(string[] args)
         {
@@ -21,6 +21,8 @@ namespace APIGateWay
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
+                    webBuilder.ConfigureAppConfiguration(config =>
+                    config.AddJsonFile("ocelot.json"));
                 })
             .ConfigureAppConfiguration((hostingContext, config) => {
 

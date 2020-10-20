@@ -1,52 +1,55 @@
 {
   "Routes": [
     {
-      "DownstreamPathTemplate": "/api/user",
-      "DownstreamScheme": "http",
+      "DownstreamPathTemplate": "/user",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "venus.fhict.nl",
-          "Port": "21"
+          "Host": "tamagotchiuserapi.azurewebsites.net",
+          "Port": 443
         }
       ],
-      "UpstreamPathTemplate": "/user",
+      "UpstreamPathTemplate": "/api/user",
       "UpstreamHttpMethod": [ "GET", "POST" ]
     },
     {
-      "DownstreamPathTemplate": "/api/user/{id}",
-      "DownstreamScheme": "http",
+      "DownstreamPathTemplate": "/user/{id}",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "venus.fhict.nl",
-          "Port": "21"
+          "Host": "tamagotchiuserapi.azurewebsites.net",
+          "Port": 443
         }
       ],
-      "UpstreamPathTemplate": "/user/{id}",
+      "UpstreamPathTemplate": "/api/user/{id}",
       "UpstreamHttpMethod": [ "GET" ]
     },
     {
-      "DownstreamPathTemplate": "/api/PetAnimal",
-      "DownstreamScheme": "http",
+      "DownstreamPathTemplate": "/animal",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "venus.fhict.nl",
-          "Port": "21"
+          "Host": "tamagotchianimalapi.azurewebsites.net",
+          "Port": 443
         }
       ],
-      "UpstreamPathTemplate": "/PetAnimal",
+      "UpstreamPathTemplate": "/api/animal",
       "UpstreamHttpMethod": [ "GET", "POST" ]
     },
     {
-      "DownstreamPathTemplate": "/api/PetAnimal/{id}",
-      "DownstreamScheme": "http",
+      "DownstreamPathTemplate": "/animal/{id}",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "venus.fhict.nl",
-          "Port": "21"
+          "Host": "tamagotchianimalapi.azurewebsites.net",
+          "Port": 443
         }
       ],
-      "UpstreamPathTemplate": "/PetAnimal/{id}",
+      "UpstreamPathTemplate": "/api/animal/{id}",
       "UpstreamHttpMethod": [ "GET" ]
     }
-  ]
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "https://tamagotchigateway.azurewebsites.net"
+  }
 }

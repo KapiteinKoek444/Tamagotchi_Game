@@ -36,7 +36,7 @@ namespace APIGateWay
                 endpoints.MapControllers();
             });
 
-            await app.UseOcelot();
+            app.UseOcelot().Wait();
         }
     }
 }

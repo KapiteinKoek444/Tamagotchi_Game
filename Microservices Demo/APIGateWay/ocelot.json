@@ -1,52 +1,55 @@
 {
   "Routes": [
     {
-      "DownstreamPathTemplate": "/api/user",
+      "DownstreamPathTemplate": "/user",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "tamagotchiuserapi.azurewebsites.net",
-          "Port": "21"
+          "Port": 443
         }
       ],
-      "UpstreamPathTemplate": "/user",
+      "UpstreamPathTemplate": "/api/user",
       "UpstreamHttpMethod": [ "GET", "POST" ]
     },
     {
-      "DownstreamPathTemplate": "/api/user/{id}",
+      "DownstreamPathTemplate": "/user/{id}",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "tamagotchiuserapi.azurewebsites.net",
-          "Port": "21"
+          "Port": 443
         }
       ],
-      "UpstreamPathTemplate": "/user/{id}",
+      "UpstreamPathTemplate": "/api/user/{id}",
       "UpstreamHttpMethod": [ "GET" ]
     },
     {
-      "DownstreamPathTemplate": "/api/PetAnimal",
+      "DownstreamPathTemplate": "/animal",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "tamagotchianimalapi.azurewebsites.net",
-          "Port": "21"
+          "Port": 443
         }
       ],
-      "UpstreamPathTemplate": "/PetAnimal",
+      "UpstreamPathTemplate": "/api/animal",
       "UpstreamHttpMethod": [ "GET", "POST" ]
     },
     {
-      "DownstreamPathTemplate": "/api/PetAnimal/{id}",
+      "DownstreamPathTemplate": "/animal/{id}",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "tamagotchianimalapi.azurewebsites.net",
-          "Port": "21"
+          "Port": 443
         }
       ],
-      "UpstreamPathTemplate": "/PetAnimal/{id}",
+      "UpstreamPathTemplate": "/api/animal/{id}",
       "UpstreamHttpMethod": [ "GET" ]
     }
-  ]
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "https://tamagotchigateway.azurewebsites.net"
+  }
 }
