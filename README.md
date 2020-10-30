@@ -9,9 +9,9 @@ Gateway Api link: https://tamagotchigateway.azurewebsites.net/api  (/user , /ani
 
 Micro Services:
 
-- User Api link   : https://tamagotchiuserapi.azurewebsites.net
+- User   Api link   : https://tamagotchiuserapi.azurewebsites.net
 - Animal Api link : https://tamagotchianimalapi.azurewebsites.net
-- Store Api link: https://tamago-shopapi.azurewebsites.net
+- Store  Api link: https://tamago-shopapi.azurewebsites.net
 
 In-game mini games:
 
