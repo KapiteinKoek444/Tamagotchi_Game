@@ -11,6 +11,7 @@ Micro Services:
 
 - User Api link   : https://tamagotchiuserapi.azurewebsites.net
 - Animal Api link : https://tamagotchianimalapi.azurewebsites.net
+- Store Api link: https://tamago-shopapi.azurewebsites.net
 
 In-game mini games:
 
