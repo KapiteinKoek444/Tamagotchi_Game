@@ -5,7 +5,7 @@ Walking skeleton link: https://tamago-frontend.azurewebsites.net
 
 Trello Link: https://trello.com/b/dCAhtjdz/tamagotchi-project
 
-Gateway Api link: https://tamagotchigateway.azurewebsites.net/api  (/user , /animal)
+Gateway Api link: https://tamagotchigateway.azurewebsites.net/api  (/user , /animal , /store)
 
 Micro Services:
 
