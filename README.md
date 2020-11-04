@@ -16,3 +16,4 @@ Micro Services:
 In-game mini games:
 
 - Memory game link : https://tamagotchimemorygame.azurewebsites.net 
+- Tetris game link : https://tamagotchitetrisgame.azurewebsites.net
