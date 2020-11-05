@@ -8,7 +8,7 @@ Trello Link: https://trello.com/b/dCAhtjdz/tamagotchi-project
 Micro Services:
 
 (C#)
-- Gateway   Api link: https://tamagotchigateway.azurewebsites.net/api  (/user , /animal , /store)
+- Gateway   Api link: https://tamagotchigateway.azurewebsites.net/api  (/user , /animal , /store , /wallet , /inventory)
 - User      Api link   : https://tamagotchiuserapi.azurewebsites.net
 - Animal    Api link : https://tamagotchianimalapi.azurewebsites.net
 
