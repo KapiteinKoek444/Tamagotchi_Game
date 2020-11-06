@@ -1,0 +1,32 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+.column {
+    padding: 1em 2em;
+    text-align: left;
+  }
+  
+  .grid {
+    display: grid;
+    grid-column-gap: 5px;
+    grid-template-columns: repeat(2, 0.01fr);
+  }
+
+  .center{
+    position: fixed;
+    top: 10%;
+    left: 36.5%;
+  }
+  .play-button{
+      background-color: var(--green);
+      color: white;
+      margin-top: 642px;
+      width: 130px ;
+  }
+  .play-button:focus{
+    outline:none;
+    box-shadow: none;
+  }
+  .title{
+    margin-top: 20px;
+    text-align:center;
+  }

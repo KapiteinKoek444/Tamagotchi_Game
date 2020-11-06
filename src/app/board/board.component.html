@@ -1,0 +1,17 @@
+<h2 class="title">TAMAGO_TETRIS</h2>
+
+
+<div class="center">
+    <div class="grid">
+        <div class="column">
+        <canvas #board class="game-board" style="outline: black 3px solid; background-color: var(--darkBlue)"></canvas>
+        </div>
+        <div class="column">
+          <div>
+            <p>Score: {{ points }}</p>
+            <p>Level: {{ level }}</p>
+          </div>
+          <button (click)="play()" class="play-button">Play</button>
+        </div>
+      </div>
+</div>

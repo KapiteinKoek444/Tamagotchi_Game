@@ -1,0 +1,20 @@
+/* styles.css */
+* {
+  font-family: 'Press Start 2P', cursive;
+}
+
+:root{
+    --red:    #AD3027;
+    --black:  #071013;
+    --green:  #60AD44;
+    --blue:   #39A2F7;
+    --yellow: #FFBC54;
+    --darkBlue: #204ba8;
+
+}
+
+body{
+    background-color:var(--black);
+    color: white;
+    font-family: sans-serif;
+}
