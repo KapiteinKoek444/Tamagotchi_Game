@@ -126,26 +126,42 @@ button.submit-animal{
 /* Dashboard css */
 
 div.main{
-
+  margin-top: 5rem;
+  text-align: center;
 }
 
 img.current-animal{
-
+  size: 1rem;
+  transform: scale(4);
+  align-self: center;
+  image-rendering: pixelated;
+  display:inline-block;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  text-align: center;
 }
 
 div.animal-statistics{
+  position: fixed;
+  text-align: left;
+}
 
+div.image-holder{
+  margin-top: 5rem;
 }
 
 p.animal-status{
-
+  font-size: 15px;
+  font-family: cursive;
 }
 
 div.animal-actions{
-  position: fixed;
-  z-index: 10;
+  margin-top: 5rem;
+  position: relative;
+  text-align: center;
 }
 
 button.submit-animal{
-
+  font-size: 15px;
+  font-family: cursive;
 }
