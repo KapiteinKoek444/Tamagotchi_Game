@@ -1,7 +1,7 @@
 # Tamagotchi_Game
 Tamagotchi achtig spel voor semeseter 3
 
-Walking skeleton link: https://tamago-frontend.azurewebsites.net
+Tamago front-end link: https://tamago-frontend.azurewebsites.net
 
 Trello Link: https://trello.com/b/dCAhtjdz/tamagotchi-project
 
