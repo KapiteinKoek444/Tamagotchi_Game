@@ -1,0 +1,9 @@
+<h1>Login</h1>
+<div>
+  <p>Username:</p>
+  <input #textboxU type="text" ngModel="" required>
+  <p>Password:</p>
+  <input #textboxP type="password" ngModel="" required><br><br>
+  <button (click)="Login(textboxU.value, textboxP.value)">Login</button>
+  <p>no account, </p><a routerLink="/register">register Here</a>
+</div>

@@ -1,0 +1,24 @@
+<div id="Main">
+
+
+  <h1> {{animal.name}} </h1>
+  <div>
+
+    <img id="tamagotchi" src="">
+
+  </div>
+  <div id="stats">
+
+    <p id="Status">Food: {{animal.food}} </p>
+    <p id="Status">Energy: {{animal.energy}} </p>
+    <p id="Status">Happiness: {{animal.happiness}} </p>
+
+  </div>
+  <div id="buttons">
+
+    <button (click)="Feed()">Feed</button>
+    <button (click)="Play()">Play</button>
+    <button (click)="Sleep()">Sleep</button>
+  </div>
+
+</div>

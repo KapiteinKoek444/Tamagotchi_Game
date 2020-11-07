@@ -1,0 +1,29 @@
+h1{
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 100;
+}
+
+p{
+  font-weight: 100;
+}
+
+div{
+  margin-top: 4rem;
+  text-align: center;
+}
+
+img{
+  size: 1rem;
+  transform: scale(6);
+  align-self: center;
+  image-rendering: pixelated;
+}
+
+#Main{
+  margin-top: 200px;
+}
+
+#Status{
+  color: #109BC9;
+}
