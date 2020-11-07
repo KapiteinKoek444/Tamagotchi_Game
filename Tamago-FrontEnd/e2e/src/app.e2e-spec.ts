@@ -10,7 +10,7 @@ describe('workspace-project App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('Tamagotchi-Web app is running!');
+    expect(page.getTitleText()).toEqual('Tamago-FrontEnd app is running!');
   });
 
   afterEach(async () => {

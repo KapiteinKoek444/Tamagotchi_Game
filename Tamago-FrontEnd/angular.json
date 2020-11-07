@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Tamagotchi-Web": {
+    "Tamago-FrontEnd": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/Tamagotchi-Web",
+            "outputPath": "dist/Tamago-FrontEnd",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -62,18 +62,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "Tamagotchi-Web:build"
+            "browserTarget": "Tamago-FrontEnd:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "Tamagotchi-Web:build:production"
+              "browserTarget": "Tamago-FrontEnd:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "Tamagotchi-Web:build"
+            "browserTarget": "Tamago-FrontEnd:build"
           }
         },
         "test": {
@@ -110,18 +110,18 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "Tamagotchi-Web:serve"
+            "devServerTarget": "Tamago-FrontEnd:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "Tamagotchi-Web:serve:production"
+              "devServerTarget": "Tamago-FrontEnd:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "Tamagotchi-Web",
+  "defaultProject": "Tamago-FrontEnd",
   "cli": {
     "analytics": false
   }

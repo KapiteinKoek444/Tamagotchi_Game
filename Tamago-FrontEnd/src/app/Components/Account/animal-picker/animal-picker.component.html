@@ -1,0 +1,29 @@
+<h1 class="title">Choose your animal</h1>
+
+<div class="name-picker">
+  <p class="input-title">Animal name:</p>
+  <input #textboxN class="input-box" type="text" ngModel="" required><br><br>
+</div>
+
+<div class="animal-picker">
+  <div id='images' class="image-holders">
+
+    <label class="image-label" for="0"><img class="image-holder"
+        src="../../../../assets/animalTypes/Kikker.png" /></label>
+    <label class="image-label" for="1"><img class="image-holder" src="../../../../assets/animalTypes/UIL.png" /></label>
+    <label class="image-label" for="2"><img class="image-holder"
+        src="../../../../assets/animalTypes/BLOEM.png" /></label>
+    <label class="image-label" for="3"><img class="image-holder"
+        src="../../../../assets/animalTypes/VOGEL.png" /></label>
+    <label class="image-label" for="4"><img class="image-holder"
+        src="../../../../assets/animalTypes/OCTOPUS.png" /></label>
+  </div>
+
+  <div id='images' class="imagebuttons">
+    <button id="0" class="submit-animal" (click)="SetAnimal(textboxN.value, 0)">Pick Me!</button>
+    <button id="1" class="submit-animal" (click)="SetAnimal(textboxN.value, 1)">Pick Me!</button>
+    <button id="2" class="submit-animal" (click)="SetAnimal(textboxN.value, 2)">Pick Me!</button>
+    <button id="3" class="submit-animal" (click)="SetAnimal(textboxN.value, 3)">Pick Me!</button>
+    <button id="4" class="submit-animal" (click)="SetAnimal(textboxN.value, 4)">Pick Me!</button>
+  </div>
+</div>

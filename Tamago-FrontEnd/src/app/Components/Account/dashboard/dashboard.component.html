@@ -1,0 +1,24 @@
+<div class="main">
+
+
+  <div class="animal-statistics" id="stats">
+
+    <p class="animal-status">Food: {{animal.food}} </p>
+    <p class="animal-status">Energy: {{animal.energy}} </p>
+    <p class="animal-status">Happiness: {{animal.happiness}} </p>
+
+  </div>
+  <h1 class="title"> {{animal.name}} </h1>
+  <div class="image-holder">
+
+    <img class="current-animal" id="tamagotchi" src="./../../../../assets/animalTypes/Kikker.png">
+
+  </div>
+  <div class="animal-actions" id="buttons">
+
+    <button class="submit-animal" (click)="Feed()">Feed</button>
+    <button class="submit-animal" (click)="Play()">Play</button>
+    <button class="submit-animal" (click)="Sleep()">Sleep</button>
+  </div>
+
+</div>

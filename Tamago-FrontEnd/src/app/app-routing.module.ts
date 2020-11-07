@@ -1,29 +1,21 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { RegisterComponent } from '../app/User_Manager/register/register.component';
-import { LoginComponent } from '../app/User_Manager/login/login.component';
-import { AppComponent } from './app.component';
-import { UserComponent } from './Entities/user/user.component';
-import { AnimalComponent } from './Entities/Animal/animal.component';
-import { DinoRunComponent } from './dino-run/dino-run.component';
-import { InventoryComponent } from './Entities/inventory/inventory.component';
-import { AnimalShelterComponent } from './animal-shelter/animal-shelter.component';
+import { LoginComponent } from './Components/Account/login/login.component';
+import { RegisterComponent } from './Components/Account/register/register.component';
+import { AnimalPickerComponent } from './Components/Account/animal-picker/animal-picker.component';
+import { DashboardComponent } from './Components/Account/dashboard/dashboard.component';
 
 const routes: Routes = [
-  { path: 'index', component: AppComponent },
-  { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'user', component: UserComponent },
-  { path: 'animal', component: AnimalComponent },
-  { path: 'dinoRun', component: DinoRunComponent },
-  { path: 'inventory', component: InventoryComponent },
-  { path: 'shelter', component: AnimalShelterComponent },
+  { path: 'register', component: RegisterComponent },
+  { path: 'animalpicker', component: AnimalPickerComponent },
+  { path: 'dashboard', component: DashboardComponent },
   { path: '', redirectTo: '/login', pathMatch: 'full' }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { useHash: true })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents = [RegisterComponent, LoginComponent, AppComponent, UserComponent, AnimalComponent, DinoRunComponent];
+export const routingComponents = [LoginComponent, RegisterComponent, AnimalPickerComponent];
