@@ -1,0 +1,151 @@
+/*  Register and Login css */
+
+h1.title{
+  text-align: center;
+  font-family: cursive;
+  font-size: 30px;
+}
+
+button.submit{
+  font-family: cursive;
+
+  font-size: 15px;
+  border-style: solid;
+  border-radius: 100px;
+  border-width: 3px;
+  border-color: black;
+
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 7px;
+  padding-bottom: 8px;
+
+  background-color: #F0F8FF;
+  outline: 0;
+}
+
+button.submit:hover{
+  border-width: 3.5px;
+}
+
+p.subtitle{
+  font-family: cursive;
+  font-size: 10px;
+  display: inline-block;
+}
+
+a.sublink{
+  font-family: cursive;
+  font-size: 10px;
+
+  font-style: italic;
+  display: inline-block;
+}
+
+div.input-table{
+  margin-top: 30px;
+  text-align: center;
+}
+
+input.input-box{
+  font-family: cursive;
+  padding-left: 8px;
+  border-radius: 20px;
+  border-color: black;
+}
+
+input.input-box:focus{
+  border-width: 3px;
+  outline: 0;
+}
+
+input.input-box:hover{
+  border-width: 3px;
+}
+
+p.input-title{
+  font-size: 15px;
+  font-family: cursive;
+}
+
+/* Animal Picker css */
+
+div.name-picker{
+  text-align: center;
+}
+
+div.animal-picker{
+  margin-top: 50px;
+}
+
+div.image-holders{
+  margin-top: 30px;
+}
+
+label.image-label{
+  text-align: center;
+}
+
+img.image-holder{
+  size: 1rem;
+  transform: scale(4);
+  align-self: center;
+  image-rendering: pixelated;
+  display:inline-block;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  text-align: center;
+}
+
+div.imagebuttons{
+  margin-top: 30px;
+}
+
+button.submit-animal{
+  font-family: cursive;
+  font-size: 15px;
+
+  border-style: solid;
+  border-radius: 100px;
+  border-width: 3px;
+  border-color: black;
+
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 7px;
+  padding-bottom: 8px;
+
+  margin-left: 2rem;
+  margin-right: 2rem;
+
+  background-color: #F0F8FF;
+  outline: 0;
+  text-align: center;
+}
+
+/* Dashboard css */
+
+div.main{
+
+}
+
+img.current-animal{
+
+}
+
+div.animal-statistics{
+
+}
+
+p.animal-status{
+
+}
+
+div.animal-actions{
+  position: fixed;
+  z-index: 10;
+}
+
+button.submit-animal{
+
+}
