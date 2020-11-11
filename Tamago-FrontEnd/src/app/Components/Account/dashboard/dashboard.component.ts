@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiServiceAnimal } from '../../../Services/api_service/api-service.service';
 import { AnimalModel } from '../../../Models/AnimalModel';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
@@ -12,7 +13,8 @@ export class DashboardComponent implements OnInit {
   images: String[];
   animal: AnimalModel;
 
-  constructor(private apiserviceAnimal: ApiServiceAnimal) {
+  constructor(private apiserviceAnimal: ApiServiceAnimal,
+    private router: Router) {
     this.images = ["Kikker", "UIL", "BLOEM", "VOGEL", "OCTOPUS"];
   }
 
@@ -28,14 +30,18 @@ export class DashboardComponent implements OnInit {
   }
 
   public Feed() {
-
+   console.error("Not implemented yet");
   }
 
   public Sleep() {
-
+    console.error("Not implemented yet");
   }
 
   public Play() {
+    this.router.navigate(['GamesPage']);
+  }
 
+  public Shop(){
+    this.router.navigate(['ShopPage']);
   }
 }

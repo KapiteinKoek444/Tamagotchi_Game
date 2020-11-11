@@ -1,0 +1,12 @@
+<div class="title">
+    <button class="submit-animal" (click)= "back()">Back</button>
+    <h1 style="text-align: center">Mini Games</h1>
+</div>
+<div class="grid-container">
+    <div *ngFor="let gameUrl of gameUrls">
+        <div (click)="onClick(gameUrl.url)">
+            <h4 class="card-title">{{gameUrl.name}}</h4>
+        </div>
+     </div>
+</div>
+
