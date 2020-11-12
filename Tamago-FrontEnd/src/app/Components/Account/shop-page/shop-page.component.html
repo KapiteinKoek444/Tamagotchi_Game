@@ -1,1 +1,59 @@
-<p>shop-page works!</p>
+
+  <body>
+    <div class="top-bar">
+      <div class="bar-actions">
+        <a (click)="back()">Back</a>
+      </div>
+      <div class="menu">
+        <a (click)="inventory()">My Inventory</a>
+        <a class="active">Store</a>
+      </div>
+      <div class="bar-actions">
+        <a href="">
+          <i class="fa fa-dollar"></i> 10,000
+        </a>
+      </div>
+    </div>
+    <div class="content">
+      <div class="store">
+        <div class="store-big">
+          <div class="store-section-info">
+            <h1>FEATURED ITEMS</h1>
+          </div>
+          <div class="store-items" *ngFor="let featuredItem of featuredItems">
+            <div class="store-item rare">
+              <div class="store-item-shadow"></div>
+              <div class="store-item-details">
+                <h1>{{featuredItem.name}}</h1>
+                <p>{{featuredItem.category}}</p>
+              </div>
+              <div class="store-item-price">
+                <i class="fa fa-dollar"></i> {{featuredItem.price}}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="store-small">
+          <div class="store-section-info">
+            <h1>DAILY ITEMS</h1>
+          </div>
+          <div class="store-items-group"  *ngFor="let dailyItem of dailyItems">
+            <div class="store-items">
+              <div class="store-item common">
+                <div class="store-item-shadow"></div>
+                <div class="store-item-details">
+                  <h1>{{dailyItem.name}}</h1>
+                  <p>{{dailyItem.category}}</p>
+                </div>
+                <div class="store-item-price">
+                  <i class="fa fa-dollar"></i> {{dailyItem.price}}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-bar">
+    </div>
+  </body>
