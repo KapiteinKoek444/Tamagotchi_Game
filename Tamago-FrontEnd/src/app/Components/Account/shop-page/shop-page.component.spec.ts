@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { ShopPageComponent } from './shop-page.component';
+import { RouterTestingModule } from '@angular/router/testing';
 
 describe('ShopPageComponent', () => {
   let component: ShopPageComponent;
@@ -8,6 +8,7 @@ describe('ShopPageComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      imports: [RouterTestingModule],
       declarations: [ ShopPageComponent ]
     })
     .compileComponents();

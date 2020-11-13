@@ -1,4 +1,7 @@
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
+import { GuidFactory } from 'src/app/Services/GuidFactory';
 
 import { AnimalPickerComponent } from './animal-picker.component';
 
@@ -8,7 +11,9 @@ describe('AnimalPickerComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AnimalPickerComponent ]
+      imports: [HttpClientTestingModule,RouterTestingModule], 
+      declarations: [ AnimalPickerComponent ],
+      providers: [ GuidFactory],
     })
     .compileComponents();
   });
