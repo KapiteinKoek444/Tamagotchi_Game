@@ -33,16 +33,18 @@ export class ApiServiceUser {
   }
 
   public SendUser(user) {
+    console.log(user);
     this.http.post('https://tamagotchigateway.azurewebsites.net/api/user', user, httpOptions).subscribe();
     return user;
   }
 
   public GetUserPassword(loginModel) {
     this.http.post<string>(`https://tamagotchigateway.azurewebsites.net/api/user/login`, { email: loginModel.email, password: loginModel.password }, httpOptions).subscribe(data => {
-      localStorage.setItem("userid", data);
+    localStorage.removeItem("userid");  
+    localStorage.setItem("userid", data);
     });
   }
-}
+} 
 
 @Injectable({
   providedIn: 'root'
