@@ -11,7 +11,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using MongoDB.Driver;
-using Shared;
+using Shared.Extensions.ActiveMQ;
+using Shared.Extensions.Consul;
+using UserManagement.Config;
 
 namespace TamagotchiAnimalAPI
 {
@@ -23,6 +25,8 @@ namespace TamagotchiAnimalAPI
         }
 
         public IConfiguration Configuration { get; }
+
+        public ConfigurationSetting _configurationSetting { get; set; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
@@ -44,6 +48,9 @@ namespace TamagotchiAnimalAPI
                 return result;
             });
 
+            _configurationSetting = services.RegisterConfiguration(Configuration);
+            services.AddConsulConfig(_configurationSetting);
+
             services.AddCors(o => o.AddPolicy("MyPolicy", builder =>
             {
                 builder.AllowAnyOrigin()
@@ -61,6 +68,8 @@ namespace TamagotchiAnimalAPI
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseConsul(_configurationSetting);
 
             app.UseHttpsRedirection();
 

@@ -4,11 +4,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using MongoDB.Bson;
 using MongoDB.Driver;
 using MongoDB_API.Entities;
-using Shared;
+using Shared.Extensions.ActiveMQ;
 
 namespace MongoDB_API.Controllers
 {
@@ -29,7 +27,9 @@ namespace MongoDB_API.Controllers
         [HttpGet]
         public IEnumerable<User> Get()
         {
-            return _usersCollection.Find(Builders<User>.Filter.Empty).ToList();
+            var result = _usersCollection.Find(Builders<User>.Filter.Empty).ToList();
+            var mp = _activeMQLog.GetMessageProducer();
+            return result;
         }
 
         [HttpGet("{id}")]
@@ -38,8 +38,9 @@ namespace MongoDB_API.Controllers
             var filter = Builders<User>.Filter.Eq("_id", id);
             return _usersCollection.Find(filter).First();
         }
+
         [HttpPost]
-    
+        [Route("login")]
         public Guid Login([FromBody] User model)
         {           
             try

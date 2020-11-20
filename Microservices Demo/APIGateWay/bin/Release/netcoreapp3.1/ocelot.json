@@ -1,7 +1,8 @@
 {
   "Routes": [
+    //users
     {
-      "DownstreamPathTemplate": "/user",
+      "DownstreamPathTemplate": "/user", //
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -10,10 +11,22 @@
         }
       ],
       "UpstreamPathTemplate": "/api/user",
-      "UpstreamHttpMethod": [ "GET", "POST" ]
+      "UpstreamHttpMethod": [ "Get", "Post" ]
     },
     {
-      "DownstreamPathTemplate": "/user/{id}",
+      "DownstreamPathTemplate": "/user/login", //
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "tamagotchiuserapi.azurewebsites.net",
+          "Port": 443
+        }
+      ],
+      "UpstreamPathTemplate": "/api/user/login",
+      "UpstreamHttpMethod": [ "Get", "Post" ]
+    },
+    {
+      "DownstreamPathTemplate": "/user/{id}", //
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -22,10 +35,11 @@
         }
       ],
       "UpstreamPathTemplate": "/api/user/{id}",
-      "UpstreamHttpMethod": [ "GET" ]
+      "UpstreamHttpMethod": [ "Get", "Post" ]
     },
+    //animals
     {
-      "DownstreamPathTemplate": "/animal",
+      "DownstreamPathTemplate": "/animal", //
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -34,10 +48,10 @@
         }
       ],
       "UpstreamPathTemplate": "/api/animal",
-      "UpstreamHttpMethod": [ "GET", "POST" ]
+      "UpstreamHttpMethod": [ "Get", "Post" ]
     },
     {
-      "DownstreamPathTemplate": "/animal/{id}",
+      "DownstreamPathTemplate": "/animal/{id}", //
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -46,7 +60,106 @@
         }
       ],
       "UpstreamPathTemplate": "/api/animal/{id}",
-      "UpstreamHttpMethod": [ "GET" ]
+      "UpstreamHttpMethod": [ "Get", "Post" ]
+    },
+    //store
+    {
+      "DownstreamPathTemplate": "/Rest/GetAllFood", //
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "tamago-shopapi.azurewebsites.net",
+          "Port": 443
+        }
+      ],
+      "UpstreamPathTemplate": "/api/store/food",
+      "UpstreamHttpMethod": [ "Get", "Post" ]
+    },
+    {
+      "DownstreamPathTemplate": "/Rest/GetFood/{id}", //
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "tamago-shopapi.azurewebsites.net",
+          "Port": 443
+        }
+      ],
+      "UpstreamPathTemplate": "/api/store/food/{id}",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    //bank
+    {
+      "DownstreamPathTemplate": "/Rest/AddWallet", //
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "tamago-bankapi.azurewebsites.net",
+          "Port": 443
+        }
+      ],
+      "UpstreamPathTemplate": "/api/bank/wallet/add",
+      "UpstreamHttpMethod": [ "Post" ]
+    },
+    {
+      "DownstreamPathTemplate": "/Rest/UpdateWallet", //
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "tamago-bankapi.azurewebsites.net",
+          "Port": 443
+        }
+      ],
+      "UpstreamPathTemplate": "/api/bank/wallet/update",
+      "UpstreamHttpMethod": [ "Post" ]
+    },
+    {
+      "DownstreamPathTemplate": "/Rest/AddMoney/{id}/{amount}", //
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "tamago-bankapi.azurewebsites.net",
+          "Port": 443
+        }
+      ],
+      "UpstreamPathTemplate": "/api/bank/wallet/{id}/{amount}",
+      "UpstreamHttpMethod": [ "Post" ]
+    },
+    {
+      "DownstreamPathTemplate": "/Rest/GetMoney/{id}", //
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "tamago-bankapi.azurewebsites.net",
+          "Port": 443
+        }
+      ],
+      "UpstreamPathTemplate": "/api/bank/wallet/{id}",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    //inventory
+    {
+      "DownstreamPathTemplate": "/Rest/AddInventory", //
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "tamago-inventoryapi.azurewebsites.net",
+          "Port": 443
+        }
+      ],
+      "UpstreamPathTemplate": "/api/inventory/add",
+      "UpstreamHttpMethod": [ "Post" ]
+    },
+    {
+      "DownstreamPathTemplate": "/Rest/GetInventory/{id}", //
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "tamago-inventoryapi.azurewebsites.net",
+          "Port": 443
+        }
+      ],
+      "UpstreamPathTemplate": "/api/inventory/get/{id}",
+      "UpstreamHttpMethod": [ "Get" ]
     }
   ],
   "GlobalConfiguration": {

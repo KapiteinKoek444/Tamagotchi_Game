@@ -1,7 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MongoDB.Bson.Serialization.Attributes;
-using Shared.MongoDB;
 
 namespace MongoDBTest
 {

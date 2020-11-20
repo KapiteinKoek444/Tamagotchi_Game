@@ -63,3 +63,7 @@ C:\Users\micke\Source\Repos\Tamagotchi_Game\Microservices Demo\APIGateWay\obj\Re
 C:\Users\micke\Source\Repos\Tamagotchi_Game\Microservices Demo\APIGateWay\obj\Release\netcoreapp3.1\APIGateWay.dll
 C:\Users\micke\Source\Repos\Tamagotchi_Game\Microservices Demo\APIGateWay\obj\Release\netcoreapp3.1\APIGateWay.pdb
 C:\Users\micke\Source\Repos\Tamagotchi_Game\Microservices Demo\APIGateWay\obj\Release\netcoreapp3.1\APIGateWay.genruntimeconfig.cache
+C:\Users\micke\Source\Repos\Tamagotchi_Game\Microservices Demo\APIGateWay\bin\Release\netcoreapp3.1\Consul.dll
+C:\Users\micke\Source\Repos\Tamagotchi_Game\Microservices Demo\APIGateWay\bin\Release\netcoreapp3.1\Ocelot.Provider.Consul.dll
+C:\Users\micke\Source\Repos\Tamagotchi_Game\Microservices Demo\APIGateWay\bin\Release\netcoreapp3.1\runtimes\unix\lib\netstandard1.3\System.Net.Http.WinHttpHandler.dll
+C:\Users\micke\Source\Repos\Tamagotchi_Game\Microservices Demo\APIGateWay\bin\Release\netcoreapp3.1\runtimes\win\lib\netstandard1.3\System.Net.Http.WinHttpHandler.dll

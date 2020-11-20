@@ -9,7 +9,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using MongoDB.Driver;
-using Shared;
+using Shared.Extensions.ActiveMQ;
+using Shared.Extensions.Consul;
+using UserManagement.Config;
 
 namespace TamagotchiUserAPI
 {
@@ -23,10 +25,12 @@ namespace TamagotchiUserAPI
         }
 
         public IConfiguration Configuration { get; }
+        public ConfigurationSetting _configurationSetting { get; set; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
             services.AddSingleton<IMongoClient, MongoClient>(s =>
             {
                 var uri = s.GetRequiredService<IConfiguration>()["MongoUri"];
@@ -43,6 +47,9 @@ namespace TamagotchiUserAPI
                 ActiveMQLog result = new ActiveMQLog(uri, username, password);
                 return result;
             });
+
+             _configurationSetting = services.RegisterConfiguration(Configuration);
+            services.AddConsulConfig(_configurationSetting);
 
             services.AddCors(o => o.AddPolicy("MyPolicy", builder =>
             {
@@ -61,6 +68,8 @@ namespace TamagotchiUserAPI
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseConsul(_configurationSetting);
 
             app.UseHttpsRedirection();
 

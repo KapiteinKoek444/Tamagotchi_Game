@@ -32,3 +32,10 @@ C:\Users\micke\Source\Repos\Tamagotchi_Game\Microservices Demo\TamagotchiUserAPI
 C:\Users\micke\Source\Repos\Tamagotchi_Game\Microservices Demo\TamagotchiUserAPI\bin\Debug\netcoreapp3.1\Apache.NMS.ActiveMQ.dll
 C:\Users\micke\Source\Repos\Tamagotchi_Game\Microservices Demo\TamagotchiUserAPI\bin\Debug\netcoreapp3.1\Shared.dll
 C:\Users\micke\Source\Repos\Tamagotchi_Game\Microservices Demo\TamagotchiUserAPI\bin\Debug\netcoreapp3.1\Shared.pdb
+C:\Users\micke\Source\Repos\Tamagotchi_Game\Microservices Demo\TamagotchiUserAPI\bin\Debug\netcoreapp3.1\Json.Net.dll
+C:\Users\micke\Source\Repos\Tamagotchi_Game\Microservices Demo\TamagotchiUserAPI\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\micke\Source\Repos\Tamagotchi_Game\Microservices Demo\TamagotchiUserAPI\bin\Debug\netcoreapp3.1\Consul.dll
+C:\Users\micke\Source\Repos\Tamagotchi_Game\Microservices Demo\TamagotchiUserAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Server.Kestrel.Https.dll
+C:\Users\micke\Source\Repos\Tamagotchi_Game\Microservices Demo\TamagotchiUserAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Server.Kestrel.Transport.Abstractions.dll
+C:\Users\micke\Source\Repos\Tamagotchi_Game\Microservices Demo\TamagotchiUserAPI\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\micke\Source\Repos\Tamagotchi_Game\Microservices Demo\TamagotchiUserAPI\bin\Debug\netcoreapp3.1\Properties\ServiceDependencies\TamagotchiUserAPI - Web Deploy\profile.arm.json

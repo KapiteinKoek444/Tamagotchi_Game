@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 using MongoDB.Bson;
 using MongoDB.Driver;
 using MongoDB_API.Entities;
-using Shared;
+using Shared.Extensions.ActiveMQ;
 
 namespace MongoDB_API.Controllers
 {

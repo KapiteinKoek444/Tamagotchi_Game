@@ -1,11 +1,13 @@
 ﻿using Apache.NMS;
+using Apache.NMS.ActiveMQ;
 using Apache.NMS.ActiveMQ.Transactions;
 using Apache.NMS.Util;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using Newtonsoft.Json;
 
-namespace Shared
+namespace Shared.Extensions.ActiveMQ
 {
     public class ActiveMQLog : IActiveMQLog
     {
@@ -14,16 +16,24 @@ namespace Shared
 
         private  IMessageProducer messageProducer;
         private  IMessageConsumer messageConsumer;
+        private IConnection connection;
 
         public ActiveMQLog(string mqUrl, string username, string password)
         {
             _connectionFactory = new NMSConnectionFactory(mqUrl);
 
-
-
-            IConnection connection = _connectionFactory.CreateConnection(username, password);
+            try
+            {
+            connection = _connectionFactory.CreateConnection(username, password);
             connection.Start();
             _session = connection.CreateSession();
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
 
         }
 
@@ -36,10 +46,20 @@ namespace Shared
         {
             IDestination destination = SessionUtil.GetDestination(_session, queueName);
             messageConsumer = _session.CreateConsumer(destination);
-
-            messageConsumer.Listener += new MessageListener(MQLogger);
         }
 
+        public ITextMessage ConvertObjectToIMessage(Type type)
+        {
+            var jsonString = JsonConvert.SerializeObject(type);
+            var messege = messageProducer.CreateTextMessage(jsonString);
+            return messege;
+        }
+        public  T ConvertIMessageToObject<T>(ITextMessage objectMessage)
+        {
+            var objectString = objectMessage.Text;
+            var result = JsonConvert.DeserializeObject<T>(objectString);
+            return result;
+        }
         public IMessageProducer GetMessageProducer()
         {
             return messageProducer;
@@ -49,10 +69,12 @@ namespace Shared
             return messageConsumer;
         }
 
-        private void MQLogger(IMessage message)
+        public void CloseSession()
         {
-            ITextMessage objectMessage = message as ITextMessage;
-            var result = objectMessage.Text;
+            _session.Close();
+            connection.Stop();
         }
+
+
     }
 }

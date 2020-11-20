@@ -19,6 +19,13 @@ namespace APIGateWay
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddOcelot();
+
+            services.AddCors(o => o.AddPolicy("MyPolicy", builder =>
+            {
+                builder.AllowAnyOrigin()
+                       .AllowAnyMethod()
+                       .AllowAnyHeader();
+            }));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -30,6 +37,8 @@ namespace APIGateWay
             }
 
             app.UseRouting();
+
+            app.UseCors("MyPolicy");
 
             app.UseEndpoints(endpoints =>
             {
