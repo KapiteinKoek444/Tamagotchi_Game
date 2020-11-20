@@ -9,5 +9,4 @@ public class TamagotchiShopApiApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(TamagotchiShopApiApplication.class, args);
 	}
-
 }

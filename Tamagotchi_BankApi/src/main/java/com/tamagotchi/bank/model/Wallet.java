@@ -15,7 +15,7 @@ import lombok.ToString;
 public class Wallet {
 	
 	@Id
-	public String Id;
+	public String id;
 	
 	public String UserId;
 	
@@ -23,11 +23,11 @@ public class Wallet {
 
 	//Getters and setters
 	public String getId() {
-		return Id;
+		return id;
 	}
 
 	public void setId(String id) {
-		Id = id;
+		id = id;
 	}
 
 	public String getUserId() {

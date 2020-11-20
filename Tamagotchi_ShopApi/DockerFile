@@ -1,0 +1,4 @@
+FROM openjdk:11
+EXPOSE 8080
+ADD target/Tamagotchi_ShopApi.jar Tamagotchi_ShopApi.jar
+ENTRYPOINT ["java", "-jar", "/Tamagotchi_ShopApi.jar"]

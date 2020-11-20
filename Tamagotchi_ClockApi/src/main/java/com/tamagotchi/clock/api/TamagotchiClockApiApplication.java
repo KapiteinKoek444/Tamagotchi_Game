@@ -1,4 +1,4 @@
-package com.tamagotchi.inv;
+package com.tamagotchi.clock.api;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -6,10 +6,10 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-public class TamagotchiInventoryApiApplication {
+public class TamagotchiClockApiApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(TamagotchiInventoryApiApplication.class, args);
+		SpringApplication.run(TamagotchiClockApiApplication.class, args);
 	}
 
 }

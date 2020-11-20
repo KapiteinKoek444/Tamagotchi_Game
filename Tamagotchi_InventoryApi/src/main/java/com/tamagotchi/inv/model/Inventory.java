@@ -21,6 +21,6 @@ public class Inventory {
 	public String userId;
 	
 	
-	public List<String> items;
+	public List<String> itemId;
 	
 }

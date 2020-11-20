@@ -1,0 +1,11 @@
+spring:
+  cloud:
+    consul:
+      config:
+        enabled: true
+      discovery:
+        health-check-path: ${management.server.servlet.context.path}/health
+        health-check-interval: 1m
+        instanceId: ${spring.application.name}:${random.value}
+  application:
+    name: inventory-api

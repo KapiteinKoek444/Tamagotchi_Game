@@ -1,5 +1,6 @@
 package com.tamagotchi.shop.model;
 
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import lombok.Getter;
@@ -11,8 +12,14 @@ import lombok.ToString;
 @ToString
 
 @Document(collection = "Food")
-public class Food extends Item{
-
+public class Food{
+	@Id
+	public String id;
+	public String name;
+	
+	public double price;
+	public double discount;
+	
 	public String category;
 	
 	public double foodVal;
