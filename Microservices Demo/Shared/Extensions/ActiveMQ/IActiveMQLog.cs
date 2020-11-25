@@ -3,7 +3,7 @@ using System;
 
 namespace Shared.Extensions.ActiveMQ
 {
-    public interface IActiveMQLog
+    public interface IActiveMqLog
     {
         void ConnectListener(string queueName);
         void ConnectSender(string queueName);

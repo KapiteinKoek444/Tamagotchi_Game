@@ -15,9 +15,9 @@ namespace MongoDB_API.Controllers
     public class UserController : ControllerBase
     {
         private IMongoCollection<User> _usersCollection;
-        private readonly IActiveMQLog _activeMQLog;
+        private readonly IActiveMqLog _activeMQLog;
 
-        public UserController(IMongoClient client, IActiveMQLog activeMQLog)
+        public UserController(IMongoClient client, IActiveMqLog activeMQLog)
         {
             var database = client.GetDatabase("Users");
             _usersCollection = database.GetCollection<User>("UserData");
@@ -46,7 +46,7 @@ namespace MongoDB_API.Controllers
             try
             {
                 var users = _usersCollection.Find(Builders<User>.Filter.Empty).ToList();
-                var user  = users.Where(x => x.Password == model.Password && x.Email == model.Email).SingleOrDefault();
+                var user = users.SingleOrDefault(x => x.Password == model.Password && x.Email == model.Email);
                 return user.Id;
             }
             catch (Exception ex)
@@ -60,15 +60,14 @@ namespace MongoDB_API.Controllers
         [HttpPost]
         public IActionResult Post([FromBody] User model)
         {
-            try
-            {
-                _usersCollection.InsertOne(model);
+            var users = _usersCollection.Find(Builders<User>.Filter.Empty).ToList();
+                var user = users.SingleOrDefault(x => x.Password == model.Password && x.Email == model.Email);
+
+                if(user != null)
+                    return StatusCode(StatusCodes.Status500InternalServerError,null);
+
+                    _usersCollection.InsertOne(model);
                 return StatusCode(StatusCodes.Status201Created, model);
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(StatusCodes.Status500InternalServerError, ex);
-            }
         }
 
 

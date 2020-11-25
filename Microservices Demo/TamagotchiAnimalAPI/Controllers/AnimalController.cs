@@ -17,9 +17,9 @@ namespace MongoDB_API.Controllers
     public class AnimalController : ControllerBase
     {
         private IMongoCollection<Animal> AnimalCollection;
-        private readonly IActiveMQLog _activeMQLog;
+        private readonly IActiveMqLog _activeMQLog;
 
-        public AnimalController(IMongoClient client, IActiveMQLog activeMQLog)
+        public AnimalController(IMongoClient client, IActiveMqLog activeMQLog)
         {
             var database = client.GetDatabase("PetAnimals");
             AnimalCollection = database.GetCollection<Animal>("Animals");

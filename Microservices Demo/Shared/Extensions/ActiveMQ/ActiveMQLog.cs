@@ -9,14 +9,14 @@ using Newtonsoft.Json;
 
 namespace Shared.Extensions.ActiveMQ
 {
-    public class ActiveMQLog : IActiveMQLog
+    public class ActiveMQLog : IActiveMqLog
     {
         private readonly IConnectionFactory _connectionFactory;
         private readonly ISession _session;
 
         private  IMessageProducer messageProducer;
         private  IMessageConsumer messageConsumer;
-        private IConnection connection;
+        private IConnection _connection;
 
         public ActiveMQLog(string mqUrl, string username, string password)
         {
@@ -24,9 +24,9 @@ namespace Shared.Extensions.ActiveMQ
 
             try
             {
-            connection = _connectionFactory.CreateConnection(username, password);
-            connection.Start();
-            _session = connection.CreateSession();
+            _connection = _connectionFactory.CreateConnection(username, password);
+            _connection.Start();
+            _session = _connection.CreateSession();
 
             }
             catch (Exception)
@@ -72,7 +72,7 @@ namespace Shared.Extensions.ActiveMQ
         public void CloseSession()
         {
             _session.Close();
-            connection.Stop();
+            _connection.Stop();
         }
 
 

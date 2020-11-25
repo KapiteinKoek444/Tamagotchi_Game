@@ -9,6 +9,6 @@ namespace Shared.Extensions.Consul
         public string ServiceName { get; set; }
         public string ServiceHost { get; set; }
         public int ServicePort { get; set; }
-        public string ConsulAddresss { get; set; }
+        public string ConsulAddress { get; set; }
     }
 }

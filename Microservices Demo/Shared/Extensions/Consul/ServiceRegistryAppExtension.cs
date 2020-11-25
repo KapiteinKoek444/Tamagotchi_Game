@@ -14,7 +14,7 @@ namespace UserManagement.Config
         {
             services.AddSingleton<IConsulClient, ConsulClient>(p => new ConsulClient(consulConfig =>
             {
-                consulConfig.Address = new Uri(configurationSetting.ConsulAddresss);
+                consulConfig.Address = new Uri(configurationSetting.ConsulAddress);
             }));
             return services;
         }
@@ -29,7 +29,7 @@ namespace UserManagement.Config
             var registration = new AgentServiceRegistration()
             {
                 ID = configurationSetting.ServiceName, //{uri.Port}",
-                // servie name  
+                // service name  
                 Name = configurationSetting.ServiceName,
                 Address = configurationSetting.ServiceHost, //$"{uri.Host}",
                 Port = configurationSetting.ServicePort  // uri.Port
@@ -42,7 +42,7 @@ namespace UserManagement.Config
 
             lifetime.ApplicationStopping.Register(() =>
             {
-                logger.LogInformation("Unregistering from Consul");
+                logger.LogInformation("Unregistered from Consul");
             });
 
             return app;

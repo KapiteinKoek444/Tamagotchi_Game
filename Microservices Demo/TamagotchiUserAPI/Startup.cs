@@ -37,7 +37,7 @@ namespace TamagotchiUserAPI
                 return new MongoClient(uri);
             });
 
-            services.AddSingleton<IActiveMQLog, ActiveMQLog>(s =>
+            services.AddSingleton<IActiveMqLog, ActiveMQLog>(s =>
             {
                 var uri =      s.GetRequiredService<IConfiguration>()["MQUri"];
                 var username = s.GetRequiredService<IConfiguration>()["MQUsername"];
