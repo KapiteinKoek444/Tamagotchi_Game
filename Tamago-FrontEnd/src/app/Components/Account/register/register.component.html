@@ -4,8 +4,8 @@
 
 <div class="input-table">
   <p class="input-title">Email:</p>
-  <input #textboxEmail class="input-box" type="email" ngModel="" required>
+  <input #textboxEmail class="input-box" type="email" ngModel="" required id="emailField">
   <p class="input-title">Password:</p>
-  <input #textboxPassword class="input-box" type="password" ngModel="" required><br><br>
-  <button class="submit" (click)="Register(textboxEmail.value, textboxPassword.value)">Register</button>
+  <input #textboxPassword class="input-box" type="password" ngModel="" required id="passwordField"><br><br>
+  <button class="submit" (click)="Register(textboxEmail.value, textboxPassword.value)" id="registerButton">Register</button>
 </div>

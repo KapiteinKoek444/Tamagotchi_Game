@@ -36,11 +36,20 @@ export class RegisterComponent implements OnInit {
     var inventory = new InventoryModel(this.guidFactory.GenerateGuid(), id, new Array);
     var wallet = new WalletModel(this.guidFactory.GenerateGuid(), id, 1000);
 
-    this.apiserviceUser.SendUser(user);
-    this.apiserviceBank.SendWallet(wallet);
-    this.apiserviceInventory.SendInventory(inventory);
 
-    localStorage.setItem("userid", id);
-    this.router.navigate(['animalpicker']);
+    this.apiserviceUser.SendUser(user).subscribe(data => {
+
+      this.apiserviceBank.SendWallet(wallet);
+      this.apiserviceInventory.SendInventory(inventory);
+  
+      localStorage.setItem("userid", id);
+      this.router.navigate(['animalpicker']);
+    },
+    error => {
+      console.error(error);
+    }
+    );
+      
+
   }
 }

@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { HttpHeaders } from '@angular/common/http';
 import { AnimalModel } from 'src/app/Models/AnimalModel';
+import { UserModel } from 'src/app/Models/UserModel';
+
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -32,10 +34,8 @@ export class ApiServiceUser {
     return this.http.get("https://tamagotchigateway.azurewebsites.net/api/user/" + id, httpOptions);
   }
 
-  public SendUser(user) {
-    console.log(user);
-    this.http.post('https://tamagotchigateway.azurewebsites.net/api/user', user, httpOptions).subscribe();
-    return user;
+  public SendUser(user) { 
+   return this.http.post('https://tamagotchigateway.azurewebsites.net/api/user', user, httpOptions);
   }
 
   public GetUserPassword(loginModel) {
