@@ -8,6 +8,9 @@ namespace Shared.Extensions.ActiveMQ
         void ConnectListener(string queueName);
         void ConnectSender(string queueName);
         void CloseSession();
+
+        bool IsSesionActive();
+
         IMessageConsumer GetMessageConsumer();
         IMessageProducer GetMessageProducer();
         ITextMessage ConvertObjectToIMessage(Type type);

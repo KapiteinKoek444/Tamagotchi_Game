@@ -1,0 +1,150 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\micke\\Source\\Repos\\Tamagotchi_Game\\Microservices Demo\\GateWayAPITests\\GateWayAPITests.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\micke\\Source\\Repos\\Tamagotchi_Game\\Microservices Demo\\APIGateWay\\APIGateWay.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\micke\\Source\\Repos\\Tamagotchi_Game\\Microservices Demo\\APIGateWay\\APIGateWay.csproj",
+        "projectName": "APIGateWay",
+        "projectPath": "C:\\Users\\micke\\Source\\Repos\\Tamagotchi_Game\\Microservices Demo\\APIGateWay\\APIGateWay.csproj",
+        "packagesPath": "C:\\Users\\micke\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\micke\\Source\\Repos\\Tamagotchi_Game\\Microservices Demo\\APIGateWay\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\micke\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Ocelot": {
+              "target": "Package",
+              "version": "[16.0.1, )"
+            },
+            "Ocelot.Provider.Consul": {
+              "target": "Package",
+              "version": "[16.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\micke\\Source\\Repos\\Tamagotchi_Game\\Microservices Demo\\GateWayAPITests\\GateWayAPITests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\micke\\Source\\Repos\\Tamagotchi_Game\\Microservices Demo\\GateWayAPITests\\GateWayAPITests.csproj",
+        "projectName": "GateWayAPITests",
+        "projectPath": "C:\\Users\\micke\\Source\\Repos\\Tamagotchi_Game\\Microservices Demo\\GateWayAPITests\\GateWayAPITests.csproj",
+        "packagesPath": "C:\\Users\\micke\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\micke\\Source\\Repos\\Tamagotchi_Game\\Microservices Demo\\GateWayAPITests\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\micke\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Users\\micke\\Source\\Repos\\Tamagotchi_Game\\Microservices Demo\\APIGateWay\\APIGateWay.csproj": {
+                "projectPath": "C:\\Users\\micke\\Source\\Repos\\Tamagotchi_Game\\Microservices Demo\\APIGateWay\\APIGateWay.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "MSTest.TestAdapter": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
+            "MSTest.TestFramework": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.5.0, )"
+            },
+            "coverlet.collector": {
+              "target": "Package",
+              "version": "[1.2.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

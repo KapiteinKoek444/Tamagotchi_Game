@@ -22,8 +22,6 @@ C:\Users\micke\Source\Repos\Tamagotchi_Game\Microservices Demo\TamagotchiUserAPI
 C:\Users\micke\Source\Repos\Tamagotchi_Game\Microservices Demo\TamagotchiUserAPI\bin\Debug\netcoreapp3.1\runtimes\win\native\libzstd.dll
 C:\Users\micke\Source\Repos\Tamagotchi_Game\Microservices Demo\TamagotchiUserAPI\bin\Debug\netcoreapp3.1\runtimes\win\native\snappy32.dll
 C:\Users\micke\Source\Repos\Tamagotchi_Game\Microservices Demo\TamagotchiUserAPI\bin\Debug\netcoreapp3.1\runtimes\win\native\snappy64.dll
-C:\Users\micke\Source\Repos\Tamagotchi_Game\Microservices Demo\TamagotchiUserAPI\obj\Debug\netcoreapp3.1\TamagotchiUserAPI.csproj.CoreCompileInputs.cache
-C:\Users\micke\Source\Repos\Tamagotchi_Game\Microservices Demo\TamagotchiUserAPI\obj\Debug\netcoreapp3.1\TamagotchiUserAPI.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\micke\Source\Repos\Tamagotchi_Game\Microservices Demo\TamagotchiUserAPI\obj\Debug\netcoreapp3.1\TamagotchiUserAPI.csproj.CopyComplete
 C:\Users\micke\Source\Repos\Tamagotchi_Game\Microservices Demo\TamagotchiUserAPI\obj\Debug\netcoreapp3.1\TamagotchiUserAPI.dll
 C:\Users\micke\Source\Repos\Tamagotchi_Game\Microservices Demo\TamagotchiUserAPI\obj\Debug\netcoreapp3.1\TamagotchiUserAPI.pdb
@@ -39,3 +37,5 @@ C:\Users\micke\Source\Repos\Tamagotchi_Game\Microservices Demo\TamagotchiUserAPI
 C:\Users\micke\Source\Repos\Tamagotchi_Game\Microservices Demo\TamagotchiUserAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Server.Kestrel.Transport.Abstractions.dll
 C:\Users\micke\Source\Repos\Tamagotchi_Game\Microservices Demo\TamagotchiUserAPI\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 C:\Users\micke\Source\Repos\Tamagotchi_Game\Microservices Demo\TamagotchiUserAPI\bin\Debug\netcoreapp3.1\Properties\ServiceDependencies\TamagotchiUserAPI - Web Deploy\profile.arm.json
+C:\Users\micke\Source\Repos\Tamagotchi_Game\Microservices Demo\TamagotchiUserAPI\obj\Debug\netcoreapp3.1\TamagotchiUserAPI.csproj.CoreCompileInputs.cache
+C:\Users\micke\Source\Repos\Tamagotchi_Game\Microservices Demo\TamagotchiUserAPI\obj\Debug\netcoreapp3.1\TamagotchiUserAPI.MvcApplicationPartsAssemblyInfo.cache

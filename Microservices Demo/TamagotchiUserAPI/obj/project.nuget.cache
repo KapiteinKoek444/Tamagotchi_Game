@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "J66fMgFl9iDEZ58JP8aF9nC2wdaeckXuaexzU257ydbr5oDllGA0/Joaxj/kVpcsbnbR5xpOpdKMIACg/3tD4g==",
+  "dgSpecHash": "4+1Sy5Xe3K7cA6IXI4U8nZuSKa2dErRFLl5pnw1X7hKtgXXL6C36d7usyjI6m/bzUVpy0bhv4VkZ0AMPuWpfwA==",
   "success": true,
   "projectFilePath": "C:\\Users\\micke\\Source\\Repos\\Tamagotchi_Game\\Microservices Demo\\TamagotchiUserAPI\\TamagotchiUserAPI.csproj",
   "expectedPackageFiles": [
@@ -61,6 +61,7 @@
     "C:\\Users\\micke\\.nuget\\packages\\microsoft.net.http.headers\\2.2.0\\microsoft.net.http.headers.2.2.0.nupkg.sha512",
     "C:\\Users\\micke\\.nuget\\packages\\microsoft.netcore.platforms\\2.1.2\\microsoft.netcore.platforms.2.1.2.nupkg.sha512",
     "C:\\Users\\micke\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
+    "C:\\Users\\micke\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.9\\microsoft.visualstudio.azure.containers.tools.targets.1.10.9.nupkg.sha512",
     "C:\\Users\\micke\\.nuget\\packages\\microsoft.win32.primitives\\4.3.0\\microsoft.win32.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\micke\\.nuget\\packages\\mongodb.bson\\2.11.2\\mongodb.bson.2.11.2.nupkg.sha512",
     "C:\\Users\\micke\\.nuget\\packages\\mongodb.driver\\2.11.2\\mongodb.driver.2.11.2.nupkg.sha512",
