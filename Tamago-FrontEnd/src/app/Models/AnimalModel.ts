@@ -1,4 +1,6 @@
-export class AnimalModel {
+import { EntitieBase } from './EntitieBase';
+
+export class AnimalModel extends EntitieBase {
   public id: string;
   public userId: string;
   public name: string;
@@ -8,6 +10,9 @@ export class AnimalModel {
   public animalType: number;
 
   constructor(id, Uid, n, f, e, h, type) {
+
+    super();
+
     this.id = id;
     this.userId = Uid;
     this.name = n;
@@ -17,9 +22,4 @@ export class AnimalModel {
     this.animalType = type;
   }
 
-  public fromJSON(json) {
-    for (var propName in json)
-      this[propName] = json[propName];
-    return this;
-  }
 }

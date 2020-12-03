@@ -3,9 +3,9 @@
     <h1 style="text-align: center">Mini Games</h1>
 </div>
 <div class="grid-container">
-    <div *ngFor="let gameUrl of gameUrls">
-        <div (click)="onClick(gameUrl.url)">
-            <h4 class="card-title">{{gameUrl.name}}</h4>
+    <div *ngFor="let gameUrl of gameUrls; index as i" id="gameUrls">
+        <div id="urlCaller{{i}}" (click)="onClick(gameUrl.url)">
+            <h4 id="card{{i}}" class="card-title">{{gameUrl.name}}</h4>
         </div>
      </div>
 </div>

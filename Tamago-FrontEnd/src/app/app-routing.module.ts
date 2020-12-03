@@ -6,6 +6,8 @@ import { AnimalPickerComponent } from './Components/Account/animal-picker/animal
 import { DashboardComponent } from './Components/Account/dashboard/dashboard.component';
 import { GamesPageComponent } from './Components/Account/games-page/games-page.component';
 import { ShopPageComponent } from './Components/Account/shop-page/shop-page.component';
+import { InventoryPageComponent } from './Components/Account/inventory-page/inventory-page.component';
+import { SleepPageComponent } from './Components/Account/sleep-page/sleep-page.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -14,6 +16,8 @@ const routes: Routes = [
   { path: 'GamesPage', component: GamesPageComponent },
   { path: 'ShopPage', component: ShopPageComponent },
   { path: 'dashboard', component: DashboardComponent },
+  { path: 'InventoryPage', component: InventoryPageComponent },
+  { path: 'SleepPage', component: SleepPageComponent },
   { path: '', redirectTo: '/login', pathMatch: 'full' }
 ];
 

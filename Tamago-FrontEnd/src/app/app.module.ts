@@ -8,6 +8,8 @@ import { Hasher } from './Services/Hasher';
 import { GuidFactory } from './Services/GuidFactory';
 import { GamesPageComponent } from './Components/Account/games-page/games-page.component';
 import { ShopPageComponent } from './Components/Account/shop-page/shop-page.component';
+import { InventoryPageComponent } from './Components/Account/inventory-page/inventory-page.component';
+import { SleepPageComponent } from './Components/Account/sleep-page/sleep-page.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +17,8 @@ import { ShopPageComponent } from './Components/Account/shop-page/shop-page.comp
     routingComponents,
     GamesPageComponent,
     ShopPageComponent,
+    InventoryPageComponent,
+    SleepPageComponent,
   ],
   imports: [
     BrowserModule,

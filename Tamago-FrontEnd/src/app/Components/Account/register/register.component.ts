@@ -37,7 +37,8 @@ export class RegisterComponent implements OnInit {
     var wallet = new WalletModel(this.guidFactory.GenerateGuid(), id, 1000);
 
 
-    this.apiserviceUser.SendUser(user).subscribe(data => {
+    this.apiserviceUser.SendUser(user).subscribe(
+      data => {
 
       this.apiserviceBank.SendWallet(wallet);
       this.apiserviceInventory.SendInventory(inventory);

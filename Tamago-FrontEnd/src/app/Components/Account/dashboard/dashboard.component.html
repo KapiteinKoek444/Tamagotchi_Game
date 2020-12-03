@@ -7,18 +7,18 @@
     <p class="animal-status" id="happinessStatus">Happiness: {{animal.happiness}} </p>
 
   </div>
-  <h1 class="title"> {{animal.name}} </h1>
+  <h1 class="title" ng-if="animal.name"> {{animal.name}} </h1>
   <div class="image-holder">
 
-    <img class="current-animal" id="tamagotchi" src="./../../../../assets/animalTypes/Kikker.png">
+    <img class="current-animal" id="tamagotchi" src="">
 
   </div>
   <div class="animal-actions" id="buttons">
 
-    <button id="button_1" class="submit-animal" (click)="Feed()">Feed</button>
     <button id="button_2" class="submit-animal" (click)="Play()">Play</button>
     <button id="button_3" class="submit-animal" (click)="Sleep()">Sleep</button>
     <button id="button_4" class="submit-animal" (click)="Shop()">Shop</button>
+    <button id="button_5" class="submit-animal" (click)="Inventory()">Inventory</button>
   </div>
 
 </div>

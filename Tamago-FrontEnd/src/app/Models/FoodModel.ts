@@ -1,4 +1,6 @@
-export class FoodModel {
+import { EntitieBase } from './EntitieBase';
+
+export class FoodModel extends EntitieBase {
   public id: String;
   public name: String;
 
@@ -12,6 +14,7 @@ export class FoodModel {
   public happyVal: number;
 
   constructor(id, name, price, discount, category, foodVal, energyval, happyVal) {
+    super();
     this.id = id;
     this.name = name;
     this.price = price;

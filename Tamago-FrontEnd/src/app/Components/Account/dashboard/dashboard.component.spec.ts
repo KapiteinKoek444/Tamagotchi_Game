@@ -34,16 +34,6 @@ describe('DashboardComponent', () => {
     expect(component.animal).not.toBeNull();
   });
 
-  it('should call the Feed function when the Feed button is clicked', fakeAsync (() => {
-
-    spyOn(component, 'Feed');
-
-    let button = de.nativeElement.querySelector('#button_1');
-    button.click();
-    tick();
-    expect(component.Feed).toHaveBeenCalled();
-  }));
-
   it('should call the Play function when the Play button is clicked', fakeAsync (() => {
     spyOn(component, 'Play');
 

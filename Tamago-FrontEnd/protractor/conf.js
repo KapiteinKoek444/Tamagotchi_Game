@@ -5,12 +5,12 @@ exports.config = {
     'login-spec.js',
     'register-spec.js',
     'animalpicker-spec.js',
-    'dashboard-spec.js'
-  ],
+    'dashboard-spec.js',
+    'gamepage-spec.js'
+  ], 
   
   capabilities: {
-      'browserName': 'chrome',
-  
+      'browserName': 'chrome', 
   },
   framework: 'jasmine'
 };

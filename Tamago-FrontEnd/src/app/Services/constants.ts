@@ -40,3 +40,12 @@ export const GameUrls = [
         url: ""
     }
 ];
+
+export const AnimalImages = 
+[
+"Kikker",
+"UIL",
+"BLOEM",
+"VOGEL",
+"OCTOPUS"
+];
