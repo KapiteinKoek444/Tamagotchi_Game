@@ -42,23 +42,23 @@ namespace MongoDB_API.Controllers
         [HttpPost]
         public IActionResult Post([FromBody] Animal model)
         {
-            try
-            {
-                AnimalCollection.InsertOne(model);
-                return StatusCode(StatusCodes.Status201Created, model);
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(StatusCodes.Status500InternalServerError, ex);
-            }
+
+            var animals = AnimalCollection.Find(Builders<Animal>.Filter.Empty).ToList();
+            var animal = animals.SingleOrDefault(x => x.UserId == model.UserId);
+
+            if (animal != null)
+                return StatusCode(StatusCodes.Status500InternalServerError, null);
+
+            AnimalCollection.InsertOne(model);
+            return StatusCode(StatusCodes.Status201Created, model);
         }
 
         [HttpPost("{id}")]
-        public IActionResult Update([FromRoute] Guid id,[FromBody] Animal model)
+        public IActionResult Update([FromRoute] Guid id, [FromBody] Animal model)
         {
             try
             {
-                var result = AnimalCollection.ReplaceOneAsync(a => a.UserId.Equals(id),model, new UpdateOptions { IsUpsert = true });
+                AnimalCollection.ReplaceOneAsync(a => a.UserId.Equals(id), model, new UpdateOptions { IsUpsert = true });
                 return StatusCode(StatusCodes.Status201Created, model);
             }
             catch (Exception ex)

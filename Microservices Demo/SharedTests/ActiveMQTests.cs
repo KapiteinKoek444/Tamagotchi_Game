@@ -17,12 +17,14 @@ namespace SharedTests
             activeMq = new ActiveMQLog(mqUrl,username,password);
             Assert.IsTrue(activeMq.IsSesionActive());
         }
+
         [TestMethod]
         public void ActiveMQCannotConnectToServerWithEmptyInput()
         {
             activeMq = new ActiveMQLog("", "", "");
             Assert.IsFalse(activeMq.IsSesionActive());
         }
+
         [TestMethod]
         public void ActiveMQCannotConnectToServerWithNullInput()
         {

@@ -64,85 +64,122 @@
     },
     //store
     {
-      "DownstreamPathTemplate": "/Rest/GetAllFood", //
+      "DownstreamPathTemplate": "/rest", //
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "tamago-shopapi.azurewebsites.net",
+          "Host": "tamago-shop.azurewebsites.net",
           "Port": 443
         }
       ],
       "UpstreamPathTemplate": "/api/store/food",
-      "UpstreamHttpMethod": [ "Get", "Post" ]
+      "UpstreamHttpMethod": [ "Get" ]
     },
     {
-      "DownstreamPathTemplate": "/Rest/GetFood/{id}", //
+      "DownstreamPathTemplate": "/rest/{id}", //
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "tamago-shopapi.azurewebsites.net",
+          "Host": "tamago-shop.azurewebsites.net",
           "Port": 443
         }
       ],
       "UpstreamPathTemplate": "/api/store/food/{id}",
       "UpstreamHttpMethod": [ "Get" ]
     },
-    //bank
     {
-      "DownstreamPathTemplate": "/Rest/AddWallet", //
+      "DownstreamPathTemplate": "/rest/new", //
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "tamago-bankapi.azurewebsites.net",
+          "Host": "tamago-shop.azurewebsites.net",
+          "Port": 443
+        }
+      ],
+      "UpstreamPathTemplate": "/api/store/food",
+      "UpstreamHttpMethod": [ "Post" ]
+    },
+    {
+      "DownstreamPathTemplate": "/rest/post/{id}", //
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "tamago-shop.azurewebsites.net",
+          "Port": 443
+        }
+      ],
+      "UpstreamPathTemplate": "/api/store/food/{id}",
+      "UpstreamHttpMethod": [ "Post" ]
+    },
+    {
+      "DownstreamPathTemplate": "/rest/remove/{id}", //
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "tamago-shop.azurewebsites.net",
+          "Port": 443
+        }
+      ],
+      "UpstreamPathTemplate": "/api/store/food/{id}",
+      "UpstreamHttpMethod": [ "Delete" ]
+    },
+
+    //bank
+    {
+      "DownstreamPathTemplate": "/Rest/new", //
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "tamago-bank.azurewebsites.net",
           "Port": 443
         }
       ],
       "UpstreamPathTemplate": "/api/bank/wallet/add",
       "UpstreamHttpMethod": [ "Post" ]
     },
-    {
-      "DownstreamPathTemplate": "/Rest/UpdateWallet", //
+      {
+      "DownstreamPathTemplate": "/Rest", //
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "tamago-bankapi.azurewebsites.net",
+          "Host": "tamago-bank.azurewebsites.net",
           "Port": 443
         }
       ],
-      "UpstreamPathTemplate": "/api/bank/wallet/update",
-      "UpstreamHttpMethod": [ "Post" ]
+      "UpstreamPathTemplate": "/api/bank",
+      "UpstreamHttpMethod": [ "get" ]
     },
     {
-      "DownstreamPathTemplate": "/Rest/AddMoney/{id}/{amount}", //
+      "DownstreamPathTemplate": "/Rest/{id}", //
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "tamago-bankapi.azurewebsites.net",
-          "Port": 443
-        }
-      ],
-      "UpstreamPathTemplate": "/api/bank/wallet/{id}/{amount}",
-      "UpstreamHttpMethod": [ "Post" ]
-    },
-    {
-      "DownstreamPathTemplate": "/Rest/GetMoney/{id}", //
-      "DownstreamScheme": "https",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "tamago-bankapi.azurewebsites.net",
+          "Host": "tamago-bank.azurewebsites.net",
           "Port": 443
         }
       ],
       "UpstreamPathTemplate": "/api/bank/wallet/{id}",
       "UpstreamHttpMethod": [ "Get" ]
     },
-    //inventory
     {
-      "DownstreamPathTemplate": "/Rest/AddInventory", //
+      "DownstreamPathTemplate": "/Rest/remove/{id}", //
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "tamago-inventoryapi.azurewebsites.net",
+          "Host": "tamago-bank.azurewebsites.net",
+          "Port": 443
+        }
+      ],
+      "UpstreamPathTemplate": "/api/bank/wallet/remove/{id}",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    //inventory
+    {
+      "DownstreamPathTemplate": "/Rest/new", //
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "tamago-inventory.azurewebsites.net",
           "Port": 443
         }
       ],
@@ -150,16 +187,40 @@
       "UpstreamHttpMethod": [ "Post" ]
     },
     {
-      "DownstreamPathTemplate": "/Rest/GetInventory/{id}", //
+      "DownstreamPathTemplate": "/Rest", //
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "tamago-inventoryapi.azurewebsites.net",
+          "Host": "tamago-inventory.azurewebsites.net",
           "Port": 443
         }
       ],
-      "UpstreamPathTemplate": "/api/inventory/get/{id}",
+      "UpstreamPathTemplate": "/api/inventory",
       "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/Rest/{id}", //
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "tamago-inventory.azurewebsites.net",
+          "Port": 443
+        }
+      ],
+      "UpstreamPathTemplate": "/api/inventory/{id}",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/Rest/remove/{id}", //
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "tamago-inventory.azurewebsites.net",
+          "Port": 443
+        }
+      ],
+      "UpstreamPathTemplate": "/api/inventory/remove/{id}",
+      "UpstreamHttpMethod": [ "Remove" ]
     }
   ],
   "GlobalConfiguration": {

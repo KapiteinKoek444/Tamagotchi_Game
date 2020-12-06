@@ -27,12 +27,19 @@ namespace Shared.Extensions.ActiveMQ
 
             if (mqUrl == null || username == null || password == null)
                 return;
+            try
+            {
+                _connectionFactory = new NMSConnectionFactory(mqUrl);
+                _connection = _connectionFactory.CreateConnection(username, password);
+                _connection.Start();
+                _session = _connection.CreateSession();
+                SesionActive = true;
+            }
+            catch (Exception e)
+            {
 
-            _connectionFactory = new NMSConnectionFactory(mqUrl);
-            _connection = _connectionFactory.CreateConnection(username, password);
-            _connection.Start();
-            _session = _connection.CreateSession();
-            SesionActive = true;
+            }
+
         }
 
         public void ConnectSender(string queueName)
