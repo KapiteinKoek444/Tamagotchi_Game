@@ -21,7 +21,7 @@
             <h1>FEATURED ITEMS</h1>
           </div>
           <div class="store-items" *ngFor="let featuredItem of featuredItems">
-            <div class="store-item rare">
+            <div class="store-item rare" (click)="BuyItem(featuredItem)">
               <div class="store-item-shadow"></div>
               <div class="store-item-details">
                 <h1>{{featuredItem.name}}</h1>

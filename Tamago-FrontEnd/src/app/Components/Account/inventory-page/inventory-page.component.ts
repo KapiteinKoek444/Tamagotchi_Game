@@ -10,11 +10,26 @@ import { ApiServiceInventory } from 'src/app/Services/api_service/api-service.se
 })
 export class InventoryPageComponent implements OnInit {
 
-  inventoryItems: FoodModel[];
+  inventoryItems: InventoryItem[];
 
   constructor(private apiServiceInventory : ApiServiceInventory,private router: Router) { }
 
   ngOnInit(): void {
+
+    this.inventoryItems = [];
+    var user = localStorage.getItem("userid");
+    this.apiServiceInventory.GetInventory(user).subscribe((data) => { 
+
+      var inventoryData = data as any[];
+
+      for (let index = 0; index < inventoryData.length; index++) {
+        var element = inventoryData[index];
+        var food = new FoodModel("0","0", 0, 0, "0", 0, 0, 0).fromJSON(element);
+        var inventoryItem = new InventoryItem(food,1);
+        this.inventoryItems.push(inventoryItem);
+      }
+    });
+
   }
   back() {
     this.router.navigate(['dashboard']);
@@ -22,4 +37,14 @@ export class InventoryPageComponent implements OnInit {
   public Shop(){
     this.router.navigate(['ShopPage']);
   }
+}
+
+export class InventoryItem {
+
+  constructor(item  : FoodModel,amount: number){
+   this.item = item;
+   this.amount = amount;
+  }
+  item : FoodModel;
+  amount : number;
 }

@@ -6,7 +6,9 @@ exports.config = {
     'register-spec.js',
     'animalpicker-spec.js',
     'dashboard-spec.js',
-    'gamepage-spec.js'
+    'gamepage-spec.js',
+    'inventory-spec.js',
+    'shop-spec.js'
   ], 
   
   capabilities: {

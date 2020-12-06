@@ -17,15 +17,27 @@ export class ShopPageComponent implements OnInit {
    }
 
   ngOnInit(): void {
-
+    this.dailyItems = [];
+    this.featuredItems =[];
     this.apiServiceShop.GetAllFood().subscribe((data) => { 
-      var food = new FoodModel("0","0", 0, 0, "0", 0, 0, 0).fromJSON(data);
-      if(food.discount <= 0){
-        this.dailyItems.push(food);
-      }else{
-        this.featuredItems.push(food);
+
+      var foodData = data as any[];
+
+      for (let index = 0; index < foodData.length; index++) {
+        var element = foodData[index];
+        var food = new FoodModel("0","0", 0, 0, "0", 0, 0, 0).fromJSON(element);
+        if(food.discount <= 0){
+          this.dailyItems.push(food);
+        }else{
+          this.featuredItems.push(food);
+        }
+        
       }
     });
+  }
+
+  BuyItem(data){
+   console.log(data.name + " clicked");
   }
 
   back() {
