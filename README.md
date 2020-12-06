@@ -1,4 +1,4 @@
-# Tamagotchi_Game
+# Tamago Game
 Tamagotchi achtig spel voor semeseter 3
 
 Tamago front-end link: https://tamago-frontend.azurewebsites.net
