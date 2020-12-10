@@ -8,7 +8,7 @@ WRD_Tamagotchi_SoftwareOnderbouwingen:
   ons document over onze software keuzes met daarin de beredenatie.
   
 WRD_Analyse document Tamagotchi:
-  ons analyse document:
+  ons analyse document.
 
 XD_Tamagotchi_Game:
   onze wireframes van de frontend.
