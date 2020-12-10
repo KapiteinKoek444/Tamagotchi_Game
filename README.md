@@ -1,11 +1,5 @@
-# Tamagotchi_Game
-Tamagotchi achtig spel voor semeseter 3
+#Java-Api
 
-Walking skeleton link: https://tamagotchi-frontend.azurewebsites.net
+(Obsolete)
 
-Trello Link: https://trello.com/b/dCAhtjdz/tamagotchi-project
-
-
-In-game mini games:
-
-- Memory game link : https://tamagotchimemorygame.azurewebsites.net 
+In word document beschreven waarom deze api's gestopt zijn.
