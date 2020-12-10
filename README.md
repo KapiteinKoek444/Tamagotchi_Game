@@ -16,6 +16,8 @@ XD_Tamagotchi_Game:
 /---------------------------------------------------\
 
 # Api Linkjes:
+(disclaimer)
+Azure heeft de feature om app services uit te zetten op het moment dat een api lang uit staat, dit zorgt ervoor dat sommige features het niet goed, altijd doen.
 
 Tamagotchi achtig spel voor semeseter 3
 
