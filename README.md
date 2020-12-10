@@ -15,7 +15,7 @@ XD_Tamagotchi_Game:
 
 /---------------------------------------------------\
 
-misschien uitleg, api's, linkjes ofzo.
+# Api Linkjes:
 
 Tamagotchi achtig spel voor semeseter 3
 
