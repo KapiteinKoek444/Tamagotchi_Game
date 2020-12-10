@@ -126,7 +126,7 @@
 
     //bank
     {
-      "DownstreamPathTemplate": "/Rest/new", //
+      "DownstreamPathTemplate": "/Rest/new/{id}", //
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -134,7 +134,7 @@
           "Port": 443
         }
       ],
-      "UpstreamPathTemplate": "/api/bank/wallet/add",
+      "UpstreamPathTemplate": "/api/bank/wallet/add/{id}",
       "UpstreamHttpMethod": [ "Post" ]
     },
       {
@@ -175,7 +175,7 @@
     },
     //inventory
     {
-      "DownstreamPathTemplate": "/Rest/new", //
+      "DownstreamPathTemplate": "/Rest/new/{id}", //
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -183,7 +183,7 @@
           "Port": 443
         }
       ],
-      "UpstreamPathTemplate": "/api/inventory/add",
+      "UpstreamPathTemplate": "/api/inventory/add/{id}",
       "UpstreamHttpMethod": [ "Post" ]
     },
     {

@@ -25,40 +25,41 @@ namespace MongoDB_API.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<User> Get()
+        public async Task<IActionResult> Get()
         {
             var result = _usersCollection.Find(Builders<User>.Filter.Empty).ToList();
-            var mp = _activeMQLog.GetMessageProducer();
-            return result;
+            return Ok(result);
         }
 
         [HttpGet("{id}")]
-        public User Get([FromRoute] Guid id)
+        public async Task<IActionResult> Get([FromRoute] Guid id)
         {
-            var filter = Builders<User>.Filter.Eq("_id", id);
-            return _usersCollection.Find(filter).First();
+            var filter =  Builders<User>.Filter.Eq("_id", id);
+            var result =  _usersCollection.Find(filter).First();
+            return Ok(result);
         }
 
         [HttpPost]
         [Route("login")]
-        public Guid Login([FromBody] User model)
+        public async Task<IActionResult> Login([FromBody] User model)
         {           
             try
             {
                 var users = _usersCollection.Find(Builders<User>.Filter.Empty).ToList();
                 var user = users.SingleOrDefault(x => x.Password == model.Password && x.Email == model.Email);
-                return user.Id;
+                var result = user.Id;
+                return Ok(result);
             }
             catch (Exception ex)
             {
                 
-                return Guid.Empty;
+                return NotFound(null);
             }
 
         }
 
         [HttpPost]
-        public IActionResult Post([FromBody] User model)
+        public async Task<IActionResult> Post([FromBody] User model)
         {
             var users = _usersCollection.Find(Builders<User>.Filter.Empty).ToList();
                 var user = users.SingleOrDefault(x => x.Password == model.Password && x.Email == model.Email);

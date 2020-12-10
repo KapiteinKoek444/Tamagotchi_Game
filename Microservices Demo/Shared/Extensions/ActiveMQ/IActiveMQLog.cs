@@ -11,6 +11,7 @@ namespace Shared.Extensions.ActiveMQ
 
         bool IsSesionActive();
 
+        ISession GetMessageSession();
         IMessageConsumer GetMessageConsumer();
         IMessageProducer GetMessageProducer();
         ITextMessage ConvertObjectToIMessage(Type type);

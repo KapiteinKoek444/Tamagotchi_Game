@@ -87,6 +87,13 @@ namespace Shared.Extensions.ActiveMQ
 
             return messageConsumer;
         }
+        public ISession GetMessageSession()
+        {
+            if (!SesionActive)
+                return null;
+
+            return _session;
+        }
 
         public bool IsSesionActive()
         {
