@@ -37,7 +37,7 @@ public class FoodMessageQueueController {
 	private Queue RequestAllItemResponseQueue;
 
 	@GetMapping("/BuyFood/{id}/{userid}")
-	private void BuyFood(@PathVariable String id,
+	public void BuyFood(@PathVariable String id,
 			@PathVariable String userid) {
 		Food food = repository.findById(id).orElse(null);
 		
@@ -49,7 +49,7 @@ public class FoodMessageQueueController {
 	}
 	
 	@JmsListener(destination = "buyfoodreceive.queue")
-	private String AwaitbankConfirmation(ModelBankFood confirmation) {
+	public String AwaitbankConfirmation(ModelBankFood confirmation) {
 		
 		if(confirmation.affordable == true) {
 			ModelItem item = new ModelItem();
@@ -65,14 +65,16 @@ public class FoodMessageQueueController {
 	}
 	
 	@JmsListener(destination = "addfoodinvresponse.queue")
-	private void AwaitInvConfirmation(ModelItem item) {
+	public String AwaitInvConfirmation(ModelItem item) {
 		if(item.confirmation = true) {
+			return "Succesfully added item to inventory!";
 		}else {
+			return "Failed to add Item to inventory!";
 		}
 	}
 	
 	@JmsListener(destination = "requestallitemresponse.queue")
-	private void RequestAllItems(ModelRequestItems items) {
+	public void RequestAllItems(ModelRequestItems items) {
 		ModelRequestItemsResponse response = new ModelRequestItemsResponse();
 		response.UserId = items.userId;
 		

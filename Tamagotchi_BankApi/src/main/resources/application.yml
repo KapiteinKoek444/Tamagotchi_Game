@@ -9,3 +9,10 @@ spring:
        instanceId: ${spring.application.name}:${random.value}
   application:
     name: bank-api
+server:
+  ssl:
+    enabled: true
+    ciphers: TLS_RSA_WITH_AES_128_CBC_SHA256
+    protocol: TLS
+    enabled-protocols: [TLSv1.2]
+    

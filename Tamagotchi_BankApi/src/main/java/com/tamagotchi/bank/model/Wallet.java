@@ -27,7 +27,7 @@ public class Wallet {
 	}
 
 	public void setId(String id) {
-		id = id;
+		this.id = id;
 	}
 
 	public String getUserId() {

@@ -32,11 +32,13 @@ public class FoodRestController {
 	}
 
 	@PostMapping("/AddFood")
-	public void AddFood(@RequestBody Food food) {
+	public String AddFood(@RequestBody Food food) {
 		repository.save(food);
+		return food.id;
 	}
 	
-	public void RemoveFood(Food food) {
+	public String RemoveFood(Food food) {
 		repository.delete(food);
+		return food.id;
 	}
 }

@@ -8,4 +8,4 @@ spring:
         health-check-interval: 1m 
         instanceId: ${spring.application.name}:${random.value}
   application:
-    name: shop-api
+    name: Shop-api
