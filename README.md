@@ -15,6 +15,8 @@ XD_Tamagotchi_Game:
 
 /---------------------------------------------------\
 
+misschien uitleg, api's, linkjes ofzo.
+
 Tamagotchi achtig spel voor semeseter 3
 
 Tamago front-end link: https://tamago-frontend.azurewebsites.net
