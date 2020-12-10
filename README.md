@@ -2,16 +2,16 @@
 Leeswijzer:
 
 WRD_Tamago_ResearchDocument:
-  ons research document met daarin 2 deelvragen met onderzoek volgens dot framework.
+  - ons research document met daarin 2 deelvragen met onderzoek volgens dot framework.
  
 WRD_Tamagotchi_SoftwareOnderbouwingen:
-  ons document over onze software keuzes met daarin de beredenatie.
+  - ons document over onze software keuzes met daarin de beredenatie.
   
 WRD_Analyse document Tamagotchi:
-  ons analyse document.
+  - ons analyse document.
 
 XD_Tamagotchi_Game:
-  onze wireframes van de frontend.
+  - onze wireframes van de frontend.
 
 /---------------------------------------------------\
 
