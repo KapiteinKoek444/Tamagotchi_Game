@@ -1,4 +1,20 @@
 # Tamago Game
+Leeswijzer:
+
+WRD_Tamago_ResearchDocument:
+  ons research document met daarin 2 deelvragen met onderzoek volgens dot framework.
+ 
+WRD_Tamagotchi_SoftwareOnderbouwingen:
+  ons document over onze software keuzes met daarin de beredenatie.
+  
+WRD_Analyse document Tamagotchi:
+  ons analyse document:
+
+XD_Tamagotchi_Game:
+  onze wireframes van de frontend.
+
+/---------------------------------------------------\
+
 Tamagotchi achtig spel voor semeseter 3
 
 Tamago front-end link: https://tamago-frontend.azurewebsites.net
