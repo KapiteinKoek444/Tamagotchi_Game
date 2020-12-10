@@ -1,2 +1,3 @@
-# Tamagotchi_Game
-Tamagotchi achtig spel voor semeseter 3
+#Tamagotchi_frontend
+
+Onze frontend gemaakt met angular
