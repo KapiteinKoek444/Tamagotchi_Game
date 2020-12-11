@@ -1,4 +1,7 @@
 # Tamago Game
+
+Demo video: https://www.youtube.com/watch?v=2dcq3kH27x0&feature=youtu.be
+
 Leeswijzer:
 
 WRD_Tamago_ResearchDocument:
