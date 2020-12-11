@@ -1,6 +1,6 @@
 const { browser, element } = require("protractor");
 
-describe('Check login in page', function () {
+describe('Check gamepage in page', function () {
 
     beforeEach(function () {
         browser.get('http://localhost:4200/#/GamesPage');

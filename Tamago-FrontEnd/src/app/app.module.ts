@@ -10,6 +10,7 @@ import { GamesPageComponent } from './Components/Account/games-page/games-page.c
 import { ShopPageComponent } from './Components/Account/shop-page/shop-page.component';
 import { InventoryPageComponent } from './Components/Account/inventory-page/inventory-page.component';
 import { SleepPageComponent } from './Components/Account/sleep-page/sleep-page.component';
+import { ConfirmationDialogComponent } from './Components/Add-Ons/confirmation-dialog/confirmation-dialog.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { SleepPageComponent } from './Components/Account/sleep-page/sleep-page.c
     ShopPageComponent,
     InventoryPageComponent,
     SleepPageComponent,
+    ConfirmationDialogComponent,
   ],
   imports: [
     BrowserModule,

@@ -39,7 +39,7 @@
           </div>
           <div class="store-items-group"  *ngFor="let dailyItem of dailyItems">
             <div class="store-items">
-              <div class="store-item common">
+              <div class="store-item common" (click)="BuyItem(dailyItem)">
                 <div class="store-item-shadow"></div>
                 <div class="store-item-details">
                   <h1>{{dailyItem.name}}</h1>

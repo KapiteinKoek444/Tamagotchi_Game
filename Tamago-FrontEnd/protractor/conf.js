@@ -8,7 +8,8 @@ exports.config = {
     'dashboard-spec.js',
     'gamepage-spec.js',
     'inventory-spec.js',
-    'shop-spec.js'
+    'shop-spec.js',
+    'sleep-spec.js'
   ], 
   
   capabilities: {

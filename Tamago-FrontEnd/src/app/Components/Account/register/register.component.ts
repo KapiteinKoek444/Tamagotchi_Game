@@ -2,8 +2,6 @@ import { Component, OnInit } from '@angular/core';
 
 //models
 import { UserModel } from '../../../Models/UserModel';
-import { InventoryModel } from '../../../Models/InventoryModel';
-import { WalletModel } from '../../../Models/WalletModel';
 
 //services
 import { GuidFactory } from '../../../Services/GuidFactory';
@@ -33,15 +31,12 @@ export class RegisterComponent implements OnInit {
     var id = this.guidFactory.GenerateGuid();
     var securePassword = this.hasher.MD5(password);
     var user = new UserModel(email, securePassword, id);
-    var inventory = new InventoryModel(this.guidFactory.GenerateGuid(), id, new Array);
-    var wallet = new WalletModel(this.guidFactory.GenerateGuid(), id, 1000);
 
 
     this.apiserviceUser.SendUser(user).subscribe(
       data => {
-
-      this.apiserviceBank.SendWallet(wallet);
-      this.apiserviceInventory.SendInventory(inventory);
+      this.apiserviceBank.SendWallet(id);
+      this.apiserviceInventory.SendInventory(id);
   
       localStorage.setItem("userid", id);
       this.router.navigate(['animalpicker']);

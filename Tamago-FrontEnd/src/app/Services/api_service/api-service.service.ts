@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { HttpHeaders } from '@angular/common/http';
 import { AnimalModel } from 'src/app/Models/AnimalModel';
 import { UserModel } from 'src/app/Models/UserModel';
+import { BuyBleModel } from 'src/app/Models/BuyBleModel';
 
 
 const httpOptions = {
@@ -83,13 +84,12 @@ export class ApiServiceBank {
     return this.http.get('https://tamagotchigateway.azurewebsites.net/api/bank/wallet/' + userId, httpOptions);
   }
 
-  public SendWallet(wallet) {
-    this.http.post('https://tamagotchigateway.azurewebsites.net/api/bank/wallet/add', wallet, httpOptions).subscribe();
-    return wallet;
+  public SendWallet(userId: String) {
+    this.http.post('https://tamagotchigateway.azurewebsites.net/api/bank/wallet/add/' + userId, httpOptions).subscribe();
   }
 
-  public Update(wallet) {
-    this.http.post('https://tamagotchigateway.azurewebsites.net/api/bank/wallet/update', wallet, httpOptions);
+  public Update(wallet,userId: String) {
+    this.http.post('https://tamagotchigateway.azurewebsites.net/api/bank/wallet/update/' + userId, wallet, httpOptions);
   }
 
   public AddMoney(userId: String, money: number) {
@@ -108,17 +108,15 @@ export class ApiServiceInventory {
   }
 
   public GetInventory(userId: String) {
-    return this.http.get('https://tamagotchigateway.azurewebsites.net/api/inventory/get/' + userId, httpOptions);
+    return this.http.get('https://tamagotchigateway.azurewebsites.net/api/inventory/' + userId, httpOptions);
   }
 
-  public SendInventory(inventory) {
-    this.http.post('https://tamagotchigateway.azurewebsites.net/api/inventory/add', inventory, httpOptions).subscribe();
-    console.log(inventory);
-    return inventory;
+  public SendInventory(userId: String ) {
+    this.http.post('https://tamagotchigateway.azurewebsites.net/api/inventory/add/'+ userId, httpOptions).subscribe();
   }
 
-  public UpdateInventory(inventory) {
-    return this.http.post('https://tamagotchigateway.azurewebsites.net/api/inventory/add', inventory, httpOptions);
+  public UpdateInventory(inventory,userId: String) {
+    return this.http.post('https://tamagotchigateway.azurewebsites.net/api/inventory/add/' + userId, inventory, httpOptions);
   }
 }
 
@@ -138,4 +136,9 @@ export class ApiServiceShop {
   public GetFood(id: String) {
     return this.http.get('https://tamagotchigateway.azurewebsites.net/api/store/food/' + id, httpOptions);
   }
+  public BuyFood(model: BuyBleModel) {
+    console.log(model);
+    return this.http.post('https://tamagotchigateway.azurewebsites.net/api/store/food/buy' ,model, httpOptions);
+  }
 }
+  
