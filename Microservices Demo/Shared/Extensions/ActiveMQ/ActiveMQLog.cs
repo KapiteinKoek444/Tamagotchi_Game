@@ -18,7 +18,7 @@ namespace Shared.Extensions.ActiveMQ
         private  IMessageProducer messageProducer;
         private  IMessageConsumer messageConsumer;
         private IConnection _connection;
-        private bool SesionActive;
+        private bool SessionActive;
 
         public ActiveMQLog(string mqUrl, string username, string password)
         {
@@ -33,7 +33,7 @@ namespace Shared.Extensions.ActiveMQ
                 _connection = _connectionFactory.CreateConnection(username, password);
                 _connection.Start();
                 _session = _connection.CreateSession();
-                SesionActive = true;
+                SessionActive = true;
             }
             catch (Exception e)
             {
@@ -44,7 +44,7 @@ namespace Shared.Extensions.ActiveMQ
 
         public void ConnectSender(string queueName)
         {
-            if(!SesionActive)
+            if(!SessionActive)
                 return;
 
             IDestination destination = SessionUtil.GetDestination(_session, queueName);
@@ -52,62 +52,56 @@ namespace Shared.Extensions.ActiveMQ
         }
         public void ConnectListener(string queueName)
         {
-            if (!SesionActive)
+            if (!SessionActive)
                 return;
 
             IDestination destination = SessionUtil.GetDestination(_session, queueName);
             messageConsumer = _session.CreateConsumer(destination);
+            _connection.Start();
         }
 
-        public ITextMessage ConvertObjectToIMessage(Type type)
+        public ITextMessage ConvertObjectToIMessage<T>(T type)
         {
 
-            var jsonString = JsonConvert.SerializeObject(type);
-            var messege = messageProducer.CreateTextMessage(jsonString);
-            return messege;
+            var xmlString = XmlUtil.Serialize(type);
+            var message = messageProducer.CreateTextMessage(xmlString);
+            return message;
         }
         public  T ConvertIMessageToObject<T>(ITextMessage objectMessage)
         {
-
             var objectString = objectMessage.Text;
-            var result = JsonConvert.DeserializeObject<T>(objectString);
+            T result = (T)XmlUtil.Deserialize(typeof(T), objectString);
             return result;
         }
+
         public IMessageProducer GetMessageProducer()
         {
-            if (!SesionActive)
+            if (!SessionActive)
                 return null;
 
             return messageProducer;
         }
         public IMessageConsumer GetMessageConsumer()
         {
-            if (!SesionActive)
+            if (!SessionActive)
                 return null;
 
             return messageConsumer;
         }
-        public ISession GetMessageSession()
-        {
-            if (!SesionActive)
-                return null;
-
-            return _session;
-        }
 
         public bool IsSesionActive()
         {
-            return SesionActive;
+            return SessionActive;
         }
 
         public void CloseSession()
         {
-            if (!SesionActive)
+            if (!SessionActive)
                 return;
 
             _session.Close();
             _connection.Stop();
-            SesionActive = false;
+            SessionActive = false;
         }
 
 

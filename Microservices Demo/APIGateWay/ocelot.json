@@ -1,6 +1,6 @@
 {
   "Routes": [
-    //users
+    //user
     {
       "DownstreamPathTemplate": "/user", //
       "DownstreamScheme": "https",
@@ -37,7 +37,7 @@
       "UpstreamPathTemplate": "/api/user/{id}",
       "UpstreamHttpMethod": [ "Get", "Post" ]
     },
-    //animals
+    //animal
     {
       "DownstreamPathTemplate": "/animal", //
       "DownstreamScheme": "https",
@@ -74,6 +74,18 @@
       ],
       "UpstreamPathTemplate": "/api/store/food",
       "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/active/buyfood", //
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "tamago-shop.azurewebsites.net",
+          "Port": 443
+        }
+      ],
+      "UpstreamPathTemplate": "/api/store/food/buy",
+      "UpstreamHttpMethod": [ "Post" ]
     },
     {
       "DownstreamPathTemplate": "/rest/{id}", //
@@ -137,7 +149,7 @@
       "UpstreamPathTemplate": "/api/bank/wallet/add/{id}",
       "UpstreamHttpMethod": [ "Post" ]
     },
-      {
+    {
       "DownstreamPathTemplate": "/Rest", //
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
@@ -149,6 +161,7 @@
       "UpstreamPathTemplate": "/api/bank",
       "UpstreamHttpMethod": [ "get" ]
     },
+
     {
       "DownstreamPathTemplate": "/Rest/{id}", //
       "DownstreamScheme": "https",
@@ -221,6 +234,56 @@
       ],
       "UpstreamPathTemplate": "/api/inventory/remove/{id}",
       "UpstreamHttpMethod": [ "Remove" ]
+    },
+    //clock
+    {
+      "DownstreamPathTemplate": "/api/time", //
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "tamagotchiclockapi.azurewebsites.net",
+          "Port": 443
+        }
+      ],
+      "UpstreamPathTemplate": "/api/clock",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/time", //
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "tamagotchiclockapi.azurewebsites.net",
+          "Port": 443
+        }
+      ],
+      "UpstreamPathTemplate": "/api/clock",
+      "UpstreamHttpMethod": [ "Post" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/time/{id}", //
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "tamagotchiclockapi.azurewebsites.net",
+          "Port": 443
+        }
+      ],
+      "UpstreamPathTemplate": "/api/clock/{id}",
+      "UpstreamHttpMethod": [ "Get", "Post" ]
+    },
+    // SignalR clock
+    {
+      "DownstreamPathTemplate": "/{catchAll}",
+      "DownstreamScheme": "ws",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "tamagotchiclockapi.azurewebsites.net",
+          "Port": 443
+        }
+      ],
+      "UpstreamPathTemplate": "/api/socket/{catchAll}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE", "OPTIONS" ]
     }
   ],
   "GlobalConfiguration": {

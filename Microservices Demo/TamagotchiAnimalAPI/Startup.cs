@@ -13,6 +13,7 @@ using Microsoft.Extensions.Logging;
 using MongoDB.Driver;
 using Shared.Extensions.ActiveMQ;
 using Shared.Extensions.Consul;
+using TamagotchiAnimalAPI.SignalR;
 using UserManagement.Config;
 
 namespace TamagotchiAnimalAPI
@@ -54,9 +55,11 @@ namespace TamagotchiAnimalAPI
             services.AddCors(o => o.AddPolicy("MyPolicy", builder =>
             {
                 builder.AllowAnyOrigin()
-                       .AllowAnyMethod()                   
+                       .AllowAnyMethod()
                        .AllowAnyHeader();
             }));
+
+            services.AddSignalR();
 
             services.AddControllers();
         }
@@ -79,6 +82,10 @@ namespace TamagotchiAnimalAPI
 
             app.UseAuthorization();
 
+            app.UseSignalR(routes =>
+            {
+                routes.MapHub<AnimalValuesHub>("/AnimalValues");
+            });
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();

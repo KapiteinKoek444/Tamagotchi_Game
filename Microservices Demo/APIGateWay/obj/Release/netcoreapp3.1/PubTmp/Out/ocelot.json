@@ -76,6 +76,18 @@
       "UpstreamHttpMethod": [ "Get" ]
     },
     {
+      "DownstreamPathTemplate": "/active/buyfood", //
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "tamago-shop.azurewebsites.net",
+          "Port": 443
+        }
+      ],
+      "UpstreamPathTemplate": "/api/store/food/buy",
+      "UpstreamHttpMethod": [ "Post" ]
+    },
+    {
       "DownstreamPathTemplate": "/rest/{id}", //
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
@@ -137,7 +149,7 @@
       "UpstreamPathTemplate": "/api/bank/wallet/add/{id}",
       "UpstreamHttpMethod": [ "Post" ]
     },
-      {
+    {
       "DownstreamPathTemplate": "/Rest", //
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
@@ -149,6 +161,7 @@
       "UpstreamPathTemplate": "/api/bank",
       "UpstreamHttpMethod": [ "get" ]
     },
+
     {
       "DownstreamPathTemplate": "/Rest/{id}", //
       "DownstreamScheme": "https",

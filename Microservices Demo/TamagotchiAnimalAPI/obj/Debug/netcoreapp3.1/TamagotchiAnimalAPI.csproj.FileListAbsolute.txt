@@ -3,9 +3,6 @@ C:\Users\micke\Source\Repos\Tamagotchi_Game\Microservices Demo\TamagotchiAnimalA
 C:\Users\micke\Source\Repos\Tamagotchi_Game\Microservices Demo\TamagotchiAnimalAPI\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
 C:\Users\micke\Source\Repos\Tamagotchi_Game\Microservices Demo\TamagotchiAnimalAPI\bin\Debug\netcoreapp3.1\TamagotchiAnimalAPI.exe
 C:\Users\micke\Source\Repos\Tamagotchi_Game\Microservices Demo\TamagotchiAnimalAPI\obj\Debug\netcoreapp3.1\TamagotchiAnimalAPI.csprojAssemblyReference.cache
-C:\Users\micke\Source\Repos\Tamagotchi_Game\Microservices Demo\TamagotchiAnimalAPI\obj\Debug\netcoreapp3.1\TamagotchiAnimalAPI.AssemblyInfoInputs.cache
-C:\Users\micke\Source\Repos\Tamagotchi_Game\Microservices Demo\TamagotchiAnimalAPI\obj\Debug\netcoreapp3.1\TamagotchiAnimalAPI.AssemblyInfo.cs
-C:\Users\micke\Source\Repos\Tamagotchi_Game\Microservices Demo\TamagotchiAnimalAPI\obj\Debug\netcoreapp3.1\TamagotchiAnimalAPI.RazorTargetAssemblyInfo.cache
 C:\Users\micke\Source\Repos\Tamagotchi_Game\Microservices Demo\TamagotchiAnimalAPI\obj\Debug\netcoreapp3.1\staticwebassets\TamagotchiAnimalAPI.StaticWebAssets.Manifest.cache
 C:\Users\micke\Source\Repos\Tamagotchi_Game\Microservices Demo\TamagotchiAnimalAPI\obj\Debug\netcoreapp3.1\staticwebassets\TamagotchiAnimalAPI.StaticWebAssets.xml
 C:\Users\micke\Source\Repos\Tamagotchi_Game\Microservices Demo\TamagotchiAnimalAPI\bin\Debug\netcoreapp3.1\TamagotchiAnimalAPI.deps.json
