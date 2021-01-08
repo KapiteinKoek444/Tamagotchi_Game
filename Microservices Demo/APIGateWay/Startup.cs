@@ -18,13 +18,18 @@ namespace APIGateWay
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+
+
+
             services.AddOcelot();
 
             services.AddCors(o => o.AddPolicy("MyPolicy", builder =>
             {
-                builder.AllowAnyOrigin()
+                builder.AllowCredentials()
                        .AllowAnyMethod()
+                       .WithOrigins()
                        .AllowAnyHeader();
+
             }));
         }
 
@@ -40,13 +45,15 @@ namespace APIGateWay
 
             app.UseCors("MyPolicy");
 
+
+            app.UseWebSockets();
+            app.UseOcelot().Wait();
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
             });
 
-            app.UseWebSockets();
-            app.UseOcelot().Wait();
         }
     }
 }

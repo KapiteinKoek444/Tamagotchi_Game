@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Dp3vAn5uXB5G7WeT6MHprptK3R6tt3mU+8I23kITtxYROthqnWckbmzVTV+Sm6a6SGFRcmntMwwxDViOKK274A==",
+  "dgSpecHash": "LQVnP5+iQAbwdm++394C7jlzhCxHaAPevV98DzPnb1agrpab32C613nZZZFetvR/j/iQH7O8RITO+xJ4nq44LA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\micke\\source\\repos\\Tamagotchi_Game\\Microservices Demo\\ClockApi\\ClockApi.csproj",
+  "projectFilePath": "C:\\Users\\micke\\Source\\Repos\\Tamagotchi_Game\\Microservices Demo\\ClockApi\\ClockApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\micke\\.nuget\\packages\\apache.nms\\1.7.1\\apache.nms.1.7.1.nupkg.sha512",
     "C:\\Users\\micke\\.nuget\\packages\\apache.nms.activemq\\1.7.2\\apache.nms.activemq.1.7.2.nupkg.sha512",

@@ -20,6 +20,7 @@ namespace TamagotchiAnimalAPI
 {
     public class Startup
     {
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -29,9 +30,15 @@ namespace TamagotchiAnimalAPI
 
         public ConfigurationSetting _configurationSetting { get; set; }
 
+
+
+
+
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
+
             services.AddSingleton<IMongoClient, MongoClient>(s =>
             {
                 var uri = s.GetRequiredService<IConfiguration>()["MongoUri"];
@@ -54,9 +61,11 @@ namespace TamagotchiAnimalAPI
 
             services.AddCors(o => o.AddPolicy("MyPolicy", builder =>
             {
-                builder.AllowAnyOrigin()
-                       .AllowAnyMethod()
-                       .AllowAnyHeader();
+                builder
+                    .AllowAnyMethod()
+                    .AllowAnyHeader()
+                    .SetIsOriginAllowed(origin => true) // allow any origin  
+                    .AllowCredentials();               // allow credentials 
             }));
 
             services.AddSignalR();
@@ -89,6 +98,7 @@ namespace TamagotchiAnimalAPI
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+                //endpoints.MapHub<AnimalValuesHub>("/AnimalValues");
             });
         }
     }

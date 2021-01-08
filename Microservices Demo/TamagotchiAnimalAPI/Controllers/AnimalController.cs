@@ -25,7 +25,7 @@ namespace TamagotchiAnimalAPI.Controllers
         private IMongoCollection<Animal> _animalCollection;
         private readonly IHubContext<AnimalValuesHub> _hubContext;
 
-        protected static ITextMessage message = null;
+        public ITextMessage message = null;
         private readonly IActiveMqLog _activeMQLog;
 
         public AnimalController(IMongoClient client, IActiveMqLog activeMQLog, IHubContext<AnimalValuesHub> hubContext)
@@ -37,66 +37,30 @@ namespace TamagotchiAnimalAPI.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Get()
+        public async Task<List<Animal>> Get()
         {
             var result = _animalCollection.Find(Builders<Animal>.Filter.Empty).ToList();
-            return Ok(result);
+            return result;
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> Get([FromRoute] Guid id)
+        public async Task<Animal> Get([FromRoute] Guid id)
         {
             var filter = Builders<Animal>.Filter.Eq("UserId", id);
-            var result = _animalCollection.Find(filter).First();
-            return Ok(result);
+            var result = _animalCollection.Find(filter).FirstOrDefault();
+            return result;
         }
 
         [HttpGet("ConnectAnimal/{id}")]
-        public async Task<IActionResult> ConnectAnimal([FromRoute] Guid id)
+        public async Task<ActionResult<Animal>> ConnectAnimal([FromRoute] Guid id)
         {
-            Animal animal = (Animal)await Get(id);
 
-            if (animal == null)
-                return StatusCode(StatusCodes.Status500InternalServerError, "Animal not found..");
-
-            _activeMQLog.ConnectSender("Clock.GetUserTimeStamp.queue");
-            _activeMQLog.ConnectListener("Clock.GetUserTimeStampResponse.queue");
-
-            using (IMessageConsumer consumer = _activeMQLog.GetMessageConsumer())
-            {
-                using (IMessageProducer producer = _activeMQLog.GetMessageProducer())
-                {
-                    // Start the connection so that messages will be processed.
-                    producer.DeliveryMode = MsgDeliveryMode.Persistent;
-                    consumer.Listener += new MessageListener(UponClockMessage);
-
-                    // Send a message
-                    RequestEntityModel requestmodel = new RequestEntityModel()
-                    {
-                        id = id,
-                    };
-                    IMessage request = _activeMQLog.ConvertObjectToIMessage<RequestEntityModel>(requestmodel);
-                    producer.Send(request);
-
-                    // Wait for the message
-                    while (message == null) await Task.Delay(40);
-                }
-            }
-
-            TimeStampModel receivedModel = _activeMQLog.ConvertIMessageToObject<TimeStampModel>(message);
-            //reset message 
-            message = null;
-
-            var result = AnimalFactory.CalculateAnimalScore(animal, receivedModel.LastOnline);
-
-            var updateAnimal = await Update(id, result);
-
-            var timerFactory = new TimerFactory(() => _hubContext.Clients.All.SendAsync("getAnimalData", result));
+            var timerFactory = new TimerFactory(() => _hubContext.Clients.All.SendAsync("getAnimalData", GetCurrentAnimelValues(id).Result));
             return Ok();
         }
 
         [HttpPost]
-        public async Task<IActionResult> Post([FromBody] Animal model)
+        public async Task<ActionResult<Animal>> Post([FromBody] Animal model)
         {
 
             var animals = _animalCollection.Find(Builders<Animal>.Filter.Empty).ToList();
@@ -110,7 +74,8 @@ namespace TamagotchiAnimalAPI.Controllers
         }
 
         [HttpPost("{id}")]
-        public async Task<IActionResult> Update([FromRoute] Guid id, [FromBody] Animal model)
+
+        public async Task<ActionResult<Animal>> Update([FromRoute] Guid id, [FromBody] Animal model)
         {
             try
             {
@@ -123,9 +88,77 @@ namespace TamagotchiAnimalAPI.Controllers
             }
         }
 
-        public async void UponClockMessage(IMessage message)
+        [HttpDelete("{id}")]
+        [Route("remove/{id}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async Task<Animal> Remove([FromRoute] Guid id)
         {
-            ITextMessage objectMessage = message as ITextMessage;
+            var filter = Builders<Animal>.Filter.Eq("id", id);
+            var data = _animalCollection.FindOneAndDelete(filter);
+            return data;
+        }
+
+        public async Task<Animal> GetCurrentAnimelValues(Guid id)
+        {
+            var filter = Builders<Animal>.Filter.Eq("UserId", id);
+            Animal animal = _animalCollection.Find(filter).First();
+
+            if (animal == null)
+                return null;
+
+            _activeMQLog.ConnectSender("Clock.GetUserTimeStamp.queue");
+            _activeMQLog.ConnectListener("Clock.GetUserTimeStampResponse.queue");
+
+            using (IMessageConsumer consumer = _activeMQLog.GetMessageConsumer())
+            {
+                using (IMessageProducer producer = _activeMQLog.GetMessageProducer())
+                {
+                    if (consumer == null || producer == null)
+                        return null;
+
+                    // Start the connection so that messages will be processed.
+                    producer.DeliveryMode = MsgDeliveryMode.Persistent;
+                    consumer.Listener += new MessageListener(UponClockMessage);
+
+                    // Send a message
+                    RequestEntityModel requestmodel = new RequestEntityModel()
+                    {
+                        id = id,
+                    };
+                    IMessage request = _activeMQLog.ConvertObjectToIMessage<RequestEntityModel>(requestmodel);
+                    producer.Send(request);
+
+                    int count = 0;
+                    int maxTryAmount = 500;
+                    // Wait for the message
+                    while (message == null)
+                    {
+                        if (count >= maxTryAmount)
+                        {
+                            return null;
+                        }
+
+                        count++;
+                        await Task.Delay(40);
+                    }
+                }
+            }
+
+            TimeStampModel receivedModel = _activeMQLog.ConvertIMessageToObject<TimeStampModel>(message);
+            //reset message 
+            message = null;
+
+            var result = AnimalFactory.CalculateAnimalScore(animal, receivedModel.LastOnline,0.1);
+
+            var updateAnimal = await Update(id, result);
+
+            return result;
+        }
+
+        public async void UponClockMessage(IMessage Textmessage)
+        {
+            ITextMessage objectMessage = Textmessage as ITextMessage;
             message = objectMessage;
         }
     }

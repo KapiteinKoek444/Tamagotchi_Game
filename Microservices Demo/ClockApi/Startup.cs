@@ -49,9 +49,11 @@ namespace ClockApi
 
             services.AddCors(o => o.AddPolicy("MyPolicy", builder =>
             {
-                builder.AllowAnyOrigin()
+                builder
                     .AllowAnyMethod()
-                    .AllowAnyHeader();
+                    .AllowAnyHeader()
+                    .SetIsOriginAllowed(origin => true) // allow any origin  
+                    .AllowCredentials();
             }));
 
             services.AddControllers();

@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SignalR;
 using MongoDB.Driver;
+using Shared.ActiveMQ_Models;
+using Shared.ApiModels;
 using Shared.Extensions.ActiveMQ;
 using Shared.Shared.ApiModels;
 
@@ -32,28 +34,28 @@ namespace ClockApi.Controllers
 
         // GET: api/<TimeController>
         [HttpGet]
-        public async Task<IActionResult> Get()
+        public async Task<List<TimeStamp>> Get()
         {
             var result = _TimeStampCollection.Find(Builders<TimeStamp>.Filter.Empty).ToList();
-            return Ok(result);
+            return result;
         }
 
 
         // GET api/<TimeController>/5
         [HttpGet("{id}")]
-        public async Task<IActionResult> Get([FromRoute] Guid id)
+        public async Task<TimeStamp> Get([FromRoute] Guid id)
         {
             var filter = Builders<TimeStamp>.Filter.Eq("UserId", id);
-            var result = _TimeStampCollection.Find(filter).First();
-            return Ok(result);
+            var result = _TimeStampCollection.Find(filter).FirstOrDefault();
+            return result;
         }
 
         // POST api/<TimeController>
         [HttpPost]
         public async Task<IActionResult> Post([FromBody] TimeStamp model)
         {
-            var TimeStamps = _TimeStampCollection.Find(Builders<TimeStamp>.Filter.Empty).ToList();
-            var user = TimeStamps.SingleOrDefault(x => x.UserId == model.UserId);
+            var filter = Builders<TimeStamp>.Filter.Eq("UserId", model.UserId);
+            var user = _TimeStampCollection.Find(filter).FirstOrDefault();
 
             if (user != null)
             {
@@ -65,6 +67,32 @@ namespace ClockApi.Controllers
             _TimeStampCollection.InsertOne(model);
             return StatusCode(StatusCodes.Status201Created, model);
         }
+        [HttpPost("{id}")]
+        public async Task<IActionResult> Update([FromRoute] Guid id, [FromBody] TimeStamp model)
+        {
+            try
+            {
+                _TimeStampCollection.ReplaceOneAsync(a => a.UserId.Equals(id), model, new UpdateOptions { IsUpsert = true });
+                return StatusCode(StatusCodes.Status201Created, model);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, ex);
+            }
+        }
+
+        [HttpDelete("{id}")]
+        [Route("remove/{id}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async Task<TimeStamp> Remove([FromRoute] Guid id)
+        {
+            var filter = Builders<TimeStamp>.Filter.Eq("id", id);
+            var data = _TimeStampCollection.FindOneAndDelete(filter);
+            return data;
+        }
+
+
 
         [HttpGet]
         [Route("Test")]
@@ -79,19 +107,26 @@ namespace ClockApi.Controllers
         public async void UponAnimalMessage(IMessage message)
         {
             ITextMessage objectMessage = message as ITextMessage;
-            AnimalModel receivedModel = _activeMQLog.ConvertIMessageToObject<AnimalModel>(objectMessage);
+            RequestEntityModel receivedModel = _activeMQLog.ConvertIMessageToObject<RequestEntityModel>(objectMessage);
 
-            var timestamp = (TimeStamp)await Get(receivedModel.UserId);
+            var filter = Builders<TimeStamp>.Filter.Eq("UserId", receivedModel.id);
+            var timestamp = _TimeStampCollection.Find(filter).FirstOrDefault();
+            
 
             if (timestamp == null)
             {
-                timestamp = new TimeStamp() {Id = Guid.NewGuid(), UserId = receivedModel.UserId , LastOnline = DateTime.Now};
+                timestamp = new TimeStamp() {Id = Guid.NewGuid(), UserId = receivedModel.id, LastOnline = DateTime.Now};
                 await Post(timestamp);
             }
 
             _activeMQLog.ConnectSender("Clock.GetUserTimeStampResponse.queue");
             var producer = _activeMQLog.GetMessageProducer();
-            producer.Send(timestamp);
+
+            producer.Send(new TimeStampModel() { Id = timestamp.Id, UserId = timestamp.UserId, LastOnline = timestamp.LastOnline});
+            timestamp.LastOnline = DateTime.Now;
+
+            await Update(timestamp.UserId,timestamp);
+
         }
 
 

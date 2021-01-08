@@ -18,7 +18,7 @@ namespace Shared.Extensions.ActiveMQ
         private  IMessageProducer messageProducer;
         private  IMessageConsumer messageConsumer;
         private IConnection _connection;
-        private bool SessionActive;
+        private bool SessionActive = false;
 
         public ActiveMQLog(string mqUrl, string username, string password)
         {

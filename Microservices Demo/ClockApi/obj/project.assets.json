@@ -6744,11 +6744,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\micke\\source\\repos\\Tamagotchi_Game\\Microservices Demo\\ClockApi\\ClockApi.csproj",
+      "projectUniqueName": "C:\\Users\\micke\\Source\\Repos\\Tamagotchi_Game\\Microservices Demo\\ClockApi\\ClockApi.csproj",
       "projectName": "ClockApi",
-      "projectPath": "C:\\Users\\micke\\source\\repos\\Tamagotchi_Game\\Microservices Demo\\ClockApi\\ClockApi.csproj",
+      "projectPath": "C:\\Users\\micke\\Source\\Repos\\Tamagotchi_Game\\Microservices Demo\\ClockApi\\ClockApi.csproj",
       "packagesPath": "C:\\Users\\micke\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\micke\\source\\repos\\Tamagotchi_Game\\Microservices Demo\\ClockApi\\obj\\",
+      "outputPath": "C:\\Users\\micke\\Source\\Repos\\Tamagotchi_Game\\Microservices Demo\\ClockApi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\micke\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6764,8 +6764,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\micke\\source\\repos\\Tamagotchi_Game\\Microservices Demo\\Shared\\Shared.csproj": {
-              "projectPath": "C:\\Users\\micke\\source\\repos\\Tamagotchi_Game\\Microservices Demo\\Shared\\Shared.csproj"
+            "C:\\Users\\micke\\Source\\Repos\\Tamagotchi_Game\\Microservices Demo\\Shared\\Shared.csproj": {
+              "projectPath": "C:\\Users\\micke\\Source\\Repos\\Tamagotchi_Game\\Microservices Demo\\Shared\\Shared.csproj"
             }
           }
         }

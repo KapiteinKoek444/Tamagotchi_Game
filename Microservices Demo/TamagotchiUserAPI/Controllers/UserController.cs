@@ -25,18 +25,18 @@ namespace MongoDB_API.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Get()
+        public async Task<List<User>> Get()
         {
             var result = _usersCollection.Find(Builders<User>.Filter.Empty).ToList();
-            return Ok(result);
+            return result;
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> Get([FromRoute] Guid id)
+        public async Task<User> Get([FromRoute] Guid id)
         {
             var filter =  Builders<User>.Filter.Eq("_id", id);
-            var result =  _usersCollection.Find(filter).First();
-            return Ok(result);
+            var result =  _usersCollection.Find(filter).FirstOrDefault();
+            return result;
         }
 
         [HttpPost]
@@ -52,7 +52,6 @@ namespace MongoDB_API.Controllers
             }
             catch (Exception ex)
             {
-                
                 return NotFound(null);
             }
 
@@ -62,7 +61,7 @@ namespace MongoDB_API.Controllers
         public async Task<IActionResult> Post([FromBody] User model)
         {
             var users = _usersCollection.Find(Builders<User>.Filter.Empty).ToList();
-                var user = users.SingleOrDefault(x => x.Password == model.Password && x.Email == model.Email);
+                var user = users.SingleOrDefault(x => x.Password == model.Password && x.Email == model.Email); // check if the user already exist
 
                 if(user != null)
                     return StatusCode(StatusCodes.Status500InternalServerError,null);
@@ -71,6 +70,16 @@ namespace MongoDB_API.Controllers
                 return StatusCode(StatusCodes.Status201Created, model);
         }
 
+        [HttpDelete("{id}")]
+        [Route("remove/{id}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async Task<User> Remove([FromRoute] Guid id)
+        {
+            var filter = Builders<User>.Filter.Eq("_id", id);
+            var data = _usersCollection.FindOneAndDelete(filter);
+            return data;
+        }
 
     }
 }
