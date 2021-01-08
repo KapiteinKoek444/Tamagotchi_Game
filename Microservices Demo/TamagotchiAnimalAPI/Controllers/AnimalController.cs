@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Threading.Tasks;
 using Apache.NMS;
@@ -52,6 +53,7 @@ namespace TamagotchiAnimalAPI.Controllers
         }
 
         [HttpGet("ConnectAnimal/{id}")]
+        [ExcludeFromCodeCoverage]
         public async Task<ActionResult<Animal>> ConnectAnimal([FromRoute] Guid id)
         {
 
@@ -99,6 +101,7 @@ namespace TamagotchiAnimalAPI.Controllers
             return data;
         }
 
+        [ExcludeFromCodeCoverage]
         public async Task<Animal> GetCurrentAnimelValues(Guid id)
         {
             var filter = Builders<Animal>.Filter.Eq("UserId", id);

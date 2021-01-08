@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Text;
 
 namespace Shared.Shared.ApiModels
 {
-	public class AnimalModel
+    [ExcludeFromCodeCoverage]
+    public class AnimalModel
 	{
         public Guid Id { get; set; }
         public Guid UserId { get; set; }

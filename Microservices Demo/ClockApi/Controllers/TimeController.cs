@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Threading.Tasks;
 using Apache.NMS;
@@ -96,6 +97,7 @@ namespace ClockApi.Controllers
 
         [HttpGet]
         [Route("Test")]
+        [ExcludeFromCodeCoverage]
         public void Test()
         {
             TimeStamp test = new TimeStamp();
@@ -104,6 +106,7 @@ namespace ClockApi.Controllers
             test.LastOnline = DateTime.Now;
             Post(test);
         }
+        [ExcludeFromCodeCoverage]
         public async void UponAnimalMessage(IMessage message)
         {
             ITextMessage objectMessage = message as ITextMessage;

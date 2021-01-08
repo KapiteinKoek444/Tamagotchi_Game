@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Text;
 
 namespace Shared.Extensions.Consul
 {
+    [ExcludeFromCodeCoverage]
     public class ConfigurationSetting
     {
         public string ServiceName { get; set; }

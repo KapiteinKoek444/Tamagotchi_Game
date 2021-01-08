@@ -1,11 +1,13 @@
 ﻿using MongoDB.Bson.Serialization.Attributes;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace TamagotchiAnimalAPI.Entities
 {
+    [ExcludeFromCodeCoverage]
     public class Animal
     {
         [BsonId]
