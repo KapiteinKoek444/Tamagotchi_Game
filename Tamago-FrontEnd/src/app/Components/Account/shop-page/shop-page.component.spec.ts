@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ShopPageComponent } from './shop-page.component';
 import { RouterTestingModule } from '@angular/router/testing';
+import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 
 describe('ShopPageComponent', () => {
   let component: ShopPageComponent;
@@ -8,7 +9,7 @@ describe('ShopPageComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [RouterTestingModule],
+      imports: [HttpClientTestingModule,RouterTestingModule],
       declarations: [ ShopPageComponent ]
     })
     .compileComponents();

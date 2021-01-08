@@ -60,6 +60,13 @@ export class ApiServiceAnimal {
     return this.http.get(`https://tamagotchigateway.azurewebsites.net/api/animal/` + userId, httpOptions);
   }
 
+  public ConnectAnimal(userId: String){
+    //var result = this.http.get('https://tamagotchigateway.azurewebsites.net/api/animal/ConnectAnimal/' + userId, httpOptions);
+    var result = this.http.get('https://localhost:44337/animal/ConnectAnimal/' + userId, httpOptions);
+    console.log(result);
+    return result;
+  }
+
   public SendAnimal(animal) {
     this.http.post('https://tamagotchigateway.azurewebsites.net/api/animal', animal, httpOptions).subscribe();
     return animal;
@@ -141,4 +148,14 @@ export class ApiServiceShop {
     return this.http.post('https://tamagotchigateway.azurewebsites.net/api/store/food/buy' ,model, httpOptions);
   }
 }
+
+@Injectable({
+  providedIn: 'root'
+})
+
+export class APIClock{
+  constructor(private http: HttpClient) {
+  }
+}
+
   

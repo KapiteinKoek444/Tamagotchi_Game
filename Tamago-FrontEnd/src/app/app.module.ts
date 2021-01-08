@@ -11,6 +11,8 @@ import { ShopPageComponent } from './Components/Account/shop-page/shop-page.comp
 import { InventoryPageComponent } from './Components/Account/inventory-page/inventory-page.component';
 import { SleepPageComponent } from './Components/Account/sleep-page/sleep-page.component';
 import { ConfirmationDialogComponent } from './Components/Add-Ons/confirmation-dialog/confirmation-dialog.component';
+import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
+import { ConfirmationDialogService } from './Components/Add-Ons/Services/confirmation-dialog.service';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,7 @@ import { ConfirmationDialogComponent } from './Components/Add-Ons/confirmation-d
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
+    NgbModalModule,
   ],
   providers: [
     HttpClientModule,
@@ -36,7 +39,9 @@ import { ConfirmationDialogComponent } from './Components/Add-Ons/confirmation-d
     ApiServiceInventory,
     ApiServiceShop,
     Hasher,
-    GuidFactory],
+    GuidFactory,
+    ConfirmationDialogService 
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
