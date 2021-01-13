@@ -1,59 +1,64 @@
-
-  <body>
-    <div class="top-bar">
-      <div class="bar-actions">
-        <button class="submit-animal" (click)= "back()">Back</button>
-      </div>
-      <div class="menu">
-        <a (click)="inventory()">My Inventory</a>
-        <a class="active">Store</a>
-      </div>
-      <div class="bar-actions">
-        <a>
-          <i class="fa fa-dollar"></i> 10,000
-        </a>
-      </div>
+<body>
+  <div class="top-bar">
+    <div class="bar-actions">
+      <button class="submit-animal" (click)="back()">Back</button>
     </div>
-    <div class="content">
-      <div class="store">
-        <div class="store-big">
-          <div class="store-section-info">
-            <h1>FEATURED ITEMS</h1>
+    <div class="menu">
+      <a (click)="inventory()">My Inventory</a>
+      <a class="active">Store</a>
+    </div>
+    <div class="bar-actions">
+      <a>
+        <i class="fa fa-dollar"></i> {{ walletbalance }}$
+      </a>
+    </div>
+  </div>
+  <div class="content">
+    <div class="store">
+      <div class="store-big">
+        <div class="store-section-info">
+          <h1>FEATURED ITEMS</h1>
+        </div>
+        <div class="store-items" *ngFor="let featuredItem of featuredItems">
+          <div class="store-item rare" (click)="BuyItem(featuredItem)">
+            <div class="store-item-shadow"></div>
+            <div class="store-item-details">
+              <h1>{{featuredItem.name}}</h1>
+              <p>{{featuredItem.category}}</p>
+            </div>
+            <div class="store-item-price">
+              <i class="fa fa-dollar">{{featuredItem.price}}$</i>
+              <i class="fa fa-dollar">, {{featuredItem.foodVal}}F</i>
+              <i class="fa fa-dollar">, {{featuredItem.energyVal}}E</i>
+              <i class="fa fa-dollar">, {{featuredItem.happyVal}}H</i>
+            </div>
           </div>
-          <div class="store-items" *ngFor="let featuredItem of featuredItems">
-            <div class="store-item rare" (click)="BuyItem(featuredItem)">
+        </div>
+      </div>
+      <div class="store-small">
+        <div class="store-section-info">
+          <h1>DAILY ITEMS</h1>
+        </div>
+        <div class="store-items-group" *ngFor="let dailyItem of dailyItems">
+          <div class="store-items">
+            <div class="store-item common" (click)="BuyItem(dailyItem)">
               <div class="store-item-shadow"></div>
               <div class="store-item-details">
-                <h1>{{featuredItem.name}}</h1>
-                <p>{{featuredItem.category}}</p>
+                <h1>{{dailyItem.name}}</h1>
+                <p>{{dailyItem.category}}</p>
               </div>
               <div class="store-item-price">
-                <i class="fa fa-dollar"></i> {{featuredItem.price}}
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="store-small">
-          <div class="store-section-info">
-            <h1>DAILY ITEMS</h1>
-          </div>
-          <div class="store-items-group"  *ngFor="let dailyItem of dailyItems">
-            <div class="store-items">
-              <div class="store-item common" (click)="BuyItem(dailyItem)">
-                <div class="store-item-shadow"></div>
-                <div class="store-item-details">
-                  <h1>{{dailyItem.name}}</h1>
-                  <p>{{dailyItem.category}}</p>
-                </div>
-                <div class="store-item-price">
-                  <i class="fa fa-dollar"></i> {{dailyItem.price}}
-                </div>
+                <i class="fa fa-dollar">{{dailyItem.price}}$</i>
+                <i class="fa fa-dollar">, {{dailyItem.foodVal}}F</i>
+                <i class="fa fa-dollar">, {{dailyItem.energyVal}}E</i>
+                <i class="fa fa-dollar">, {{dailyItem.happyVal}}H</i>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="bottom-bar">
-    </div>
-  </body>
+  </div>
+  <div class="bottom-bar">
+  </div>
+</body>

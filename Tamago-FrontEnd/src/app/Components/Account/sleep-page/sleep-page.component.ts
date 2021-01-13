@@ -7,7 +7,7 @@ import { AnimalImages } from 'src/app/Services/constants';
 @Component({
   selector: 'app-sleep-page',
   templateUrl: './sleep-page.component.html',
-  styleUrls: ['./sleep-page.component.css','../../../../assets/css/Account.css']
+  styleUrls: ['./sleep-page.component.css', '../../../../assets/css/Account.css']
 })
 export class SleepPageComponent implements OnInit {
 
@@ -15,14 +15,14 @@ export class SleepPageComponent implements OnInit {
   images: String[];
   animal: AnimalModel;
 
-  constructor(private apiserviceAnimal: ApiServiceAnimal,private router: Router) {
+  constructor(private apiserviceAnimal: ApiServiceAnimal, private router: Router) {
     this.images = AnimalImages;
-   }
+  }
 
-   ngOnInit(): void {
+  ngOnInit(): void {
     this.animal = new AnimalModel(0, 0, "null", 0, 0, 0, 1);
 
-    this.apiserviceAnimal.GetAnimal(localStorage.getItem("userid")).subscribe((data) => {
+    this.apiserviceAnimal.GetAnimal().subscribe((data) => {
       this.animal = new AnimalModel(0, 0, "0", 0, 0, 0, 0).fromJSON(data)
 
       var imageAnimal = document.getElementById('animal') as HTMLImageElement;
