@@ -247,6 +247,18 @@
       "UpstreamPathTemplate": "/api/inventory/remove/{id}",
       "UpstreamHttpMethod": [ "Remove" ]
     },
+    {
+      "DownstreamPathTemplate": "/Rest/post", //
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "tamago-inventory.azurewebsites.net",
+          "Port": 443
+        }
+      ],
+      "UpstreamPathTemplate": "/api/inventory/update",
+      "UpstreamHttpMethod": [ "Post" ]
+    },
     //clock
     {
       "DownstreamPathTemplate": "/api/time", //

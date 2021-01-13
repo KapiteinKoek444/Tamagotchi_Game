@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "PHXhPwQbu6IFI51iAITpfTgISrde93Wl555zEm8MKu2sAkbYUOSYiaxjxvuQdYCtFMZWMGN1wLMk+LOUlZCKzg==",
+  "dgSpecHash": "e4SjUEAGz2+vcPXkA5PanVhqWmwB3Teo4xJhw87wM9Bek4vfjRon/KtZ3MH+VNeHPBnjq2H654kU9KdPDArfMg==",
   "success": true,
   "projectFilePath": "C:\\Users\\micke\\Source\\Repos\\Tamagotchi_Game\\Microservices Demo\\AnimalAPITests\\AnimalAPITests.csproj",
   "expectedPackageFiles": [
@@ -10,6 +10,7 @@
     "C:\\Users\\micke\\.nuget\\packages\\coverlet.collector\\1.2.0\\coverlet.collector.1.2.0.nupkg.sha512",
     "C:\\Users\\micke\\.nuget\\packages\\dnsclient\\1.3.1\\dnsclient.1.3.1.nupkg.sha512",
     "C:\\Users\\micke\\.nuget\\packages\\json.net\\1.0.23\\json.net.1.0.23.nupkg.sha512",
+    "C:\\Users\\micke\\.nuget\\packages\\microsoft.aspnet.signalr\\2.4.1\\microsoft.aspnet.signalr.2.4.1.nupkg.sha512",
     "C:\\Users\\micke\\.nuget\\packages\\microsoft.aspnetcore\\2.2.0\\microsoft.aspnetcore.2.2.0.nupkg.sha512",
     "C:\\Users\\micke\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\micke\\.nuget\\packages\\microsoft.aspnetcore.authentication.core\\2.2.0\\microsoft.aspnetcore.authentication.core.2.2.0.nupkg.sha512",

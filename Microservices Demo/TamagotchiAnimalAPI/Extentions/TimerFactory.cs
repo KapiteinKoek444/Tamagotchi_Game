@@ -12,7 +12,8 @@ namespace TamagotchiAnimalAPI.factories
     {
         private readonly Timer _timer;
         private readonly AutoResetEvent _autoResetEvent;
-        private readonly Action _action;
+        private readonly  Action _action;
+        private readonly int timeOut = 30;
 
         public DateTime TimeStarted { get; set; }
 
@@ -23,11 +24,18 @@ namespace TamagotchiAnimalAPI.factories
             TimeStarted = DateTime.Now;
         }
 
+        //public void StartTimer(Action action)
+        //{
+        //    _action = action;
+        //    _timer = new Timer(Execute, _autoResetEvent, 1000, 5000);
+        //    TimeStarted = DateTime.Now;
+        //}
+
         private void Execute(object state)
         {
             _action();
 
-            if ((DateTime.Now - TimeStarted).Seconds > 60)
+            if ((DateTime.Now - TimeStarted).Seconds > timeOut)
             {
                 _timer.Dispose();
             }

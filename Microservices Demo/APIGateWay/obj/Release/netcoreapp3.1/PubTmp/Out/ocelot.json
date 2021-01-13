@@ -247,6 +247,18 @@
       "UpstreamPathTemplate": "/api/inventory/remove/{id}",
       "UpstreamHttpMethod": [ "Remove" ]
     },
+    {
+      "DownstreamPathTemplate": "/Rest/post", //
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "tamago-inventory.azurewebsites.net",
+          "Port": 443
+        }
+      ],
+      "UpstreamPathTemplate": "/api/inventory/update",
+      "UpstreamHttpMethod": [ "Post" ]
+    },
     //clock
     {
       "DownstreamPathTemplate": "/api/time", //
@@ -284,15 +296,14 @@
       "UpstreamPathTemplate": "/api/clock/{id}",
       "UpstreamHttpMethod": [ "Get", "Post" ]
     },
-    // SignalR clock
+    // SignalR 
     {
       "DownstreamPathTemplate": "/{catchAll}",
-      "ReRouteIsCaseSensitive": false,
       "DownstreamScheme": "ws",
       "DownstreamHostAndPorts": [
         {
           "Host": "tamagotchianimalapi.azurewebsites.net",
-          "Port": 50000
+          "Port": 80
         }
       ],
       "UpstreamPathTemplate": "/api/socket/{catchAll}",

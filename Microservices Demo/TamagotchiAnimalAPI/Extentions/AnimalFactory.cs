@@ -30,6 +30,5 @@ namespace TamagotchiAnimalAPI.Extentions
             return animal;
         }
 
-
     }
 }

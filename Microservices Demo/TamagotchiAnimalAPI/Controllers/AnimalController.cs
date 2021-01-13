@@ -28,6 +28,7 @@ namespace TamagotchiAnimalAPI.Controllers
 
         public ITextMessage message = null;
         private readonly IActiveMqLog _activeMQLog;
+        public TimerFactory timer;
 
         public AnimalController(IMongoClient client, IActiveMqLog activeMQLog, IHubContext<AnimalValuesHub> hubContext)
         {
@@ -35,6 +36,7 @@ namespace TamagotchiAnimalAPI.Controllers
             _animalCollection = database.GetCollection<Animal>("Animals");
             _activeMQLog = activeMQLog;
             _hubContext = hubContext;
+            //timer = new TimerFactory();
         }
 
         [HttpGet]
@@ -57,7 +59,7 @@ namespace TamagotchiAnimalAPI.Controllers
         public async Task<ActionResult<Animal>> ConnectAnimal([FromRoute] Guid id)
         {
 
-            var timerFactory = new TimerFactory(() => _hubContext.Clients.All.SendAsync("getAnimalData", GetCurrentAnimelValues(id).Result));
+            var timerFactory = new TimerFactory(() => _hubContext.Clients.All.SendAsync("getAnimalData", GetCurrentAnimalValues(id).Result));
             return Ok();
         }
 
@@ -76,12 +78,11 @@ namespace TamagotchiAnimalAPI.Controllers
         }
 
         [HttpPost("{id}")]
-
         public async Task<ActionResult<Animal>> Update([FromRoute] Guid id, [FromBody] Animal model)
         {
             try
             {
-                _animalCollection.ReplaceOneAsync(a => a.UserId.Equals(id), model, new UpdateOptions { IsUpsert = true });
+                await _animalCollection.ReplaceOneAsync(a => a.UserId.Equals(id), model, new ReplaceOptions() { IsUpsert = true });
                 return StatusCode(StatusCodes.Status201Created, model);
             }
             catch (Exception ex)
@@ -102,7 +103,7 @@ namespace TamagotchiAnimalAPI.Controllers
         }
 
         [ExcludeFromCodeCoverage]
-        public async Task<Animal> GetCurrentAnimelValues(Guid id)
+        public async Task<Animal> GetCurrentAnimalValues(Guid id)
         {
             var filter = Builders<Animal>.Filter.Eq("UserId", id);
             Animal animal = _animalCollection.Find(filter).First();
@@ -152,7 +153,7 @@ namespace TamagotchiAnimalAPI.Controllers
             //reset message 
             message = null;
 
-            var result = AnimalFactory.CalculateAnimalScore(animal, receivedModel.LastOnline,0.1);
+            var result = AnimalFactory.CalculateAnimalScore(animal, receivedModel.LastOnline,00.1);
 
             var updateAnimal = await Update(id, result);
 

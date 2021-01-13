@@ -53,6 +53,9 @@
           "lib/netstandard2.0/Json.Net.dll": {}
         }
       },
+      "Microsoft.AspNet.SignalR/2.4.1": {
+        "type": "package"
+      },
       "Microsoft.AspNetCore/2.2.0": {
         "type": "package",
         "dependencies": {
@@ -2246,6 +2249,17 @@
         "json.net.1.0.23.nupkg.sha512",
         "json.net.nuspec",
         "lib/netstandard2.0/Json.Net.dll"
+      ]
+    },
+    "Microsoft.AspNet.SignalR/2.4.1": {
+      "sha512": "aYbLVE5toZwv/qaQ0BiIZRRwN/00WKYzGjaYUWIQuI91xZ50nnAymWD1sxCZFN9XXDRq8bevM5ET9GmAeOI/Nw==",
+      "type": "package",
+      "path": "microsoft.aspnet.signalr/2.4.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "microsoft.aspnet.signalr.2.4.1.nupkg.sha512",
+        "microsoft.aspnet.signalr.nuspec"
       ]
     },
     "Microsoft.AspNetCore/2.2.0": {
@@ -6734,6 +6748,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "Microsoft.AspNet.SignalR >= 2.4.1",
       "MongoDB.Driver >= 2.11.2",
       "Shared >= 1.0.0"
     ]
@@ -6779,6 +6794,10 @@
     "frameworks": {
       "netcoreapp3.1": {
         "dependencies": {
+          "Microsoft.AspNet.SignalR": {
+            "target": "Package",
+            "version": "[2.4.1, )"
+          },
           "MongoDB.Driver": {
             "target": "Package",
             "version": "[2.11.2, )"
