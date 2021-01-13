@@ -34,4 +34,3 @@
 [0108/111745.218:ERROR:exception_snapshot_win.cc(99)] thread ID 30960 not found in process
 [0108/111745.231:ERROR:process_reader_win.cc(123)] NtOpenThread: {Toegang geweigerd} Een proces heeft toegang tot een object aangevraagd, maar heeft deze toegangsrechten niet gekregen. (0xc0000022)
 [0108/111745.231:ERROR:exception_snapshot_win.cc(99)] thread ID 17164 not found in process
-[0113/155645.161:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)

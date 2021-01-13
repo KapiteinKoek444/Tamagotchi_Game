@@ -35,17 +35,17 @@ export class ApiServiceUser {
     return this.http.get("https://tamagotchigateway.azurewebsites.net/api/user/" + id, httpOptions);
   }
 
-  public SendUser(user) {
-    return this.http.post('https://tamagotchigateway.azurewebsites.net/api/user', user, httpOptions);
+  public SendUser(user) { 
+   return this.http.post('https://tamagotchigateway.azurewebsites.net/api/user', user, httpOptions);
   }
 
   public GetUserPassword(loginModel) {
-    this.http.post<string>('https://tamagotchigateway.azurewebsites.net/api/user/login', { email: loginModel.email, password: loginModel.password }, httpOptions).subscribe(data => {
-      localStorage.removeItem("userid");
-      localStorage.setItem("userid", data);
+    this.http.post<string>(`https://tamagotchigateway.azurewebsites.net/api/user/login`, { email: loginModel.email, password: loginModel.password }, httpOptions).subscribe(data => {
+    localStorage.removeItem("userid");  
+    localStorage.setItem("userid", data);
     });
   }
-}
+} 
 
 @Injectable({
   providedIn: 'root'
@@ -56,11 +56,11 @@ export class ApiServiceAnimal {
   constructor(private http: HttpClient) {
   }
 
-  public GetAnimal() {
-    return this.http.get('https://tamagotchigateway.azurewebsites.net/api/animal/' + localStorage.getItem("userid"), httpOptions);
+  public GetAnimal(userId: String) {
+    return this.http.get(`https://tamagotchigateway.azurewebsites.net/api/animal/` + userId, httpOptions);
   }
 
-  public ConnectAnimal(userId: String) {
+  public ConnectAnimal(userId: String){
     //var result = this.http.get('https://tamagotchigateway.azurewebsites.net/api/animal/ConnectAnimal/' + userId, httpOptions);
     var result = this.http.get('https://localhost:44337/animal/ConnectAnimal/' + userId, httpOptions);
     console.log(result);
@@ -72,8 +72,8 @@ export class ApiServiceAnimal {
     return animal;
   }
 
-  public UpdateAnimal(animal: AnimalModel) {
-    var newAnimal = this.http.post('https://tamagotchigateway.azurewebsites.net/api/animal/' + localStorage.getItem("userid"), animal, httpOptions).subscribe();
+  public UpdateAnimal(animal, id: String) {
+    var newAnimal = this.http.post('https://tamagotchigateway.azurewebsites.net/api/animal/' + id, animal, httpOptions).subscribe();
     return newAnimal;
   }
 }
@@ -95,7 +95,7 @@ export class ApiServiceBank {
     this.http.post('https://tamagotchigateway.azurewebsites.net/api/bank/wallet/add/' + userId, httpOptions).subscribe();
   }
 
-  public Update(wallet, userId: String) {
+  public Update(wallet,userId: String) {
     this.http.post('https://tamagotchigateway.azurewebsites.net/api/bank/wallet/update/' + userId, wallet, httpOptions);
   }
 
@@ -118,12 +118,12 @@ export class ApiServiceInventory {
     return this.http.get('https://tamagotchigateway.azurewebsites.net/api/inventory/' + userId, httpOptions);
   }
 
-  public SendInventory(userId: String) {
-    this.http.post('https://tamagotchigateway.azurewebsites.net/api/inventory/add/' + userId, httpOptions).subscribe();
+  public SendInventory(userId: String ) {
+    this.http.post('https://tamagotchigateway.azurewebsites.net/api/inventory/add/'+ userId, httpOptions).subscribe();
   }
 
-  public UpdateInventory(inventory) {
-    return this.http.post('https://tamagotchigateway.azurewebsites.net/api/inventory/update', inventory, httpOptions).subscribe();
+  public UpdateInventory(inventory,userId: String) {
+    return this.http.post('https://tamagotchigateway.azurewebsites.net/api/inventory/add/' + userId, inventory, httpOptions);
   }
 }
 
@@ -144,7 +144,8 @@ export class ApiServiceShop {
     return this.http.get('https://tamagotchigateway.azurewebsites.net/api/store/food/' + id, httpOptions);
   }
   public BuyFood(model: BuyBleModel) {
-    return this.http.post('https://tamagotchigateway.azurewebsites.net/api/store/food/buy', model, httpOptions);
+    console.log(model);
+    return this.http.post('https://tamagotchigateway.azurewebsites.net/api/store/food/buy' ,model, httpOptions);
   }
 }
 
@@ -152,8 +153,9 @@ export class ApiServiceShop {
   providedIn: 'root'
 })
 
-export class APIClock {
+export class APIClock{
   constructor(private http: HttpClient) {
   }
 }
 
+  
