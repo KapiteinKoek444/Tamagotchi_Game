@@ -35,17 +35,17 @@ export class ApiServiceUser {
     return this.http.get("https://tamagotchigateway.azurewebsites.net/api/user/" + id, httpOptions);
   }
 
-  public SendUser(user) { 
-   return this.http.post('https://tamagotchigateway.azurewebsites.net/api/user', user, httpOptions);
+  public SendUser(user) {
+    return this.http.post('https://tamagotchigateway.azurewebsites.net/api/user', user, httpOptions);
   }
 
   public GetUserPassword(loginModel) {
     this.http.post<string>(`https://tamagotchigateway.azurewebsites.net/api/user/login`, { email: loginModel.email, password: loginModel.password }, httpOptions).subscribe(data => {
-    localStorage.removeItem("userid");  
-    localStorage.setItem("userid", data);
+      localStorage.removeItem("userid");
+      localStorage.setItem("userid", data);
     });
   }
-} 
+}
 
 @Injectable({
   providedIn: 'root'
@@ -60,7 +60,7 @@ export class ApiServiceAnimal {
     return this.http.get(`https://tamagotchigateway.azurewebsites.net/api/animal/` + userId, httpOptions);
   }
 
-  public ConnectAnimal(userId: String){
+  public ConnectAnimal(userId: String) {
     //var result = this.http.get('https://tamagotchigateway.azurewebsites.net/api/animal/ConnectAnimal/' + userId, httpOptions);
     var result = this.http.get('https://localhost:44337/animal/ConnectAnimal/' + userId, httpOptions);
     console.log(result);
@@ -95,7 +95,7 @@ export class ApiServiceBank {
     this.http.post('https://tamagotchigateway.azurewebsites.net/api/bank/wallet/add/' + userId, httpOptions).subscribe();
   }
 
-  public Update(wallet,userId: String) {
+  public Update(wallet, userId: String) {
     this.http.post('https://tamagotchigateway.azurewebsites.net/api/bank/wallet/update/' + userId, wallet, httpOptions);
   }
 
@@ -118,12 +118,12 @@ export class ApiServiceInventory {
     return this.http.get('https://tamagotchigateway.azurewebsites.net/api/inventory/' + userId, httpOptions);
   }
 
-  public SendInventory(userId: String ) {
-    this.http.post('https://tamagotchigateway.azurewebsites.net/api/inventory/add/'+ userId, httpOptions).subscribe();
+  public SendInventory(userId: String) {
+    this.http.post('https://tamagotchigateway.azurewebsites.net/api/inventory/add/' + userId, httpOptions).subscribe();
   }
 
-  public UpdateInventory(inventory,userId: String) {
-    return this.http.post('https://tamagotchigateway.azurewebsites.net/api/inventory/add/' + userId, inventory, httpOptions);
+  public UpdateInventory(inventory, userId: String) {
+    return this.http.post('https://tamagotchigateway.azurewebsites.net/api/inventory/add/' + userId, inventory, httpOptions).subscribe();
   }
 }
 
@@ -145,7 +145,7 @@ export class ApiServiceShop {
   }
   public BuyFood(model: BuyBleModel) {
     console.log(model);
-    return this.http.post('https://tamagotchigateway.azurewebsites.net/api/store/food/buy' ,model, httpOptions);
+    return this.http.post('https://tamagotchigateway.azurewebsites.net/api/store/food/buy', model, httpOptions);
   }
 }
 
@@ -153,9 +153,8 @@ export class ApiServiceShop {
   providedIn: 'root'
 })
 
-export class APIClock{
+export class APIClock {
   constructor(private http: HttpClient) {
   }
 }
 
-  

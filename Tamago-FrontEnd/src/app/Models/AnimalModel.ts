@@ -8,8 +8,9 @@ export class AnimalModel extends EntitieBase {
   public energy: number;
   public happiness: number;
   public animalType: number;
+  public level: number;
 
-  constructor(id, Uid, n, f, e, h, type) {
+  constructor(id, Uid, n, f, e, h, type, level) {
 
     super();
 
@@ -20,6 +21,7 @@ export class AnimalModel extends EntitieBase {
     this.energy = e;
     this.happiness = h;
     this.animalType = type;
+    this.level = level;
   }
 
 }
