@@ -10,6 +10,7 @@ namespace TamagotchiAnimalAPI.Extentions
     {
 
         private const double ScoreDivider = 30;
+        private const int MaxExperience = 100;
         public static Animal CalculateAnimalScore(Animal animal ,DateTime userDateTime,double ScoreMultiplier = 1f)
         {
             var oldTimestamp = DateTime.SpecifyKind(userDateTime, DateTimeKind.Local);
@@ -27,6 +28,13 @@ namespace TamagotchiAnimalAPI.Extentions
             animal.Food -= (float)ScoreValue;
             animal.Energy -= (float)ScoreValue;
             animal.Happiness -= (float)ScoreValue;
+
+            animal.Experience += (float)ScoreValue;
+
+            if (!(animal.Experience >= MaxExperience)) return animal;
+            animal.Experience = 0;
+            animal.Level++;
+
             return animal;
         }
 

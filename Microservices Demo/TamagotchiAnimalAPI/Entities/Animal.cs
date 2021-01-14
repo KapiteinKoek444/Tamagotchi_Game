@@ -17,6 +17,8 @@ namespace TamagotchiAnimalAPI.Entities
         public float Food { get; set; }
         public float Energy { get; set; }
         public float Happiness { get; set; }
+        public float Experience { get; set; }
+        public int Level { get; set; }
         public int AnimalType { get; set; }
     }
 }
