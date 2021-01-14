@@ -26,7 +26,7 @@ export class AnimalPickerComponent implements OnInit {
     }
     else {
       var id = this.guidfactory.GenerateGuid();
-      var animal = new AnimalModel(id, localStorage.getItem("userid"), name, 100, 100, 100, animalType);
+      var animal = new AnimalModel(id, localStorage.getItem("userid"), name, 100, 100, 100, animalType, 0);
       this.apiservice.SendAnimal(animal);
       setTimeout(() => { this.router.navigate(['dashboard']); }, 100);
     }

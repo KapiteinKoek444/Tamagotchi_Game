@@ -33,8 +33,8 @@ export class LoginComponent implements OnInit {
 
     if (localStorage.getItem("userid") != "00000000-0000-0000-0000-000000000000" && localStorage.getItem("userid") != null) {
 
-      this.apiserviceAnimal.GetAnimal().subscribe(data => {
-        let animal = new AnimalModel(0, 0, "0", 0, 0, 0, 0).fromJSON(data);
+      this.apiserviceAnimal.GetAnimal(localStorage.getItem("userid")).subscribe(data => {
+        let animal = new AnimalModel(0, 0, "0", 0, 0, 0, 0, 0).fromJSON(data);
 
         if (animal.id == "00000000-0000-0000-0000-000000000000" || animal.id == null) {
           this.router.navigate(['animalpicker']);
