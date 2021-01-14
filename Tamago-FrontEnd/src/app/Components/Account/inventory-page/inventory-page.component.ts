@@ -83,7 +83,7 @@ export class InventoryPageComponent implements OnInit {
 
     //giving food to animal
     this.apiServiceAnimal.GetAnimal(localStorage.getItem("userid")).subscribe((data) => {
-      var animal = new AnimalModel(0, 0, "0", 0, 0, 0, 0, 0).fromJSON(data)
+      var animal = new AnimalModel(0, 0, "0", 0, 0, 0, 0,0, 0).fromJSON(data)
 
       animal.food += clickedFood.foodVal;
       animal.energy += clickedFood.energyVal;

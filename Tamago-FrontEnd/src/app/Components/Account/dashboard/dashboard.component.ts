@@ -29,17 +29,23 @@ export class DashboardComponent implements OnInit {
     this.signalRService.GetAnimalDataListener();
     this.startHttpRequest();
 
+    const websocketAlerts = this.signalRService
+      .retrieveMappedObject()
+      .subscribe((receivedObj: AnimalModel) => {
+        this.animal = receivedObj;
+      });
 
-
-    this.animal = new AnimalModel(0, 0, "null", 0, 0, 0, 1, 0);
+    this.animal = new AnimalModel(0, 0, "null", 0, 0, 0, 1,0, 0);
 
     this.apiserviceAnimal.GetAnimal(localStorage.getItem("userid")).subscribe((data) => {
-      this.animal = new AnimalModel(0, 0, "0", 0, 0, 0, 0, 0).fromJSON(data)
+      this.animal = new AnimalModel(0, 0, "0", 0, 0, 0, 0,0, 0).fromJSON(data)
       var image = document.getElementById('tamagotchi') as HTMLImageElement;
 
       if (this.animal.energy > 0 && this.animal.food > 0 && this.animal.happiness > 0) {
         image.src = '../../../../assets/animalTypes/' + this.images[this.animal.animalType] + ".png";
       } else {
+        var PetName = this.animal.name;
+        this.animal.name = "RIP " + PetName + " you were a good pet..";
         image.src = '../../../../assets/animalTypes/DEADPET.png'
       }
     });

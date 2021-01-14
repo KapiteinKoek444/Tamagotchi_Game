@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import * as signalR from '@microsoft/signalr';
+import { Subject ,Observable} from 'rxjs';
 import { AnimalModel } from 'src/app/Models/AnimalModel';
 
 @Injectable({
@@ -8,6 +9,7 @@ import { AnimalModel } from 'src/app/Models/AnimalModel';
 export class SignalRService {
 
   public data: AnimalModel;
+  private sharedObj = new Subject<AnimalModel>();
 
   private hubconnection: signalR.HubConnection;
   //private url = "https://tamagotchigateway.azurewebsites.net/api/socket/animalValues";
@@ -36,6 +38,10 @@ export class SignalRService {
     this.hubconnection.on('getAnimalData', (data) => {
       this.data = data;
       console.log(data);
+      this.sharedObj.next(data);
     })
   };
+  public retrieveMappedObject(): Observable<AnimalModel> {
+    return this.sharedObj.asObservable();
+  }
 }

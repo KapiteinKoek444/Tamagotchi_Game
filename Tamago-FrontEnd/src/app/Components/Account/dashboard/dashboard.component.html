@@ -5,7 +5,8 @@
     <p class="animal-status" id="foodStatus">Food: {{animal.food}} </p>
     <p class="animal-status" id="energyStatus">Energy: {{animal.energy}} </p>
     <p class="animal-status" id="happinessStatus">Happiness: {{animal.happiness}} </p>
-
+    <p class="animal-status" id="happinessStatus">Level: {{animal.level}} </p>
+    <app-progress-bar [progress]= "animal.experience" [total]= "100"></app-progress-bar>
   </div>
   <h1 class="title" ng-if="animal.name"> {{animal.name}} </h1>
   <div class="image-holder">

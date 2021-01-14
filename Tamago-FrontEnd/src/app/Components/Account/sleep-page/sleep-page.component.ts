@@ -20,10 +20,10 @@ export class SleepPageComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.animal = new AnimalModel(0, 0, "null", 0, 0, 0, 1, 0);
+    this.animal = new AnimalModel(0, 0, "null", 0, 0, 0, 1,0, 0);
 
     this.apiserviceAnimal.GetAnimal(localStorage.getItem("userid")).subscribe((data) => {
-      this.animal = new AnimalModel(0, 0, "0", 0, 0, 0, 0, 0).fromJSON(data)
+      this.animal = new AnimalModel(0, 0, "0", 0, 0, 0, 0,0, 0).fromJSON(data)
 
       var imageAnimal = document.getElementById('animal') as HTMLImageElement;
       imageAnimal.src = '../../../../assets/animalTypes/' + this.images[this.animal.animalType] + ".png";

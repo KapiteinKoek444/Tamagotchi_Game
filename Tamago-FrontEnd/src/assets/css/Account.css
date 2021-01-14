@@ -143,6 +143,7 @@ img.current-animal{
 }
 
 div.animal-statistics{
+  margin-left: 1rem;
   position: fixed;
   text-align: left;
 }

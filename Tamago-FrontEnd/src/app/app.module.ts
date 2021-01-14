@@ -13,6 +13,9 @@ import { SleepPageComponent } from './Components/Account/sleep-page/sleep-page.c
 import { ConfirmationDialogComponent } from './Components/Add-Ons/confirmation-dialog/confirmation-dialog.component';
 import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
 import { ConfirmationDialogService } from './Components/Add-Ons/Services/confirmation-dialog.service';
+import { ProgressBarComponent } from './Components/Add-Ons/progress-bar/progress-bar.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DashboardComponent } from './Components/Account/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -23,12 +26,15 @@ import { ConfirmationDialogService } from './Components/Add-Ons/Services/confirm
     InventoryPageComponent,
     SleepPageComponent,
     ConfirmationDialogComponent,
+    ProgressBarComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
     NgbModalModule,
+    BrowserAnimationsModule,
   ],
   providers: [
     HttpClientModule,
