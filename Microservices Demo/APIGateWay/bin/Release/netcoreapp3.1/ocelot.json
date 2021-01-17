@@ -198,6 +198,18 @@
       "UpstreamPathTemplate": "/api/bank/wallet/remove/{id}",
       "UpstreamHttpMethod": [ "Get" ]
     },
+    {
+      "DownstreamPathTemplate": "/rest/addmoney", //
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "tamago-bank.azurewebsites.net",
+          "Port": 443
+        }
+      ],
+      "UpstreamPathTemplate": "/api/bank/wallet/addmoney",
+      "UpstreamHttpMethod": [ "Post" ]
+    },
     //inventory
     {
       "DownstreamPathTemplate": "/Rest/new/{id}", //

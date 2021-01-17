@@ -13,8 +13,11 @@ namespace TamagotchiAnimalAPI.Extentions
         private const int MaxExperience = 100;
         public static Animal CalculateAnimalScore(Animal animal ,DateTime userDateTime,double ScoreMultiplier = 1f)
         {
+            if (animal.IsDead) return animal; //no stats update if animal is already dead
+
             var oldTimestamp = DateTime.SpecifyKind(userDateTime, DateTimeKind.Local);
             DateTime currentTimestamp = DateTime.Now;
+
 
             TimeSpan span = oldTimestamp.Subtract(currentTimestamp);
             double totalMinutes = -span.TotalMinutes;
@@ -31,7 +34,8 @@ namespace TamagotchiAnimalAPI.Extentions
 
             animal.Experience += (float)ScoreValue;
 
-            if (!(animal.Experience >= MaxExperience)) return animal;
+            if (animal.Food <= 0 || animal.Energy <= 0 || animal.Happiness <= 0) { animal.IsDead = true; animal.Food = 0; animal.Energy = 0; animal.Happiness = 0; return animal; } //animal dead if stats are lower or equal to 0 
+            if (!(animal.Experience >= MaxExperience)){ return animal;}
             animal.Experience = 0;
             animal.Level++;
 

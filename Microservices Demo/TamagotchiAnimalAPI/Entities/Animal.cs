@@ -20,5 +20,10 @@ namespace TamagotchiAnimalAPI.Entities
         public float Experience { get; set; }
         public int Level { get; set; }
         public int AnimalType { get; set; }
+        public bool IsDead { get; set; }
+        public Animal()
+        {
+            IsDead = false;
+        }
     }
 }
