@@ -7,6 +7,26 @@ describe('Check gamepage in page', function () {
         browser.waitForAngular();
     });
 
+    // it('should be able to earn money by playing game', async function () {
+
+    //     browser.get('http://localhost:4200/#/InventoryPage');wallet
+
+    //     var walletBegin = element(by.id('wallet'));
+    //     var valueBegin =parseFloat(walletBegin.getText());
+
+    //     browser.get('http://localhost:4200/#/GamesPage');
+
+    //     var urlCaller = element(by.id('urlCaller0'));
+    //     urlCaller.click();
+
+    //     browser.get('http://localhost:4200/#/InventoryPage');wallet
+
+    //     var walletEnd = element(by.id('wallet'));
+    //     var valueEnd = parseFloat(walletEnd.getText());
+
+    //     expect(valueBegin < valueEnd);
+    // });
+
     it('should be 0 index name card', async function () {
         urlCaller = element(by.id('urlCaller0'));
         card           = element(by.id('card0'));

@@ -9,6 +9,20 @@ describe('Check Shop in page', function () {
 
   });
 
+  // it('is possible to buy shop items', async function () {
+  //   var shopButton = element(by.id('Schultenbräu'));
+  //   shopButton.click();
+
+  //   var acceptButton = element(by.id('accept'));
+  //   acceptButton.click();
+
+  //   browser.get('http://localhost:4200/#/InventoryPage');
+
+  //   var iventoryItem = element(by.id('Schultenbräu'));
+
+  //   expect(iventoryItem !== null);
+  // });
+
 
   it('should load the Shop Page', async function () {
     var EC = protractor.ExpectedConditions;

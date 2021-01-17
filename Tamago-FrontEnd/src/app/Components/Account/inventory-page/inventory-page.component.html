@@ -9,7 +9,7 @@
     </div>
     <div class="bar-actions">
       <a>
-        <i class="fa fa-dollar"></i> {{ walletbalance }}
+        <i id="wallet" class="fa fa-dollar"></i> {{ walletbalance }}
       </a>
     </div>
   </div>
@@ -19,7 +19,7 @@
         <div class="store-section-info">
           <h1>My ITEMS</h1>
         </div>
-        <div class="store-items" *ngFor="let inventoryItem of inventoryItems">
+        <div id="inventoryItem.item.name" class="store-items" *ngFor="let inventoryItem of inventoryItems">
           <div class="store-item rare" (click)="GiveFood(inventoryItem.item)">
             <div class="store-item-shadow"></div>
             <div class="store-item-details">
