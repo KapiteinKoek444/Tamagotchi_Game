@@ -75,22 +75,24 @@ export class InventoryPageComponent implements OnInit {
         var id = this.inventoryItems[i].item.id;
         itemId.push(id);
       }
-
       var newModel = new InventoryModel(this.inventoryData.id, localStorage.getItem("userid"), itemId);
       console.log(newModel);
-      this.apiServiceInventory.UpdateInventory(newModel, localStorage.getItem("userid"));
+      this.apiServiceInventory.UpdateInventory(newModel, localStorage.getItem("userid")).subscribe((data)=>{
+        //giving food to animal
+        console.log(data);
+        this.apiServiceAnimal.GetAnimal(localStorage.getItem("userid")).subscribe((data) => {
+          var animal = new AnimalModel(0, 0, "0", 0, 0, 0, 0,0, 0,false).fromJSON(data)
+    
+          animal.food += clickedFood.foodVal;
+          animal.energy += clickedFood.energyVal;
+          animal.happiness += clickedFood.happyVal;
+    
+          this.apiServiceAnimal.UpdateAnimal(animal, localStorage.getItem("userid"));
+      });
+
+
     });
-
-    //giving food to animal
-    this.apiServiceAnimal.GetAnimal(localStorage.getItem("userid")).subscribe((data) => {
-      var animal = new AnimalModel(0, 0, "0", 0, 0, 0, 0,0, 0).fromJSON(data)
-
-      animal.food += clickedFood.foodVal;
-      animal.energy += clickedFood.energyVal;
-      animal.happiness += clickedFood.happyVal;
-
-      this.apiServiceAnimal.UpdateAnimal(animal, localStorage.getItem("userid"));
-    });
+  });
   }
 
   back() {

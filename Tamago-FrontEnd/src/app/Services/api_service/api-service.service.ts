@@ -40,10 +40,7 @@ export class ApiServiceUser {
   }
 
   public GetUserPassword(loginModel) {
-    this.http.post<string>(`https://tamagotchigateway.azurewebsites.net/api/user/login`, { email: loginModel.email, password: loginModel.password }, httpOptions).subscribe(data => {
-      localStorage.removeItem("userid");
-      localStorage.setItem("userid", data);
-    });
+    return this.http.post<string>(`https://tamagotchigateway.azurewebsites.net/api/user/login`, { email: loginModel.email, password: loginModel.password }, httpOptions);
   }
 }
 
@@ -62,8 +59,8 @@ export class ApiServiceAnimal {
 
   public ConnectAnimal(userId: String) {
     //var result = this.http.get('https://tamagotchigateway.azurewebsites.net/api/animal/ConnectAnimal/' + userId, httpOptions);
-    return this.http.get('https://localhost:44337/animal/ConnectAnimal/' + userId, httpOptions);
-
+    var result = this.http.get('https://localhost:44337/animal/ConnectAnimal/' + userId, httpOptions);
+    return result;
   }
 
   public SendAnimal(animal) {
@@ -122,7 +119,7 @@ export class ApiServiceInventory {
   }
 
   public UpdateInventory(inventory, userId: String) {
-    return this.http.post('https://tamagotchigateway.azurewebsites.net/api/inventory/add/' + userId, inventory, httpOptions).subscribe();
+    return this.http.post('https://tamagotchigateway.azurewebsites.net/api/inventory/update', inventory, httpOptions);
   }
 }
 

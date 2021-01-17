@@ -3,7 +3,14 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
-import { ApiServiceService, ApiServiceUser, ApiServiceAnimal, ApiServiceBank, ApiServiceInventory, ApiServiceShop } from './Services/api_service/api-service.service';
+import {
+  ApiServiceService,
+  ApiServiceUser,
+  ApiServiceAnimal,
+  ApiServiceBank,
+  ApiServiceInventory,
+  ApiServiceShop
+} from './Services/api_service/api-service.service';
 import { Hasher } from './Services/Hasher';
 import { GuidFactory } from './Services/GuidFactory';
 import { GamesPageComponent } from './Components/Account/games-page/games-page.component';
@@ -25,9 +32,9 @@ import { DashboardComponent } from './Components/Account/dashboard/dashboard.com
     ShopPageComponent,
     InventoryPageComponent,
     SleepPageComponent,
-    ConfirmationDialogComponent,
+    ConfirmationDialogComponent, //
     ProgressBarComponent,
-    DashboardComponent
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
@@ -46,8 +53,10 @@ import { DashboardComponent } from './Components/Account/dashboard/dashboard.com
     ApiServiceShop,
     Hasher,
     GuidFactory,
-    ConfirmationDialogService 
+    ConfirmationDialogService
   ],
+
+  entryComponents: [ConfirmationDialogComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

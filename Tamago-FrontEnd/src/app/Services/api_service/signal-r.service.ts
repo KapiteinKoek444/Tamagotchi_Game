@@ -41,6 +41,13 @@ export class SignalRService {
       this.sharedObj.next(data);
     })
   };
+
+  public disconnect() {
+    if (this.hubconnection) {
+      this.hubconnection.stop();
+      this.hubconnection = null;
+    }
+  }
   public retrieveMappedObject(): Observable<AnimalModel> {
     return this.sharedObj.asObservable();
   }

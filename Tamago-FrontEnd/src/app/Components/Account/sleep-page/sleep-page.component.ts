@@ -20,16 +20,19 @@ export class SleepPageComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.animal = new AnimalModel(0, 0, "null", 0, 0, 0, 1,0, 0);
+    this.animal = new AnimalModel(0, 0, "null", 0, 0, 0, 1,0, 0,false);
 
     this.apiserviceAnimal.GetAnimal(localStorage.getItem("userid")).subscribe((data) => {
-      this.animal = new AnimalModel(0, 0, "0", 0, 0, 0, 0,0, 0).fromJSON(data)
-
-      var imageAnimal = document.getElementById('animal') as HTMLImageElement;
-      imageAnimal.src = '../../../../assets/animalTypes/' + this.images[this.animal.animalType] + ".png";
+      this.animal = new AnimalModel(0, 0, "0", 0, 0, 0, 0,0, 0,false).fromJSON(data)
 
       var imageBed = document.getElementById('bed') as HTMLImageElement;
       imageBed.src = '../../../../assets/furnitureTypes/' + "Bed_1.png";
+      var imageAnimal = document.getElementById('animal') as HTMLImageElement;
+
+      if (this.animal.energy <= 0 || this.animal.food <= 0 || this.animal.happiness <= 0) return;
+
+      imageAnimal.src = '../../../../assets/animalTypes/' + this.images[this.animal.animalType] + ".png";
+
     });
   }
 
