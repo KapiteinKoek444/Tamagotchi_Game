@@ -91,8 +91,8 @@ export class ApiServiceBank {
     this.http.post('https://tamagotchigateway.azurewebsites.net/api/bank/wallet/add/' + userId, httpOptions).subscribe();
   }
 
-  public Update(wallet, userId: String) {
-    this.http.post('https://tamagotchigateway.azurewebsites.net/api/bank/wallet/update/' + userId, wallet, httpOptions);
+  public Update(wallet) {
+    this.http.post('https://tamagotchigateway.azurewebsites.net/api/bank/wallet/update', wallet, httpOptions).subscribe();
   }
 
   public AddMoney(userId: String, money: number) {

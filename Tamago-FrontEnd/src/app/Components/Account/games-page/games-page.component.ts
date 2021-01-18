@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { WalletModel } from 'src/app/Models/WalletModel';
 import { ApiServiceBank } from 'src/app/Services/api_service/api-service.service';
 import { GameUrls } from 'src/app/Services/constants';
 
@@ -22,9 +23,18 @@ export class GamesPageComponent implements OnInit {
     console.log(url);
 
     var addedmoney = Math.floor((Math.random() * 1000) + 1);
-    var result = this.apiServiceBank.AddMoney(localStorage.getItem("userid"),addedmoney);
-    console.log(result);
+    this.apiServiceBank.GetWallet(localStorage.getItem("userid")).subscribe(data => {
 
+      var model = data as WalletModel;
+      model.balance += addedmoney;
+      console.log(model);
+      this.apiServiceBank.Update(model);
+    });
+ 
+    
+    if(url !== ""){
+      window.location.href = url;
+    } 
   }
   back(){
     this.router.navigate(['dashboard']);
