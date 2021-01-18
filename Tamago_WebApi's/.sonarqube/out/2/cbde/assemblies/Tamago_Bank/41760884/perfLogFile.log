@@ -1,0 +1,7 @@
+File name	Line	Function	Duration[ms]	Explored nodes
+C:\Users\Pouki\Documents\#Rep_C\#Fontys_S3\S3_Tamago_WebApi's\Tamago_Bank\Program.cs	15	_Tamago_Bank.Program.Main$string$$$	0	3
+C:\Users\Pouki\Documents\#Rep_C\#Fontys_S3\S3_Tamago_WebApi's\Tamago_Bank\Controllers\RestController.cs	22	_Tamago_Bank.Controllers.RestController.Get$$	0	2
+C:\Users\Pouki\Documents\#Rep_C\#Fontys_S3\S3_Tamago_WebApi's\Tamago_Bank\Controllers\RestController.cs	29	_Tamago_Bank.Controllers.RestController.Get$System.Guid$	0	2
+C:\Users\Pouki\Documents\#Rep_C\#Fontys_S3\S3_Tamago_WebApi's\Tamago_Bank\Controllers\RestController.cs	37	_Tamago_Bank.Controllers.RestController.Remove$System.Guid$	0	2
+C:\Users\Pouki\Documents\#Rep_C\#Fontys_S3\S3_Tamago_WebApi's\Tamago_Bank\Controllers\RestController.cs	46	_Tamago_Bank.Controllers.RestController.Post$Shared.Shared.ApiModels.WalletModel$	0	2
+C:\Users\Pouki\Documents\#Rep_C\#Fontys_S3\S3_Tamago_WebApi's\Tamago_Bank\Controllers\RestController.cs	54	_Tamago_Bank.Controllers.RestController.Post$System.Guid$	0	2

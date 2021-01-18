@@ -15,4 +15,7 @@
   <PropertyGroup>
     <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
   </PropertyGroup>
+  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <PkgMSBuild_SonarQube_Runner_Tool Condition=" '$(PkgMSBuild_SonarQube_Runner_Tool)' == '' ">C:\Users\Pouki\.nuget\packages\msbuild.sonarqube.runner.tool\4.8.0</PkgMSBuild_SonarQube_Runner_Tool>
+  </PropertyGroup>
 </Project>

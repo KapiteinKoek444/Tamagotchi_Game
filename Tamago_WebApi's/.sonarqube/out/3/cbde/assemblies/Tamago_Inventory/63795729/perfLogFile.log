@@ -1,0 +1,7 @@
+File name	Line	Function	Duration[ms]	Explored nodes
+C:\Users\Pouki\Documents\#Rep_C\#Fontys_S3\S3_Tamago_WebApi's\Tamago_Inventory\Program.cs	15	_Tamago_Inventory.Program.Main$string$$$	0	3
+C:\Users\Pouki\Documents\#Rep_C\#Fontys_S3\S3_Tamago_WebApi's\Tamago_Inventory\Controllers\RestController.cs	22	_Tamago_Inventory.Controllers.RestController.Get$$	0	2
+C:\Users\Pouki\Documents\#Rep_C\#Fontys_S3\S3_Tamago_WebApi's\Tamago_Inventory\Controllers\RestController.cs	29	_Tamago_Inventory.Controllers.RestController.Get$System.Guid$	0	2
+C:\Users\Pouki\Documents\#Rep_C\#Fontys_S3\S3_Tamago_WebApi's\Tamago_Inventory\Controllers\RestController.cs	37	_Tamago_Inventory.Controllers.RestController.Remove$System.Guid$	0	2
+C:\Users\Pouki\Documents\#Rep_C\#Fontys_S3\S3_Tamago_WebApi's\Tamago_Inventory\Controllers\RestController.cs	46	_Tamago_Inventory.Controllers.RestController.Post$Shared.Shared.ApiModels.InventoryModel$	0	2
+C:\Users\Pouki\Documents\#Rep_C\#Fontys_S3\S3_Tamago_WebApi's\Tamago_Inventory\Controllers\RestController.cs	54	_Tamago_Inventory.Controllers.RestController.Post$System.Guid$	0	2

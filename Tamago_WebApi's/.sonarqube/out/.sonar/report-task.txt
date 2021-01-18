@@ -1,0 +1,6 @@
+projectKey=matthijs_microservices
+serverUrl=http://localhost:999
+serverVersion=8.5.1.38104
+dashboardUrl=http://localhost:999/dashboard?id=matthijs_microservices
+ceTaskId=AXbiVP5FpRVLDfrr0ZXa
+ceTaskUrl=http://localhost:999/api/ce/task?id=AXbiVP5FpRVLDfrr0ZXa

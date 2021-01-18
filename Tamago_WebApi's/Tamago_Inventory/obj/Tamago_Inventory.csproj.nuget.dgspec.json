@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Pouki\\Documents\\#Rep_C#\\S3_Tamagotchi_Project\\Tamago_WebApi's\\Tamago_Inventory\\Tamago_Inventory.csproj": {}
+    "C:\\Users\\Pouki\\Documents\\#Rep_C\\#Fontys_S3\\S3_Tamago_WebApi's\\Tamago_Inventory\\Tamago_Inventory.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Pouki\\Documents\\#Rep_C#\\S3_Tamagotchi_Project\\Tamago_ShopApi\\Shared\\Shared.csproj": {
+    "C:\\Users\\Pouki\\Documents\\#Rep_C\\#Fontys_S3\\S3_Tamago_WebApi's\\Shared\\Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Pouki\\Documents\\#Rep_C#\\S3_Tamagotchi_Project\\Tamago_ShopApi\\Shared\\Shared.csproj",
+        "projectUniqueName": "C:\\Users\\Pouki\\Documents\\#Rep_C\\#Fontys_S3\\S3_Tamago_WebApi's\\Shared\\Shared.csproj",
         "projectName": "Shared",
-        "projectPath": "C:\\Users\\Pouki\\Documents\\#Rep_C#\\S3_Tamagotchi_Project\\Tamago_ShopApi\\Shared\\Shared.csproj",
+        "projectPath": "C:\\Users\\Pouki\\Documents\\#Rep_C\\#Fontys_S3\\S3_Tamago_WebApi's\\Shared\\Shared.csproj",
         "packagesPath": "C:\\Users\\Pouki\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Pouki\\Documents\\#Rep_C#\\S3_Tamagotchi_Project\\Tamago_ShopApi\\Shared\\obj\\",
+        "outputPath": "C:\\Users\\Pouki\\Documents\\#Rep_C\\#Fontys_S3\\S3_Tamago_WebApi's\\Shared\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Pouki\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -58,7 +58,7 @@
             },
             "Microsoft.Extensions.DependencyInjection.Abstractions": {
               "target": "Package",
-              "version": "[5.0.0, )"
+              "version": "[3.1.9, )"
             },
             "NETStandard.Library": {
               "suppressParent": "All",
@@ -81,18 +81,18 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Pouki\\Documents\\#Rep_C#\\S3_Tamagotchi_Project\\Tamago_WebApi's\\Tamago_Inventory\\Tamago_Inventory.csproj": {
+    "C:\\Users\\Pouki\\Documents\\#Rep_C\\#Fontys_S3\\S3_Tamago_WebApi's\\Tamago_Inventory\\Tamago_Inventory.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Pouki\\Documents\\#Rep_C#\\S3_Tamagotchi_Project\\Tamago_WebApi's\\Tamago_Inventory\\Tamago_Inventory.csproj",
+        "projectUniqueName": "C:\\Users\\Pouki\\Documents\\#Rep_C\\#Fontys_S3\\S3_Tamago_WebApi's\\Tamago_Inventory\\Tamago_Inventory.csproj",
         "projectName": "Tamago_Inventory",
-        "projectPath": "C:\\Users\\Pouki\\Documents\\#Rep_C#\\S3_Tamagotchi_Project\\Tamago_WebApi's\\Tamago_Inventory\\Tamago_Inventory.csproj",
+        "projectPath": "C:\\Users\\Pouki\\Documents\\#Rep_C\\#Fontys_S3\\S3_Tamago_WebApi's\\Tamago_Inventory\\Tamago_Inventory.csproj",
         "packagesPath": "C:\\Users\\Pouki\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Pouki\\Documents\\#Rep_C#\\S3_Tamagotchi_Project\\Tamago_WebApi's\\Tamago_Inventory\\obj\\",
+        "outputPath": "C:\\Users\\Pouki\\Documents\\#Rep_C\\#Fontys_S3\\S3_Tamago_WebApi's\\Tamago_Inventory\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Pouki\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -109,8 +109,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\Pouki\\Documents\\#Rep_C#\\S3_Tamagotchi_Project\\Tamago_ShopApi\\Shared\\Shared.csproj": {
-                "projectPath": "C:\\Users\\Pouki\\Documents\\#Rep_C#\\S3_Tamagotchi_Project\\Tamago_ShopApi\\Shared\\Shared.csproj"
+              "C:\\Users\\Pouki\\Documents\\#Rep_C\\#Fontys_S3\\S3_Tamago_WebApi's\\Shared\\Shared.csproj": {
+                "projectPath": "C:\\Users\\Pouki\\Documents\\#Rep_C\\#Fontys_S3\\S3_Tamago_WebApi's\\Shared\\Shared.csproj"
               }
             }
           }
@@ -125,9 +125,17 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "MSBuild.SonarQube.Runner.Tool": {
+              "target": "Package",
+              "version": "[4.8.0, )"
+            },
             "MongoDB.Driver": {
               "target": "Package",
               "version": "[2.11.5, )"
+            },
+            "NETStandard.Library": {
+              "target": "Package",
+              "version": "[2.0.3, )"
             }
           },
           "imports": [
@@ -140,6 +148,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[3.1.11, 3.1.11]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -148,7 +162,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }

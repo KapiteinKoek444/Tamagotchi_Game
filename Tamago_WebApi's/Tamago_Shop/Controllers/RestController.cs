@@ -1,11 +1,10 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MongoDB.Driver;
+using Shared.Shared.ApiModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
-using Tamago_Shop.Models;
 
 namespace Tamago_Shop.Controllers
 {
@@ -13,12 +12,12 @@ namespace Tamago_Shop.Controllers
 	[Route("rest")]
 	public class RestController : Controller
 	{
-		private IMongoCollection<FoodDTO> _foodCollection;
+		private IMongoCollection<FoodModel> _foodCollection;
 
 		public RestController(IMongoClient client)
 		{
 			var database = client.GetDatabase("Shop_Database");
-			_foodCollection = database.GetCollection<FoodDTO>("CFood");
+			_foodCollection = database.GetCollection<FoodModel>("CFood");
 		}
 
 		public IActionResult Index()
@@ -27,32 +26,32 @@ namespace Tamago_Shop.Controllers
 		}
 
 		[HttpGet]
-		public IEnumerable<FoodDTO> Get()
+		public IEnumerable<FoodModel> Get()
 		{
-			var data = _foodCollection.Find(Builders<FoodDTO>.Filter.Empty).ToList();
+			var data = _foodCollection.Find(Builders<FoodModel>.Filter.Empty).ToList();
 			return data;
 		}
 
 		[HttpGet("{id}")]
-		public FoodDTO Get([FromRoute] Guid id)
+		public FoodModel Get([FromRoute] Guid id)
 		{
-			var filter = Builders<FoodDTO>.Filter.Eq("id", id);
-			var data = _foodCollection.Find(filter).First();
+			var filter = Builders<FoodModel>.Filter.Eq("id", id);
+			var data = _foodCollection.Find(filter).FirstOrDefault();
 			return data;
 		}
 
 		[HttpDelete("{id}")]
 		[Route("remove/{id}")]
-		public FoodDTO Remove([FromRoute] Guid id)
+		public FoodModel Remove([FromRoute] Guid id)
 		{
-			var filter = Builders<FoodDTO>.Filter.Eq("id", id);
+			var filter = Builders<FoodModel>.Filter.Eq("id", id);
 			var data = _foodCollection.FindOneAndDelete(filter);
 			return data;
 		}
 
 		[HttpPost]
 		[Route("post")]
-		public IActionResult Post([FromBody] FoodDTO food)
+		public IActionResult Post([FromBody] FoodModel food)
 		{
 			_foodCollection.InsertOne(food);
 			return StatusCode(StatusCodes.Status201Created, food);
@@ -61,7 +60,7 @@ namespace Tamago_Shop.Controllers
 		[Route("test")]
 		public void PushFood()
 		{
-			FoodDTO food = new FoodDTO();
+			FoodModel food = new FoodModel();
 			food.id = Guid.NewGuid();
 			food.name = "Red-cow";
 			food.category = "soda";

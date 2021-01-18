@@ -3,11 +3,12 @@ using Microsoft.AspNetCore.Mvc;
 using MongoDB.Driver;
 using Shared.Extensions.ActiveMQ;
 using Shared.Shared.ActiveMQ_Models;
+using Shared.Shared.ApiModels;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Threading.Tasks;
-using Tamago_Inventory.Models;
 
 namespace Tamago_Inventory.Controllers
 {
@@ -15,7 +16,7 @@ namespace Tamago_Inventory.Controllers
 	[Route("active")]
 	public class ActiveMQController : Controller
 	{
-		private IMongoCollection<InventoryDTO> _inventoryCollection;
+		private IMongoCollection<InventoryModel> _inventoryCollection;
 		
 		private readonly IActiveMqLog _activeMQLogShop;
 		private readonly IActiveMqLog _activeMQLog;
@@ -26,7 +27,7 @@ namespace Tamago_Inventory.Controllers
 		public ActiveMQController(IMongoClient client, IActiveMqLog activeMQLog)
 		{
 			var database = client.GetDatabase("Inventory_Database");
-			_inventoryCollection = database.GetCollection<InventoryDTO>("CInventory");
+			_inventoryCollection = database.GetCollection<InventoryModel>("CInventory");
 
 			//Activemq logs
 			_activeMQLogShop = activeMQLog;
@@ -35,7 +36,8 @@ namespace Tamago_Inventory.Controllers
 			ListenToMessage();
 		}
 
-		public async void ListenToMessage()
+		[ExcludeFromCodeCoverage]
+		private async void ListenToMessage()
 		{
 			//Shop
 			_activeMQLogShop.ConnectListener("Inv.shopAddReceive.queue");
@@ -53,13 +55,14 @@ namespace Tamago_Inventory.Controllers
 		[Route("get/{id}")]
 		public async Task<List<FoodModel>> GetFood([FromRoute] Guid id)
 		{
-			var filter = Builders<InventoryDTO>.Filter.Eq("userId", id);
+			var filter = Builders<InventoryModel>.Filter.Eq("userId", id);
 			var data = _inventoryCollection.Find(filter).First();
-			WaitForFood(data);
+			await WaitForFood(data);
 			return response.items;
 		}
 
-		public async Task<string> WaitForFood(InventoryDTO data)
+		[ExcludeFromCodeCoverage]
+		private async Task<string> WaitForFood(InventoryModel data)
 		{
 			RequestItemModel model = new RequestItemModel();
 			model.Items = data.itemId;
@@ -77,14 +80,16 @@ namespace Tamago_Inventory.Controllers
 			return "";
 		}
 
-		public async void UponShopGetMessage(IMessage message)
+		[ExcludeFromCodeCoverage]
+		private async void UponShopGetMessage(IMessage message)
 		{
 			ITextMessage objectMessage = message as ITextMessage;
 			response = _activeMQLog.ConvertIMessageToObject<RequestItemResponseModel>(objectMessage);
 			received = true;
 		}
 
-		public async void UponShopBuyMessage(IMessage message)
+		[ExcludeFromCodeCoverage]
+		private async void UponShopBuyMessage(IMessage message)
 		{
 
 			_activeMQLogShop.ConnectSender("Inv.shopAddSend.queue");
@@ -93,12 +98,12 @@ namespace Tamago_Inventory.Controllers
 			ITextMessage objectMessage = message as ITextMessage;
 			var response = _activeMQLogShop.ConvertIMessageToObject<ItemModel>(objectMessage);
 
-			var filter = Builders<InventoryDTO>.Filter.Eq("userId", response.userId);
+			var filter = Builders<InventoryModel>.Filter.Eq("userId", response.userId);
 
 			var data = _inventoryCollection.Find(filter).First();
 			data.itemId.Add(response.itemId);
 
-			var update = Builders<InventoryDTO>.Update.Set("itemId", data.itemId);
+			var update = Builders<InventoryModel>.Update.Set("itemId", data.itemId);
 
 			_inventoryCollection.UpdateOne(filter, update);
 
@@ -106,9 +111,9 @@ namespace Tamago_Inventory.Controllers
 		}
 
 		[HttpGet]
-		public async void Get()
+		public async Task<string> Get()
 		{
-
+			return "activeMq controller loaded";
 		}
 	}
 }

@@ -3,11 +3,12 @@ using Microsoft.AspNetCore.Mvc;
 using MongoDB.Driver;
 using Shared.Extensions.ActiveMQ;
 using Shared.Shared.ActiveMQ_Models;
+using Shared.Shared.ApiModels;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Threading.Tasks;
-using Tamago_Shop.Models;
 
 namespace Tamago_Shop.Controllers
 {
@@ -15,7 +16,7 @@ namespace Tamago_Shop.Controllers
 	[Route("active")]
 	public class ActiveMQController : Controller
 	{
-		private IMongoCollection<FoodDTO> _foodCollection;
+		private IMongoCollection<FoodModel> _foodCollection;
 		private readonly IActiveMqLog _activeMQLogBank;
 		private readonly IActiveMqLog _activeMQLogInv;
 		private readonly IActiveMqLog _activeMQLogInvItems;
@@ -24,7 +25,7 @@ namespace Tamago_Shop.Controllers
 		public ActiveMQController(IMongoClient client, IActiveMqLog activeMQLog)
 		{
 			var database = client.GetDatabase("Shop_Database");
-			_foodCollection = database.GetCollection<FoodDTO>("CFood");
+			_foodCollection = database.GetCollection<FoodModel>("CFood");
 
 			//ActivemqLogs
 			_activeMQLogBank = activeMQLog;
@@ -34,7 +35,8 @@ namespace Tamago_Shop.Controllers
 			ListenToMessage();
 		}
 
-		public async void ListenToMessage()
+		[ExcludeFromCodeCoverage]
+		private async void ListenToMessage()
 		{
 			//Bank
 			_activeMQLogBank.ConnectListener("Bank.buyItemResponse.queue");
@@ -54,7 +56,7 @@ namespace Tamago_Shop.Controllers
 		[Route("buyfood")]
 		public async Task<string> BuyFood([FromBody] BuyItemModel model)
 		{
-			var filter = Builders<FoodDTO>.Filter.Eq("id", model.itemId);
+			var filter = Builders<FoodModel>.Filter.Eq("id", model.itemId);
 			var data = _foodCollection.Find(filter).First();
 
 			//send the request
@@ -63,7 +65,8 @@ namespace Tamago_Shop.Controllers
 			return r;
 		}
 
-		public async Task<string> AddFoodToInventory(FoodDTO food, Guid userId)
+		[ExcludeFromCodeCoverage]
+		private async Task<string> AddFoodToInventory(FoodModel food, Guid userId)
 		{
 			ItemModel model = new ItemModel();
 			model.itemId = food.id;
@@ -83,7 +86,8 @@ namespace Tamago_Shop.Controllers
 			return "bought item!";
 		}
 
-		public async void UponBankMessage(IMessage message)
+		[ExcludeFromCodeCoverage]
+		private async void UponBankMessage(IMessage message)
 		{
 			ITextMessage objectMessage = message as ITextMessage;
 			ItemModel received = _activeMQLogBank.ConvertIMessageToObject<ItemModel>(objectMessage);
@@ -92,11 +96,12 @@ namespace Tamago_Shop.Controllers
 			{
 				_activeMQLogBank.ConnectSender("Inv.shopAddReceive.queue");
 				var producer = _activeMQLogBank.GetMessageProducer();
-				producer.Send(received);
+				producer.Send(message);
 			}
 		}
 
-		public async void UponInvMessage(IMessage message)
+		[ExcludeFromCodeCoverage]
+		private async void UponInvMessage(IMessage message)
 		{
 			ITextMessage objectMessage = message as ITextMessage;
 			ItemModel received = _activeMQLogInv.ConvertIMessageToObject<ItemModel>(objectMessage);
@@ -105,7 +110,8 @@ namespace Tamago_Shop.Controllers
 				added = true;
 		}
 
-		public async void UponInvGetMessage(IMessage message)
+		[ExcludeFromCodeCoverage]
+		private async void UponInvGetMessage(IMessage message)
 		{
 			_activeMQLogInvItems.ConnectSender("Inv.foodReceive.queue");
 			var producer = _activeMQLogInvItems.GetMessageProducer();
@@ -119,7 +125,7 @@ namespace Tamago_Shop.Controllers
 
 			foreach(var i in model.Items)
 			{
-				var filter = Builders<FoodDTO>.Filter.Eq("id", i);
+				var filter = Builders<FoodModel>.Filter.Eq("id", i);
 				var data = _foodCollection.Find(filter).First();
 				FoodModel m = new FoodModel();
 
@@ -135,13 +141,15 @@ namespace Tamago_Shop.Controllers
 				response.items.Add(m);
 			}
 
-			producer.Send(response);
+			var newMessage = _activeMQLogInvItems.ConvertObjectToIMessage(response);
+
+			producer.Send(newMessage);
 		}
 
 		[HttpGet]
-		public async void Get()
+		public async Task<string> Get()
 		{
-
+			return "activeMq controller loaded";
 		}
 	}
 }

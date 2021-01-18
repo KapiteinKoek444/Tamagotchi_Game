@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <parameters>
   <parameter name="IIS Web Application Name" description="" value="Tamago-inventory" tags="IisApp">
-    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\Pouki\\Documents\\\#Rep_C\#\\S3_Tamagotchi_Project\\Tamago_WebApi's\\Tamago_Inventory\\obj\\Release\\netcoreapp3\.1\\PubTmp\\Out\\$" />
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\Pouki\\Documents\\\#Rep_C\\\#Fontys_S3\\S3_Tamago_WebApi's\\Tamago_Inventory\\obj\\Release\\netcoreapp3\.1\\PubTmp\\Out\\$" />
   </parameter>
 </parameters>
