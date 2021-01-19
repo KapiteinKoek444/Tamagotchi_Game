@@ -1,0 +1,23 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=c0da2bb2_002D3464_002D4e12_002D82da_002Db7a303ebd013/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="ActiveMQCannotConnectToServerWithNullInput" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;Or&gt;&#xD;
+    &lt;TestAncestor&gt;&#xD;
+      &lt;TestId&gt;MSTest::35FE0EA2-6824-41BF-889B-BD136FC223BD::.NETCoreApp,Version=v3.1::SharedTests.ActiveMQTests.ActiveMQCannotConnectToServerWithNullInput&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;MSTest::35FE0EA2-6824-41BF-889B-BD136FC223BD::.NETCoreApp,Version=v3.1::SharedTests.ActiveMQTests.ActiveMQCanConnectToServerWithInput&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;MSTest::53721727-026E-4AE7-B60D-AE56F35C6871::.NETCoreApp,Version=v3.1::AnimalAPITests.AnimalApi_Tests.RemoveTest&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;MSTest::72EA8E8F-FEBB-4FCC-BB74-321DCAB7D9A1::.NETCoreApp,Version=v3.1::AnimalAPITests.UserApi_Tests&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;MSTest::35FE0EA2-6824-41BF-889B-BD136FC223BD::.NETCoreApp,Version=v3.1::SharedTests.ActiveMQTests.CannotGetProducerWithEmptyConnectionInput&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;MSTest::35FE0EA2-6824-41BF-889B-BD136FC223BD::.NETCoreApp,Version=v3.1::SharedTests.ActiveMQTests.CannotGetConsumerWithEmptyConnectionInput&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;MSTest::35FE0EA2-6824-41BF-889B-BD136FC223BD::.NETCoreApp,Version=v3.1::SharedTests.ActiveMQTests.CanGetProducerWithConnectionInput&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;MSTest::35FE0EA2-6824-41BF-889B-BD136FC223BD::.NETCoreApp,Version=v3.1::SharedTests.ActiveMQTests.CanGetConsumerWithConnectionInput&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;MSTest::35FE0EA2-6824-41BF-889B-BD136FC223BD::.NETCoreApp,Version=v3.1::SharedTests.ActiveMQTests.ActiveMQCannotConnectToServerWithEmptyInput&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;MSTest::35FE0EA2-6824-41BF-889B-BD136FC223BD::.NETCoreApp,Version=v3.1::SharedTests.ActiveMQTests.ConvertObjectToIMessageTest&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;MSTest::35FE0EA2-6824-41BF-889B-BD136FC223BD::.NETCoreApp,Version=v3.1::SharedTests.ActiveMQTests.ConvertIMessageToObjectTest&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;MSTest::99548FAC-4896-4A0D-A5C4-F2E885D553CE::.NETCoreApp,Version=v3.1::ClockApiTests.UnitTest1.GetOneTest&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;MSTest::99548FAC-4896-4A0D-A5C4-F2E885D553CE::.NETCoreApp,Version=v3.1::ClockApiTests.UnitTest1.GetAllTest&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;MSTest::99548FAC-4896-4A0D-A5C4-F2E885D553CE::.NETCoreApp,Version=v3.1::ClockApiTests.UnitTest1.RemoveTest&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;MSTest::99548FAC-4896-4A0D-A5C4-F2E885D553CE::.NETCoreApp,Version=v3.1::ClockApiTests.UnitTest1.PostTest&lt;/TestId&gt;&#xD;
+    &lt;/TestAncestor&gt;&#xD;
+    &lt;Project Location="C:\Users\micke\Source\Repos\Tamagotchi_Game\Microservices Demo\AnimalAPITests" Presentation="&amp;lt;Test&amp;gt;\&amp;lt;AnimalAPITests&amp;gt;" /&gt;&#xD;
+  &lt;/Or&gt;&#xD;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
