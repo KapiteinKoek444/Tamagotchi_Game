@@ -199,7 +199,7 @@
       "UpstreamHttpMethod": [ "Get" ]
     },
     {
-      "DownstreamPathTemplate": "/rest/addmoney", //
+      "DownstreamPathTemplate": "/rest/post", //
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -207,8 +207,8 @@
           "Port": 443
         }
       ],
-      "UpstreamPathTemplate": "/api/bank/wallet/addmoney",
-      "UpstreamHttpMethod": [ "Post" ]
+      "UpstreamPathTemplate": "/api/bank/wallet/update",
+      "UpstreamHttpMethod": [ "Post", "Update" ]
     },
     //inventory
     {
