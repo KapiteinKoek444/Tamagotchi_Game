@@ -1,0 +1,8 @@
+File name	Line	Function	Duration[ms]	Explored nodes
+C:\Users\Pouki\Documents\#Rep_C\#Fontys_S3\S3_Tamago_WebApi's\Tamago_Shop\Program.cs	15	_Tamago_Shop.Program.Main$string$$$	0	3
+C:\Users\Pouki\Documents\#Rep_C\#Fontys_S3\S3_Tamago_WebApi's\Tamago_Shop\Controllers\RestController.cs	22	_Tamago_Shop.Controllers.RestController.Index$$	0	2
+C:\Users\Pouki\Documents\#Rep_C\#Fontys_S3\S3_Tamago_WebApi's\Tamago_Shop\Controllers\RestController.cs	27	_Tamago_Shop.Controllers.RestController.Get$$	0	2
+C:\Users\Pouki\Documents\#Rep_C\#Fontys_S3\S3_Tamago_WebApi's\Tamago_Shop\Controllers\RestController.cs	34	_Tamago_Shop.Controllers.RestController.Get$System.Guid$	0	2
+C:\Users\Pouki\Documents\#Rep_C\#Fontys_S3\S3_Tamago_WebApi's\Tamago_Shop\Controllers\RestController.cs	42	_Tamago_Shop.Controllers.RestController.Remove$System.Guid$	0	2
+C:\Users\Pouki\Documents\#Rep_C\#Fontys_S3\S3_Tamago_WebApi's\Tamago_Shop\Controllers\RestController.cs	51	_Tamago_Shop.Controllers.RestController.Post$Shared.Shared.ApiModels.FoodModel$	0	2
+C:\Users\Pouki\Documents\#Rep_C\#Fontys_S3\S3_Tamago_WebApi's\Tamago_Shop\Controllers\RestController.cs	59	_Tamago_Shop.Controllers.RestController.PushFood$$	0	3

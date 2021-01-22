@@ -1,0 +1,10 @@
+File name	Line	Function	Duration[ms]	Explored nodes
+C:\Users\Pouki\Documents\#Rep_C\#Fontys_S3\S3_Tamago_WebApi's\Shared\Shared\Extensions\ActiveMQ\ActiveMQLog.cs	46	_Shared.Extensions.ActiveMQ.ActiveMQLog.ConnectSender$string$	0	5
+C:\Users\Pouki\Documents\#Rep_C\#Fontys_S3\S3_Tamago_WebApi's\Shared\Shared\Extensions\ActiveMQ\ActiveMQLog.cs	54	_Shared.Extensions.ActiveMQ.ActiveMQLog.ConnectListener$string$	0	5
+C:\Users\Pouki\Documents\#Rep_C\#Fontys_S3\S3_Tamago_WebApi's\Shared\Shared\Extensions\ActiveMQ\ActiveMQLog.cs	64	_Shared.Extensions.ActiveMQ.ActiveMQLog.ConvertObjectToIMessage$T$$T$	0	2
+C:\Users\Pouki\Documents\#Rep_C\#Fontys_S3\S3_Tamago_WebApi's\Shared\Shared\Extensions\ActiveMQ\ActiveMQLog.cs	71	_Shared.Extensions.ActiveMQ.ActiveMQLog.ConvertIMessageToObject$T$$Apache.NMS.ITextMessage$	0	2
+C:\Users\Pouki\Documents\#Rep_C\#Fontys_S3\S3_Tamago_WebApi's\Shared\Shared\Extensions\ActiveMQ\ActiveMQLog.cs	78	_Shared.Extensions.ActiveMQ.ActiveMQLog.GetMessageProducer$$	0	4
+C:\Users\Pouki\Documents\#Rep_C\#Fontys_S3\S3_Tamago_WebApi's\Shared\Shared\Extensions\ActiveMQ\ActiveMQLog.cs	85	_Shared.Extensions.ActiveMQ.ActiveMQLog.GetMessageConsumer$$	0	4
+C:\Users\Pouki\Documents\#Rep_C\#Fontys_S3\S3_Tamago_WebApi's\Shared\Shared\Extensions\ActiveMQ\ActiveMQLog.cs	93	_Shared.Extensions.ActiveMQ.ActiveMQLog.IsSesionActive$$	0	2
+C:\Users\Pouki\Documents\#Rep_C\#Fontys_S3\S3_Tamago_WebApi's\Shared\Shared\Extensions\ActiveMQ\ActiveMQLog.cs	98	_Shared.Extensions.ActiveMQ.ActiveMQLog.CloseSession$$	0	5
+C:\Users\Pouki\Documents\#Rep_C\#Fontys_S3\S3_Tamago_WebApi's\Shared\Shared\Extensions\Consul\StartupConfig.cs	10	_Shared.Extensions.Consul.StartupConfig.RegisterConfiguration$Microsoft.Extensions.DependencyInjection.IServiceCollection.Microsoft.Extensions.Configuration.IConfiguration$	0	2

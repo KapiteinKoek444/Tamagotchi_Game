@@ -1,0 +1,12 @@
+C:\Users\Pouki\Documents\#Rep_C\#Fontys_S3\S3_Tamago_WebApi's\Testing_Shared\bin\Debug\netstandard2.0\Testing_Shared.deps.json
+C:\Users\Pouki\Documents\#Rep_C\#Fontys_S3\S3_Tamago_WebApi's\Testing_Shared\bin\Debug\netstandard2.0\Testing_Shared.dll
+C:\Users\Pouki\Documents\#Rep_C\#Fontys_S3\S3_Tamago_WebApi's\Testing_Shared\bin\Debug\netstandard2.0\Testing_Shared.pdb
+C:\Users\Pouki\Documents\#Rep_C\#Fontys_S3\S3_Tamago_WebApi's\Testing_Shared\bin\Debug\netstandard2.0\Shared.dll
+C:\Users\Pouki\Documents\#Rep_C\#Fontys_S3\S3_Tamago_WebApi's\Testing_Shared\bin\Debug\netstandard2.0\Shared.pdb
+C:\Users\Pouki\Documents\#Rep_C\#Fontys_S3\S3_Tamago_WebApi's\Testing_Shared\obj\Debug\netstandard2.0\Testing_Shared.csprojAssemblyReference.cache
+C:\Users\Pouki\Documents\#Rep_C\#Fontys_S3\S3_Tamago_WebApi's\Testing_Shared\obj\Debug\netstandard2.0\Testing_Shared.AssemblyInfoInputs.cache
+C:\Users\Pouki\Documents\#Rep_C\#Fontys_S3\S3_Tamago_WebApi's\Testing_Shared\obj\Debug\netstandard2.0\Testing_Shared.AssemblyInfo.cs
+C:\Users\Pouki\Documents\#Rep_C\#Fontys_S3\S3_Tamago_WebApi's\Testing_Shared\obj\Debug\netstandard2.0\Testing_Shared.csproj.CoreCompileInputs.cache
+C:\Users\Pouki\Documents\#Rep_C\#Fontys_S3\S3_Tamago_WebApi's\Testing_Shared\obj\Debug\netstandard2.0\Testing_Shared.csproj.CopyComplete
+C:\Users\Pouki\Documents\#Rep_C\#Fontys_S3\S3_Tamago_WebApi's\Testing_Shared\obj\Debug\netstandard2.0\Testing_Shared.dll
+C:\Users\Pouki\Documents\#Rep_C\#Fontys_S3\S3_Tamago_WebApi's\Testing_Shared\obj\Debug\netstandard2.0\Testing_Shared.pdb

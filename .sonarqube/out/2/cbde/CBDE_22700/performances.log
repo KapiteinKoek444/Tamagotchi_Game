@@ -1,0 +1,32 @@
+C:\Users\Pouki\Documents\#Rep_C\#Fontys_S3\S3_Tamago_WebApi's\Tamago_Bank\Controllers\ActiveMqController.cs
+ListenToMessage 3
+ListenToMessage 0
+UponMessage 3
+UponMessage 0
+Get 3
+Get 0
+
+C:\Users\Pouki\Documents\#Rep_C\#Fontys_S3\S3_Tamago_WebApi's\Tamago_Bank\Controllers\RestController.cs
+Get 3
+Get 0
+Get 8
+Get 0
+Remove 4
+Remove 0
+Post 4
+Post 0
+Post 4
+Post 0
+
+C:\Users\Pouki\Documents\#Rep_C\#Fontys_S3\S3_Tamago_WebApi's\Tamago_Bank\Program.cs
+Main 3
+Main 0
+CreateHostBuilder 3
+CreateHostBuilder 0
+
+C:\Users\Pouki\Documents\#Rep_C\#Fontys_S3\S3_Tamago_WebApi's\Tamago_Bank\Startup.cs
+ConfigureServices 3
+ConfigureServices 0
+Configure 3
+Configure 0
+

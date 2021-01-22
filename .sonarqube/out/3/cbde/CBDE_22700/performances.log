@@ -1,0 +1,38 @@
+C:\Users\Pouki\Documents\#Rep_C\#Fontys_S3\S3_Tamago_WebApi's\Tamago_Inventory\Controllers\ActiveMqController.cs
+ListenToMessage 3
+ListenToMessage 0
+GetFood 4
+GetFood 0
+WaitForFood 3
+WaitForFood 0
+UponShopGetMessage 3
+UponShopGetMessage 0
+UponShopBuyMessage 3
+UponShopBuyMessage 0
+Get 4
+Get 0
+
+C:\Users\Pouki\Documents\#Rep_C\#Fontys_S3\S3_Tamago_WebApi's\Tamago_Inventory\Controllers\RestController.cs
+Get 16
+Get 0
+Get 3
+Get 0
+Remove 4
+Remove 0
+Post 4
+Post 0
+Post 4
+Post 0
+
+C:\Users\Pouki\Documents\#Rep_C\#Fontys_S3\S3_Tamago_WebApi's\Tamago_Inventory\Program.cs
+Main 3
+Main 0
+CreateHostBuilder 3
+CreateHostBuilder 0
+
+C:\Users\Pouki\Documents\#Rep_C\#Fontys_S3\S3_Tamago_WebApi's\Tamago_Inventory\Startup.cs
+ConfigureServices 3
+ConfigureServices 0
+Configure 12
+Configure 0
+
