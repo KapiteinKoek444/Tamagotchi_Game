@@ -7670,19 +7670,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Pouki\\.nuget\\packages\\": {}
+    "C:\\Users\\micke\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Pouki\\Documents\\#Rep_C\\#Fontys_S3\\S3_Mickey_microservices\\ClockApiTests\\ClockApiTests.csproj",
+      "projectUniqueName": "C:\\Users\\micke\\Source\\Repos\\Tamagotchi_Game\\ClockApiTests\\ClockApiTests.csproj",
       "projectName": "ClockApiTests",
-      "projectPath": "C:\\Users\\Pouki\\Documents\\#Rep_C\\#Fontys_S3\\S3_Mickey_microservices\\ClockApiTests\\ClockApiTests.csproj",
-      "packagesPath": "C:\\Users\\Pouki\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Pouki\\Documents\\#Rep_C\\#Fontys_S3\\S3_Mickey_microservices\\ClockApiTests\\obj\\",
+      "projectPath": "C:\\Users\\micke\\Source\\Repos\\Tamagotchi_Game\\ClockApiTests\\ClockApiTests.csproj",
+      "packagesPath": "C:\\Users\\micke\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\micke\\Source\\Repos\\Tamagotchi_Game\\ClockApiTests\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Pouki\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\micke\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -7694,10 +7694,9 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\Pouki\\Documents\\#Rep_C\\#Fontys_S3\\S3_Mickey_microservices\\ClockApi\\ClockApi.csproj": {
-              "projectPath": "C:\\Users\\Pouki\\Documents\\#Rep_C\\#Fontys_S3\\S3_Mickey_microservices\\ClockApi\\ClockApi.csproj"
+            "C:\\Users\\micke\\Source\\Repos\\Tamagotchi_Game\\ClockApi\\ClockApi.csproj": {
+              "projectPath": "C:\\Users\\micke\\Source\\Repos\\Tamagotchi_Game\\ClockApi\\ClockApi.csproj"
             }
           }
         }
@@ -7710,7 +7709,6 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
-        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "MSTest.TestAdapter": {
             "target": "Package",
@@ -7747,7 +7745,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
       }
     }
   }

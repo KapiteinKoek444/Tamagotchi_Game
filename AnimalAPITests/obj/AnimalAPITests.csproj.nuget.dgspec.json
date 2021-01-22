@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Pouki\\Documents\\#Rep_C\\#Fontys_S3\\S3_Mickey_microservices\\AnimalAPITests\\AnimalAPITests.csproj": {}
+    "C:\\Users\\micke\\Source\\Repos\\Tamagotchi_Game\\AnimalAPITests\\AnimalAPITests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Pouki\\Documents\\#Rep_C\\#Fontys_S3\\S3_Mickey_microservices\\AnimalAPITests\\AnimalAPITests.csproj": {
+    "C:\\Users\\micke\\Source\\Repos\\Tamagotchi_Game\\AnimalAPITests\\AnimalAPITests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Pouki\\Documents\\#Rep_C\\#Fontys_S3\\S3_Mickey_microservices\\AnimalAPITests\\AnimalAPITests.csproj",
+        "projectUniqueName": "C:\\Users\\micke\\Source\\Repos\\Tamagotchi_Game\\AnimalAPITests\\AnimalAPITests.csproj",
         "projectName": "AnimalAPITests",
-        "projectPath": "C:\\Users\\Pouki\\Documents\\#Rep_C\\#Fontys_S3\\S3_Mickey_microservices\\AnimalAPITests\\AnimalAPITests.csproj",
-        "packagesPath": "C:\\Users\\Pouki\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Pouki\\Documents\\#Rep_C\\#Fontys_S3\\S3_Mickey_microservices\\AnimalAPITests\\obj\\",
+        "projectPath": "C:\\Users\\micke\\Source\\Repos\\Tamagotchi_Game\\AnimalAPITests\\AnimalAPITests.csproj",
+        "packagesPath": "C:\\Users\\micke\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\micke\\Source\\Repos\\Tamagotchi_Game\\AnimalAPITests\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Pouki\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\micke\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,10 +26,9 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\Pouki\\Documents\\#Rep_C\\#Fontys_S3\\S3_Mickey_microservices\\TamagotchiAnimalAPI\\TamagotchiAnimalAPI.csproj": {
-                "projectPath": "C:\\Users\\Pouki\\Documents\\#Rep_C\\#Fontys_S3\\S3_Mickey_microservices\\TamagotchiAnimalAPI\\TamagotchiAnimalAPI.csproj"
+              "C:\\Users\\micke\\Source\\Repos\\Tamagotchi_Game\\TamagotchiAnimalAPI\\TamagotchiAnimalAPI.csproj": {
+                "projectPath": "C:\\Users\\micke\\Source\\Repos\\Tamagotchi_Game\\TamagotchiAnimalAPI\\TamagotchiAnimalAPI.csproj"
               }
             }
           }
@@ -42,7 +41,6 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "MSTest.TestAdapter": {
               "target": "Package",
@@ -79,21 +77,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Pouki\\Documents\\#Rep_C\\#Fontys_S3\\S3_Mickey_microservices\\Shared\\Shared.csproj": {
+    "C:\\Users\\micke\\Source\\Repos\\Tamagotchi_Game\\Shared\\Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Pouki\\Documents\\#Rep_C\\#Fontys_S3\\S3_Mickey_microservices\\Shared\\Shared.csproj",
+        "projectUniqueName": "C:\\Users\\micke\\Source\\Repos\\Tamagotchi_Game\\Shared\\Shared.csproj",
         "projectName": "Shared",
-        "projectPath": "C:\\Users\\Pouki\\Documents\\#Rep_C\\#Fontys_S3\\S3_Mickey_microservices\\Shared\\Shared.csproj",
-        "packagesPath": "C:\\Users\\Pouki\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Pouki\\Documents\\#Rep_C\\#Fontys_S3\\S3_Mickey_microservices\\Shared\\obj\\",
+        "projectPath": "C:\\Users\\micke\\Source\\Repos\\Tamagotchi_Game\\Shared\\Shared.csproj",
+        "packagesPath": "C:\\Users\\micke\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\micke\\Source\\Repos\\Tamagotchi_Game\\Shared\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Pouki\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\micke\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -105,7 +103,6 @@
         },
         "frameworks": {
           "netstandard2.0": {
-            "targetAlias": "netstandard2.0",
             "projectReferences": {}
           }
         },
@@ -117,7 +114,6 @@
       },
       "frameworks": {
         "netstandard2.0": {
-          "targetAlias": "netstandard2.0",
           "dependencies": {
             "Apache.NMS.ActiveMQ": {
               "target": "Package",
@@ -160,21 +156,21 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Pouki\\Documents\\#Rep_C\\#Fontys_S3\\S3_Mickey_microservices\\TamagotchiAnimalAPI\\TamagotchiAnimalAPI.csproj": {
+    "C:\\Users\\micke\\Source\\Repos\\Tamagotchi_Game\\TamagotchiAnimalAPI\\TamagotchiAnimalAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Pouki\\Documents\\#Rep_C\\#Fontys_S3\\S3_Mickey_microservices\\TamagotchiAnimalAPI\\TamagotchiAnimalAPI.csproj",
+        "projectUniqueName": "C:\\Users\\micke\\Source\\Repos\\Tamagotchi_Game\\TamagotchiAnimalAPI\\TamagotchiAnimalAPI.csproj",
         "projectName": "TamagotchiAnimalAPI",
-        "projectPath": "C:\\Users\\Pouki\\Documents\\#Rep_C\\#Fontys_S3\\S3_Mickey_microservices\\TamagotchiAnimalAPI\\TamagotchiAnimalAPI.csproj",
-        "packagesPath": "C:\\Users\\Pouki\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Pouki\\Documents\\#Rep_C\\#Fontys_S3\\S3_Mickey_microservices\\TamagotchiAnimalAPI\\obj\\",
+        "projectPath": "C:\\Users\\micke\\Source\\Repos\\Tamagotchi_Game\\TamagotchiAnimalAPI\\TamagotchiAnimalAPI.csproj",
+        "packagesPath": "C:\\Users\\micke\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\micke\\Source\\Repos\\Tamagotchi_Game\\TamagotchiAnimalAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Pouki\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\micke\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -186,10 +182,9 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\Pouki\\Documents\\#Rep_C\\#Fontys_S3\\S3_Mickey_microservices\\Shared\\Shared.csproj": {
-                "projectPath": "C:\\Users\\Pouki\\Documents\\#Rep_C\\#Fontys_S3\\S3_Mickey_microservices\\Shared\\Shared.csproj"
+              "C:\\Users\\micke\\Source\\Repos\\Tamagotchi_Game\\Shared\\Shared.csproj": {
+                "projectPath": "C:\\Users\\micke\\Source\\Repos\\Tamagotchi_Game\\Shared\\Shared.csproj"
               }
             }
           }
@@ -202,7 +197,6 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.AspNet.SignalR": {
               "target": "Package",
@@ -223,12 +217,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[3.1.11, 3.1.11]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -237,7 +225,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

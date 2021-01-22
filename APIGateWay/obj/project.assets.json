@@ -5161,19 +5161,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Pouki\\.nuget\\packages\\": {}
+    "C:\\Users\\micke\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Pouki\\Documents\\#Rep_C\\#Fontys_S3\\S3_Mickey_microservices\\APIGateWay\\APIGateWay.csproj",
+      "projectUniqueName": "C:\\Users\\micke\\Source\\Repos\\Tamagotchi_Game\\APIGateWay\\APIGateWay.csproj",
       "projectName": "APIGateWay",
-      "projectPath": "C:\\Users\\Pouki\\Documents\\#Rep_C\\#Fontys_S3\\S3_Mickey_microservices\\APIGateWay\\APIGateWay.csproj",
-      "packagesPath": "C:\\Users\\Pouki\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Pouki\\Documents\\#Rep_C\\#Fontys_S3\\S3_Mickey_microservices\\APIGateWay\\obj\\",
+      "projectPath": "C:\\Users\\micke\\Source\\Repos\\Tamagotchi_Game\\APIGateWay\\APIGateWay.csproj",
+      "packagesPath": "C:\\Users\\micke\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\micke\\Source\\Repos\\Tamagotchi_Game\\APIGateWay\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Pouki\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\micke\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5185,7 +5185,6 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "projectReferences": {}
         }
       },
@@ -5197,7 +5196,6 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
-        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
             "target": "Package",
@@ -5222,12 +5220,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[3.1.11, 3.1.11]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -5236,7 +5228,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
       }
     }
   }

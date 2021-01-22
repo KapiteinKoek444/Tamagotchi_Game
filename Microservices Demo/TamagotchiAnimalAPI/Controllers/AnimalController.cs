@@ -55,7 +55,6 @@ namespace TamagotchiAnimalAPI.Controllers
         }
 
         [HttpGet("ConnectAnimal/{id}")]
-        [ExcludeFromCodeCoverage]
         public async Task<ActionResult<Animal>> ConnectAnimal([FromRoute] Guid id)
         {
 

@@ -12,3 +12,10 @@ C:\Users\Pouki\Documents\#Rep_C\#Fontys_S3\S3_Mickey_microservices\Shared\obj\Re
 C:\Users\Pouki\Documents\#Rep_C\#Fontys_S3\S3_Mickey_microservices\Shared\obj\Release\netstandard2.0\Shared.csproj.CoreCompileInputs.cache
 C:\Users\Pouki\Documents\#Rep_C\#Fontys_S3\S3_Mickey_microservices\Shared\obj\Release\netstandard2.0\Shared.dll
 C:\Users\Pouki\Documents\#Rep_C\#Fontys_S3\S3_Mickey_microservices\Shared\obj\Release\netstandard2.0\Shared.pdb
+C:\Users\micke\Source\Repos\Tamagotchi_Game\Shared\bin\Release\netstandard2.0\Shared.deps.json
+C:\Users\micke\Source\Repos\Tamagotchi_Game\Shared\bin\Release\netstandard2.0\Shared.dll
+C:\Users\micke\Source\Repos\Tamagotchi_Game\Shared\bin\Release\netstandard2.0\Shared.pdb
+C:\Users\micke\Source\Repos\Tamagotchi_Game\Shared\obj\Release\netstandard2.0\Shared.csprojAssemblyReference.cache
+C:\Users\micke\Source\Repos\Tamagotchi_Game\Shared\obj\Release\netstandard2.0\Shared.csproj.CoreCompileInputs.cache
+C:\Users\micke\Source\Repos\Tamagotchi_Game\Shared\obj\Release\netstandard2.0\Shared.dll
+C:\Users\micke\Source\Repos\Tamagotchi_Game\Shared\obj\Release\netstandard2.0\Shared.pdb

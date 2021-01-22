@@ -311,11 +311,11 @@
     // SignalR 
     {
       "DownstreamPathTemplate": "/{catchAll}",
-      "DownstreamScheme": "ws",
+      "DownstreamScheme": "wss",
       "DownstreamHostAndPorts": [
         {
           "Host": "tamagotchianimalapi.azurewebsites.net",
-          "Port": 80
+          "Port": 443
         }
       ],
       "UpstreamPathTemplate": "/api/socket/{catchAll}",

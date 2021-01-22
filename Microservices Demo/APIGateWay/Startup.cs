@@ -49,6 +49,8 @@ namespace APIGateWay
 
 
             app.UseWebSockets();
+
+
             app.UseOcelot().Wait();
 
             app.UseEndpoints(endpoints =>

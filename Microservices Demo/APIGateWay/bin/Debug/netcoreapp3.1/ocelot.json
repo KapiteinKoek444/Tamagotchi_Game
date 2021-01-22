@@ -55,7 +55,7 @@
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "tamagotchianimalapi.azurewebsites.net",
+          "Host": "localhost",
           "Port": 443
         }
       ],
@@ -198,6 +198,18 @@
       "UpstreamPathTemplate": "/api/bank/wallet/remove/{id}",
       "UpstreamHttpMethod": [ "Get" ]
     },
+    {
+      "DownstreamPathTemplate": "/rest/post", //
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "tamago-bank.azurewebsites.net",
+          "Port": 443
+        }
+      ],
+      "UpstreamPathTemplate": "/api/bank/wallet/update",
+      "UpstreamHttpMethod": [ "Post", "Update" ]
+    },
     //inventory
     {
       "DownstreamPathTemplate": "/Rest/new/{id}", //
@@ -247,6 +259,18 @@
       "UpstreamPathTemplate": "/api/inventory/remove/{id}",
       "UpstreamHttpMethod": [ "Remove" ]
     },
+    {
+      "DownstreamPathTemplate": "/Rest/post", //
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "tamago-inventory.azurewebsites.net",
+          "Port": 443
+        }
+      ],
+      "UpstreamPathTemplate": "/api/inventory/update",
+      "UpstreamHttpMethod": [ "Post" ]
+    },
     //clock
     {
       "DownstreamPathTemplate": "/api/time", //
@@ -290,8 +314,8 @@
       "DownstreamScheme": "ws",
       "DownstreamHostAndPorts": [
         {
-          "Host": "tamagotchianimalapi.azurewebsites.net",
-          "Port": 80
+          "Host": "localhost",
+          "Port": 5000
         }
       ],
       "UpstreamPathTemplate": "/api/socket/{catchAll}",

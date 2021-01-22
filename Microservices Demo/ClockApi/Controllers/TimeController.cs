@@ -124,8 +124,10 @@ namespace ClockApi.Controllers
 
             _activeMQLog.ConnectSender("Clock.GetUserTimeStampResponse.queue");
             var producer = _activeMQLog.GetMessageProducer();
+            var item = _activeMQLog.ConvertObjectToIMessage(new TimeStampModel()
+                {Id = timestamp.Id, UserId = timestamp.UserId, LastOnline = timestamp.LastOnline});
 
-            producer.Send(new TimeStampModel() { Id = timestamp.Id, UserId = timestamp.UserId, LastOnline = timestamp.LastOnline});
+            producer.Send(item);
             timestamp.LastOnline = DateTime.Now;
 
             await Update(timestamp.UserId,timestamp);
